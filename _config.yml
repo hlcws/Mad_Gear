@@ -1,4 +1,4 @@
 theme: jekyll-theme-minimal
 title: Mad Gear Frankfurt
-description: Fighting Game Location nahe Frankfurt\ [anfahrt](./anfahrt.md)
+description: Fighting Game Location nahe Frankfurt <br> <a href="./anfahrt.html">Anfahrt</a>
 show_downloads: false
