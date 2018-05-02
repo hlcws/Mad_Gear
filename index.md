@@ -36,10 +36,10 @@ Außerhalb der Kernzeit kann die Location auch durch Stamm-Member geöffnet werd
 
 ## Tickets
 
-- ☀️  Gast (1 Abend): 7€
-- ☀️☀️  Gast (1 Wochenende): 10€
-- ⚙️  Dauergast (1 Monat): 25€
-- 🙏  Spender: 5€
+- ☀️    Gast (1 Abend): 7€
+- ☀️☀️    Gast (1 Wochenende): 10€
+- ⚙️⚙️⚙️    Dauergast (1 Monat): 25€
+- 🙏🙏🙏🙏  Spender: 5€
 
 *paypal button*
 
