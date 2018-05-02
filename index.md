@@ -4,11 +4,9 @@ Mad Gear bietet eine Location für Fighting Game Enthusiasten und Wettkämpfer. 
 
 ## Quick Links
 
-Discord
-
-Forum
-
-Twitch
+- Discord
+- Forum
+- Twitch
 
 ## Adresse
 Dreieichstrasse, Mörfelden-Walldorf
@@ -21,7 +19,6 @@ Vor Ort gibt es 8 Screens und einige Konsolen. Es wird auf jeden Fall empfohlen,
 ## Games
 
 Diese Spielserien werden hauptsächlich gespielt:
-
 - Guilty Gear
 - BlazBlue
 - King of Fighters
@@ -40,7 +37,6 @@ Außerhalb der Kernzeit kann die Location auch durch Stamm-Member geöffnet werd
 *parse HE Kalender*
 
 | Datum | Motto |
-|---------------------	|-------	|
 | 2.6.2018 - 3.6.2018 	| BBTag 	|
 |  9.6.2018 - 10.6.2018 | Tekken |
 
@@ -48,8 +44,8 @@ Außerhalb der Kernzeit kann die Location auch durch Stamm-Member geöffnet werd
 
 - Gast (1 Abend): 7€
 - Gast (1 Wochenende): 10€
-- Dauergast (1 Monat): 25€
-- Spender: 5€
+- Dauergast ⚙️ (1 Monat): 25€
+- Spender 🙏: 5€
 
 *paypal button*
 
