@@ -1,4 +1,4 @@
-theme: jekyll-theme-minimal
+remote_theme: "mmistakes/minimal-mistakes"
 title: Mad Gear Frankfurt
 description: Fighting Game Location nahe Frankfurt
 show_downloads: false
