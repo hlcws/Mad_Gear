@@ -1,4 +1,4 @@
-## Mad Gear Chapter Frankfurt
+## Mad Gear Frankfurt
 
 Willkommen!
 
