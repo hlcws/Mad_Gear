@@ -2,12 +2,6 @@
 
 Mad Gear bietet eine Location für Fighting Game Enthusiasten und Wettkämpfer. Ihr könnt hier üben, euch mit Gleichgesinnten austauschen oder Matches auf dem Stream austragen.
 
-## Quick Links
-
-- Discord
-- Forum
-- Twitch
-
 ## Adresse
 Dreieichstrasse, Mörfelden-Walldorf
 
@@ -42,12 +36,19 @@ Außerhalb der Kernzeit kann die Location auch durch Stamm-Member geöffnet werd
 
 ## Tickets
 
-- Gast (1 Abend): 7€
-- Gast (1 Wochenende): 10€
-- Dauergast ⚙️ (1 Monat): 25€
-- Spender 🙏: 5€
+☀️🌇🌛  Gast (1 Abend): 7€
+☀️🌇🌛🌅  Gast (1 Wochenende): 10€
+⚙️      Dauergast  (1 Monat): 25€
+🙏      Spender  5€
 
 *paypal button*
 
 ## Teilnehmerliste
 *google forms* 
+
+
+## Andere Plattformen
+
+- Discord
+- Forum
+- Twitch
