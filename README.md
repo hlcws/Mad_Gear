@@ -1,4 +1,6 @@
-## Welcome to GitHub Pages
+## Mad Gear Chapter Frankfurt
+
+Willkommen!
 
 You can use the [editor on GitHub](https://github.com/hlcws/madgear/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
