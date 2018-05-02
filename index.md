@@ -11,7 +11,7 @@ Mad Gear bietet eine Location für Fighting Game Enthusiasten und Wettkämpfer. 
 ## Adresse
 Dreieichstrasse, Mörfelden-Walldorf
 
-*Link Anfahrtsbeschreibung*
+[Anfahrt](./anfahrt.md)
 
 ## Equipment
 Vor Ort gibt es 8 Screens und einige Konsolen. Es wird auf jeden Fall empfohlen, einen eigenen Controller mitzubringen. Falls ihr eine Playstation 4 mitbringt, könnt ihr die an einen freien Screen stecken.
