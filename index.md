@@ -36,11 +36,11 @@ Außerhalb der Kernzeit kann die Location auch durch Stamm-Member geöffnet werd
 
 ## Tickets
 
-| **Tier** | **Tage** | **Preis** |
-| Gast | ☀️ | 7€ |
-| Wochenende | ☀️☀️ | 10€ | 
-| Dauergast | ⚙️⚙️⚙️⚙️⚙️ | 20€ |
-| Spender | 🙏🙏🙏🙏🙏🙏 | 5€|
+| **Tier** | **Preis** |
+| Gast | ☀️ 7€ |
+| Wochenende ☀️☀️ | 10€ | 
+| Dauergast ⚙️⚙️⚙️ | 20€ |
+| Spender 🙏🙏🙏🙏| 5€|
 
 *paypal button*
 
