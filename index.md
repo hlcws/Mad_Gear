@@ -35,20 +35,16 @@ Außerhalb der Kernzeit kann die Location auch durch Stamm-Member geöffnet werd
 | 2.6.2018 - 3.6.2018 	| BBTag 	|
 |  9.6.2018 - 10.6.2018 | Tekken |
 
-## Tickets
+## Preise
 
 | Tier | Preis |
 | --- | --- |
-| Gast ☀️ |  7€ |
+| Tagesgast ☀️ |  7€ |
 | Wochenende ☀️☀️ | 10€ | 
 | Dauergast ⚙️⚙️⚙️ | 20€ |
 | Spender 🙏🙏🙏🙏| 5€|
 
-*paypal button*
-
-## Teilnehmerliste
-*google forms* 
-
+[Tickets](./tickets.md)
 
 ## Andere Plattformen
 
