@@ -38,7 +38,7 @@ Außerhalb der Kernzeit kann die Location auch durch Stamm-Member geöffnet werd
 
 | Tier | Preis |
 | --- | --- |
-| Gast | ☀️ 7€ |
+| Gast ☀️ |  7€ |
 | Wochenende ☀️☀️ | 10€ | 
 | Dauergast ⚙️⚙️⚙️ | 20€ |
 | Spender 🙏🙏🙏🙏| 5€|
