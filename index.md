@@ -28,18 +28,19 @@ Samstags 14:00 - Sonntag 18:00
 Außerhalb der Kernzeit kann die Location auch durch Stamm-Member geöffnet werden. Schaut am besten in den Discord oder Thread.
 
 ## Events
-*parse HE Kalender*
+*HE Kalender auslesen*
 
-| Datum | Motto |
+| **Datum** | **Motto** |
 | 2.6.2018 - 3.6.2018 	| BBTag 	|
 |  9.6.2018 - 10.6.2018 | Tekken |
 
 ## Tickets
 
-- ☀️    Gast (1 Abend): 7€
-- ☀️☀️    Gast (1 Wochenende): 10€
-- ⚙️⚙️⚙️    Dauergast (1 Monat): 25€
-- 🙏🙏🙏🙏  Spender: 5€
+| **Tier** | | **Preis** |
+| Gast | ☀️ | 7€ |
+| Wochenende | ☀️☀️ | 10€ | 
+| Dauergast | ⚙️⚙️⚙️⚙️⚙️ | 20€ |
+| Spender | 🙏🙏🙏🙏🙏🙏 | 5€|
 
 *paypal button*
 
