@@ -30,7 +30,8 @@ Außerhalb der Kernzeit kann die Location auch durch Stamm-Member geöffnet werd
 ## Events
 *HE Kalender auslesen*
 
-| **Datum** | **Motto** |
+| Datum | Motto |
+| --- | --- |
 | 2.6.2018 - 3.6.2018 	| BBTag 	|
 |  9.6.2018 - 10.6.2018 | Tekken |
 
