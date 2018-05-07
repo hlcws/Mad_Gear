@@ -15,6 +15,7 @@ Vor Ort gibt es 8 Screens und einige Konsolen. Es wird auf jeden Fall empfohlen,
 Diese Spielserien werden hauptsächlich gespielt:
 - Guilty Gear
 - BlazBlue
+- DragonBall FighterZ
 - King of Fighters
 - Street Fighter
 - Tekken
@@ -30,10 +31,18 @@ Außerhalb der Kernzeit kann die Location auch durch Stamm-Member geöffnet werd
 ## Events
 *HE Kalender auslesen*
 
+*Fiktive Beispiele*
+
+Erstes Wochenende: Everything goes
+
+Letztes Wochenende: Jedes zweite Wochenende
+
+Jeder Freitag: Tekken Friyay
+
 | Datum | Motto |
 | --- | --- |
-| 2.6.2018 - 3.6.2018 	| BBTag 	|
-|  9.6.2018 - 10.6.2018 | Tekken |
+| 2.6.2018 - 3.6.2018 	| BBTag Release	|
+| 9.6.2018 - 10.6.2018 | Tekken Session |
 
 ## Preise
 
