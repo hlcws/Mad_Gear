@@ -16,6 +16,22 @@
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+<script>
+  function gelesen() {
+  // Get the checkbox
+  var checkBox = document.getElementById("gelesen");
+  // Get the output text
+  var text = document.getElementById("text");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+}
+</script>
+    
   </head>
   <body>
 <!-- end header -->
