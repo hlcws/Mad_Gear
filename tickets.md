@@ -11,15 +11,16 @@ Mit dem Kauf erhalte ich eure Paypal E-Mail Adresse, Namen und den Betreff den i
 
 Die Tickets gelten auch nur, wenn die Location offen hat. Informiert euch vorher im Terminkalender oder Discord!
  
-Tourist (Tagesgast): 7€, gilt am Kaufdatum bis zum nächsten Tag 4 Uhr Morgens.
+**Tourist (Tagesgast)**: 7€, gilt am Kaufdatum bis zum nächsten Tag 4 Uhr Morgens.
 
-Goon (Wochenende): 10€, gilt für das Wochenende. Maximal Freitag 18:00 - Sonntag 18:00.
+**Goon (Wochenende)**: 10€, gilt für das Wochenende.
+Maximal Freitag 18:00 - Sonntag 18:00.
 
-Supergoon (Dauergast): 20€, gilt für den Monat des Kaufdatums.
+**Supergoon (Dauergast)**: 20€, gilt für den Monat des Kaufdatums.
 
-Spender (virtueller Döner): 5€, wir freuen uns über jede Spende und werden dir einen Shoutout auf dem Stream geben.
+**Spender (virtueller Döner)**: 5€, wir freuen uns über jede Spende und werden dir einen Shoutout auf dem Stream geben.
 
-Ringleader: Stamm-Member mit Verantwortung. Auf Anfrage.
+**Ringleader**: Stamm-Member mit Verantwortung. Auf Anfrage.
 
 <hr>
 
