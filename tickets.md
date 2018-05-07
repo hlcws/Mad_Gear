@@ -7,10 +7,12 @@ Wenn ihr kein Paypal habt, könnt ihr vor Ort jemanden bitten euch das Ticket zu
 
 Mit dem Kauf erhalte ich eure Paypal E-Mail Adresse, Namen und den Betreff den ihr angebt. Die E-Mail Adresse wird nach einem Jahr anonymisiert. Gebt als Betreff bitte die jeweilige Ticketart an.
 
-(Tourist)[https://paypal.me/madgearfgc/7EUR] (Tagesgast):7€, gilt am Kaufdatum bis zum nächsten Tag 4 Uhr Morgens.
+Die Tickets gelten auch nur, wenn die Location offen hat. Informiert euch vorher im Terminkalender oder Discord!
 
-(Goon)[https://paypal.me/madgearfgc/10EUR]  (Wochenende): 10€, gilt für das Wochenende. Maximal Freitag 18:00 - Sonntag 18:00, falls die Location durch einen Ringleader geöffnet wurde.
+[Tourist](https://paypal.me/madgearfgc/7EUR) (Tagesgast):7€, gilt am Kaufdatum bis zum nächsten Tag 4 Uhr Morgens.
 
-(Supergoon)[https://paypal.me/madgearfgc/20EUR]  (Dauergast): 20€, gilt für den Monat des Kaufdatums.
+[Goon](https://paypal.me/madgearfgc/10EUR)  (Wochenende): 10€, gilt für das Wochenende. Maximal Freitag 18:00 - Sonntag 18:00.
 
-Ringleader (Stamm-Member): Auf Anfrage.
+[Supergoon](https://paypal.me/madgearfgc/20EUR)  (Dauergast): 20€, gilt für den Monat des Kaufdatums.
+
+Ringleader: Stamm-Member mit Verantwortung. Auf Anfrage.
