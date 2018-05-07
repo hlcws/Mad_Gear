@@ -53,7 +53,7 @@ Letztes Wochenende: Tekken Session
 | Tourist ☀️ | Tag | 7€ |
 | Goon ☀️☀️ | Wochenende | 10€ | 
 | Supergoon ⚙️⚙️⚙️ | Monat | 20€ |
-| Spender 🙏🙏🙏🙏| 5€ |
+| Spender 🙏🙏🙏🙏|  | 5€ |
 
 [Tickets](./tickets.md)
 
