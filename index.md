@@ -35,9 +35,11 @@ Außerhalb der Kernzeit kann die Location auch durch Stamm-Member geöffnet werd
 
 Erstes Wochenende: Everything goes
 
-Letztes Wochenende: Jedes zweite Wochenende
+Zweites Wochenende: Anime Madness
 
 Jeder Freitag: Tekken Friyay
+
+Letztes Wochenende: Tekken Session
 
 | Datum | Motto |
 | --- | --- |
