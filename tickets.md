@@ -9,6 +9,10 @@ Mit dem Kauf erhalte ich eure Paypal E-Mail Adresse, Namen und den Betreff den i
 
 Die Tickets gelten auch nur, wenn die Location offen hat. Informiert euch vorher im Terminkalender oder Discord!
 
+<input type="checkbox" id="gelesen" onclick="gelesen()">
+
+<p id="text" style="display:none">
+
 [Tourist](https://paypal.me/madgearfgc/7EUR) (Tagesgast):7€, gilt am Kaufdatum bis zum nächsten Tag 4 Uhr Morgens.
 
 [Goon](https://paypal.me/madgearfgc/10EUR)  (Wochenende): 10€, gilt für das Wochenende. Maximal Freitag 18:00 - Sonntag 18:00.
@@ -16,3 +20,21 @@ Die Tickets gelten auch nur, wenn die Location offen hat. Informiert euch vorher
 [Supergoon](https://paypal.me/madgearfgc/20EUR)  (Dauergast): 20€, gilt für den Monat des Kaufdatums.
 
 Ringleader: Stamm-Member mit Verantwortung. Auf Anfrage.
+
+</p>
+
+<script>
+  function gelesen() {
+  // Get the checkbox
+  var checkBox = document.getElementById("gelesen");
+  // Get the output text
+  var text = document.getElementById("text");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+}
+</script>
