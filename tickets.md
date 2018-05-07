@@ -15,6 +15,8 @@ Goon (Wochenende): 10€, gilt für das Wochenende. Maximal Freitag 18:00 - Sonn
 
 Supergoon (Dauergast): 20€, gilt für den Monat des Kaufdatums.
 
+Spender (virtueller Döner): 5€, wir freuen uns über jede Spende und werden dir einen Shoutout auf dem Stream geben.
+
 Ringleader: Stamm-Member mit Verantwortung. Auf Anfrage.
 
 <input type="checkbox" id="gelesen" onclick="gelesen()"> Ich akzeptiere die o.g. Bestimmungen und Regeln.
