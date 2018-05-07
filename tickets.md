@@ -7,6 +7,8 @@ Wenn ihr kein Paypal habt, könnt ihr vor Ort jemanden bitten euch das Ticket zu
 
 Mit dem Kauf erhalte ich eure Paypal E-Mail Adresse, Namen und den Betreff den ihr angebt. Die E-Mail Adresse wird nach einem Jahr anonymisiert. Gebt als Betreff bitte die jeweilige Ticketart an.
 
+<hr>
+
 Die Tickets gelten auch nur, wenn die Location offen hat. Informiert euch vorher im Terminkalender oder Discord!
  
 Tourist (Tagesgast):7€, gilt am Kaufdatum bis zum nächsten Tag 4 Uhr Morgens.
@@ -18,6 +20,8 @@ Supergoon (Dauergast): 20€, gilt für den Monat des Kaufdatums.
 Spender (virtueller Döner): 5€, wir freuen uns über jede Spende und werden dir einen Shoutout auf dem Stream geben.
 
 Ringleader: Stamm-Member mit Verantwortung. Auf Anfrage.
+
+<hr>
 
 <input type="checkbox" id="gelesen" onclick="gelesen()"> Ich akzeptiere die o.g. Bestimmungen und Regeln.
 
