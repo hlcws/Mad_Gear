@@ -48,9 +48,9 @@ Jeder Freitag: Tekken Friyay
 
 | Tier | Preis |
 | --- | --- |
-| Tagesgast ☀️ |  7€ |
-| Wochenende ☀️☀️ | 10€ | 
-| Dauergast ⚙️⚙️⚙️ | 20€ |
+| Tourist ☀️ |  7€ |
+| Goon ☀️☀️ | 10€ | 
+| Supergoon ⚙️⚙️⚙️ | 20€ |
 | Spender 🙏🙏🙏🙏| 5€|
 
 [Tickets](./tickets.md)
