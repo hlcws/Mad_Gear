@@ -28,6 +28,6 @@ Maximal Freitag 18:00 - Sonntag 18:00.
 
 <p id="text" style="display:none">
  
-[Zur Bezahlung auf PayPal](https://paypal.me/madgearfgc/)
+<a href="https://paypal.me/madgearfgc/">Zur Bezahlung auf PayPal</a>
 
 </p>
