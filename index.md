@@ -8,7 +8,7 @@ Dreieichstrasse, Mörfelden-Walldorf
 [Anfahrt](./anfahrt.md)
 
 ## Equipment
-Vor Ort gibt es 8 Screens und einige Konsolen. Es wird auf jeden Fall empfohlen, einen eigenen Controller mitzubringen. Falls ihr eine Playstation 4 mitbringt, könnt ihr die an einen freien Screen stecken.
+Vor Ort gibt es 8 Screens und einige Konsolen. Bringt auf jeden Fall euren einen eigenen Controller mit! Falls ihr eine Playstation 4 mitbringt, könnt ihr die an einen freien Screen stecken.
 
 ## Games
 
@@ -62,3 +62,7 @@ Letztes Wochenende: Tekken Session
 - Discord
 - Forum
 - Twitch
+
+## Sonstiges
+
+[Impressum & Datenschutzerklärung](./impressum.md)
