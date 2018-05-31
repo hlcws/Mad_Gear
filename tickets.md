@@ -5,7 +5,7 @@ Vor Ort zeigt ihr einem Stamm-Member die Paypal Nachricht als Nachweis vor (auf 
 
 Wenn ihr kein Paypal habt, könnt ihr vor Ort jemanden bitten euch das Ticket zu kaufen.
 
-Mit dem Kauf erhalte ich eure Paypal E-Mail Adresse, Namen und den Betreff den ihr angebt. Die E-Mail Adresse wird nach einem Jahr anonymisiert. Gebt als Betreff bitte die jeweilige Ticketart an.
+Mit dem Kauf erhalte ich eure Paypal E-Mail Adresse, Namen und den Betreff den ihr angebt. Die E-Mail Adresse wird nach einem Jahr anonymisiert. Gebt als Betreff bitte die jeweilige Ticketart und den Zeitpunkt an (z.b. "kommendes Wochenende").
 
 <hr>
 
