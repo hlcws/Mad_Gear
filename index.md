@@ -7,7 +7,7 @@ Dreieichstrasse 8
 
 Mörfelden-Walldorf
 
-2. OG links
+\2\. OG links
 
 [Anfahrt](./anfahrt.md)
 
@@ -26,18 +26,15 @@ Diese Spielserien werden hauptsächlich gespielt:
 
 Und viele mehr!
 
-## Zeiten
-Kernzeit:
+## Events/Zeiten
 Samstags 13:00 - Sonntag 18:00
-
-Außerhalb der Kernzeit ist die Location sporadisch offen. Schaut am besten in den Discord oder Thread.
-
-## Events
 
 | Datum | Motto |
 | --- | --- |
 | 2.6.2018 - 3.6.2018 	| BBTag Release	Session|
 | 16.6.2018 - 17.6.2018 | Everything goes |
+
+Bitte den [Kalender](https://calendar.google.com/calendar/embed?src=kqg40hjscfpnkm780rhd7abr5s%40group.calendar.google.com&ctz=Europe%2FBerlin) beachten. Die Location ist sporadisch für andere Sachen gesperrt!
 
 ## Preise
 
