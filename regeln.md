@@ -7,6 +7,7 @@
 1. Die Location und insbesondere die geteilten Mietflächen sind sauber zu halten.
 1. Leere Flaschen und Müll werden wieder mitgenommen oder im Müll entsorgt.
 1. Das Essen ist nur in der Küche gestattet.
+1. Keine offenen Getränke in der Location
 1. In der Küche darf nichts hinterlassen oder auf dem Tisch stehen gelassen werden.
 
 ## Etikette
