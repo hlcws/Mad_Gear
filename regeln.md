@@ -9,6 +9,7 @@
 1. Das Essen ist nur in der Küche gestattet.
 1. Keine offenen Getränke in der Location
 1. In der Küche darf nichts hinterlassen oder auf dem Tisch stehen gelassen werden.
+1. Der letzte macht die Fenster zu und schaltet die Klimaanlage ab.
 
 ## Etikette
 
