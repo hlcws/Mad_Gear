@@ -9,7 +9,7 @@ Mit dem Kauf erhalte ich eure Paypal E-Mail Adresse, Namen und den Betreff den i
 
 <hr>
 
-Die Tickets gelten auch nur, wenn die Location offen hat. Informiert euch vorher im Terminkalender oder Discord!
+Die Tickets gelten auch nur, wenn die Location offen hat. Informiert euch vorher im [Kalender](https://calendar.google.com/calendar/embed?src=kqg40hjscfpnkm780rhd7abr5s%40group.calendar.google.com&ctz=Europe%2FBerlin) oder Discord!
  
 **Tourist (Tagesgast)**: 7€, gilt am Kaufdatum bis zum nächsten Tag 4 Uhr Morgens.
 
