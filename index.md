@@ -3,7 +3,10 @@
 Mad Gear bietet eine Location für Fighting Game Enthusiasten und Wettkämpfer. Ihr könnt hier üben, euch mit Gleichgesinnten austauschen oder Matches auf dem Stream austragen.
 
 ## Adresse
-Dreieichstrasse 8, Mörfelden-Walldorf
+Dreieichstrasse 8
+
+Mörfelden-Walldorf
+
 2. OG links
 
 [Anfahrt](./anfahrt.md)
@@ -51,7 +54,7 @@ Außerhalb der Kernzeit ist die Location sporadisch offen. Schaut am besten in d
 
 - [Discord](https://tinyurl.com/madgearffm)
 - [Forum](https://forum.hardedge.org/index.php?board/380-frankfurt/)
-- Twitch (coming soon)
+- [Twitch](https://twitch.tv/madgearffm)
 
 ## Sonstiges
 
