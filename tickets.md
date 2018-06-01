@@ -24,7 +24,7 @@ Maximal Freitag 18:00 - Sonntag 18:00.
 
 <hr>
 
-<input type="checkbox" id="gelesen" onclick="gelesen()"> Ich akzeptiere die o.g. Bestimmungen und Regeln.
+<input type="checkbox" id="gelesen" onclick="gelesen()"> Ich akzeptiere die o.g. Bestimmungen und [Regeln](./regeln.md).
 
 <p id="text" style="display:none">
  
