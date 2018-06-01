@@ -7,7 +7,7 @@ Dreieichstrasse 8
 
 Mörfelden-Walldorf
 
-\2\. OG links
+2\. OG links
 
 [Anfahrt](./anfahrt.md)
 
