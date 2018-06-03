@@ -1,6 +1,6 @@
 # Überblick
 
-Mad Gear bietet eine Location für Fighting Game Enthusiasten und Wettkämpfer. Ihr könnt hier üben, euch mit Gleichgesinnten austauschen oder Matches auf dem Stream austragen.
+MadGearFFM bietet eine Location für Fighting Game Enthusiasten und Wettkämpfer. Ihr könnt hier üben, euch mit Gleichgesinnten austauschen oder Matches auf dem Stream austragen.
 
 ## Adresse
 Dreieichstrasse 8
