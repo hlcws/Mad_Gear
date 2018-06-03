@@ -7,16 +7,18 @@ Wenn ihr kein Paypal habt, könnt ihr vor Ort jemanden bitten euch das Ticket zu
 
 Mit dem Kauf erhalte ich eure Paypal E-Mail Adresse, Namen und den Betreff den ihr angebt. Die E-Mail Adresse wird nach einem Jahr anonymisiert. Gebt als Betreff bitte die jeweilige Ticketart und den Zeitpunkt an (z.b. "kommendes Wochenende").
 
+Vor Ort werden Foto und Video-Aufnahmen gemacht, live auf Twitch übertragen sowie auf Social Media und Foren (HardEdge) geteilt um Werbung für die Location zu machen.
+
 <hr>
 
 Die Tickets gelten auch nur, wenn die Location offen hat. Informiert euch vorher im [Kalender](https://calendar.google.com/calendar/embed?src=kqg40hjscfpnkm780rhd7abr5s%40group.calendar.google.com&ctz=Europe%2FBerlin) oder Discord!
  
-**Tourist (Tagesgast)**: 7€, gilt am Kaufdatum bis zum nächsten Tag 4 Uhr Morgens.
+**Tourist (Tagesgast)**: 10€, gilt am Kaufdatum bis zum nächsten Tag 4 Uhr Morgens.
 
-**Goon (Wochenende)**: 10€, gilt für das Wochenende.
+**Goon (Wochenende)**: 15€, gilt für das Wochenende.
 Maximal Freitag 18:00 - Sonntag 18:00.
 
-**Supergoon (Dauergast)**: 20€, gilt für den Monat des Kaufdatums.
+**Supergoon (Dauergast)**: 25€, gilt für den Monat des Kaufdatums.
 
 **Spender (virtueller Döner)**: 5€, wir freuen uns über jede Spende und werden dir einen Shoutout auf dem Stream geben.
 
