@@ -12,4 +12,4 @@ Vor der Tür ist die Bushaltestelle "Hessenring". Man kann aber auch vom Bahnhof
 
 ## Vom Flughafen
 
-Vom Flughafen fährt jede halbe Stunde ein Hotelshuttle zum NH Hotel Mörfelden, das ist gleich daneben.
+Vom Flughafen fährt jede halbe Stunde ein Hotelshuttle zum NH Hotel Mörfelden (Hotel Bus Nr. 3), das ist gleich daneben.
