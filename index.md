@@ -40,9 +40,9 @@ Bitte den [Kalender](https://calendar.google.com/calendar/embed?src=kqg40hjscfpn
 
 | Tier | Dauer | Preis |
 | --- | --- | --- |
-| Tourist ☀️ | Tag | 7€ |
-| Goon ☀️☀️ | Wochenende | 10€ | 
-| Supergoon ⚙️⚙️⚙️ | Monat | 20€ |
+| Tourist ☀️ | Tag | 10€ |
+| Goon ☀️☀️ | Wochenende | 15€ | 
+| Supergoon ⚙️⚙️⚙️ | Monat | 25€ |
 | Spender 🙏🙏🙏🙏|  | 5€ |
 
 [Tickets](./tickets.md)
