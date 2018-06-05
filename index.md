@@ -12,7 +12,7 @@ Mörfelden-Walldorf
 [Anfahrt](./anfahrt.md)
 
 ## Equipment
-Vor Ort gibt es 8 Screens und einige Konsolen. Bringt auf jeden Fall euren einen eigenen Controller mit! Falls ihr eine Playstation 4 oder andere Konsole mitbringt, könnt ihr die an einen freien Screen stecken.
+Vor Ort gibt es 9 Screens und einige Konsolen. Bringt auf jeden Fall euren einen eigenen Controller mit! Falls ihr eine Playstation 4 oder andere Konsole mitbringt, könnt ihr die an einen freien Screen stecken. Wer was mitbringt wird im [Forum](https://forum.hardedge.org/index.php?board/380-madgear-ffm/) abgesprochen.
 
 ## Games
 
@@ -35,6 +35,8 @@ Samstags 13:00 - Sonntag 18:00
 | 16.6.2018 - 17.6.2018 | Everything goes |
 
 Bitte den [Kalender](https://calendar.google.com/calendar/embed?src=kqg40hjscfpnkm780rhd7abr5s%40group.calendar.google.com&ctz=Europe%2FBerlin) beachten. Die Location ist sporadisch für andere Sachen gesperrt!
+
+[Regeln & Etikette](./regeln.md)
 
 ## Preise
 
