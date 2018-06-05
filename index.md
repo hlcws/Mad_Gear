@@ -2,6 +2,8 @@
 
 MadGearFFM bietet eine Location für Fighting Game Enthusiasten und Wettkämpfer. Ihr könnt hier üben, euch mit Gleichgesinnten austauschen oder Matches auf dem Stream austragen.
 
+[Fotos vom 2/3. Juni 2018: BBTAG Release Session](https://www.hardedge.org/2018/06/03/madgearffm-blazblue-cross-tag-battle-release-session/)
+
 ## Adresse
 Dreieichstrasse 8
 
