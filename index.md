@@ -51,11 +51,13 @@ Bitte den [Kalender](https://calendar.google.com/calendar/embed?src=kqg40hjscfpn
 
 [Tickets](./tickets.md)
 
-## Andere Plattformen
+## Kontakt herstellen
 
 - [Discord](https://tinyurl.com/madgearffm)
 - [Forum](https://forum.hardedge.org/index.php?board/380-frankfurt/)
 - [Twitch](https://twitch.tv/madgearffm)
+- [Twitter](http://twitter.com/madgearffm)
+- [E-Mail](mailto:kontakt@madgear.club)
 
 ## Sonstiges
 
