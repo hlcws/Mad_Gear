@@ -34,7 +34,7 @@ Dreieichstrasse 8
 64546 Mörfelden-Walldorf  
   
 Telefon: 06103/3721741  
-E-Mail: kontakt@madgear-club
+E-Mail: kontakt@madgear.club
 
 ### Arten der verarbeiteten Daten:
 
