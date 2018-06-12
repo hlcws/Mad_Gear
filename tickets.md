@@ -11,7 +11,7 @@ Vor Ort werden Foto und Video-Aufnahmen gemacht, live auf Twitch übertragen sow
 
 <hr>
 
-Die Tickets gelten auch nur, wenn die Location offen hat. Informiert euch vorher im [Kalender](https://calendar.google.com/calendar/embed?src=kqg40hjscfpnkm780rhd7abr5s%40group.calendar.google.com&ctz=Europe%2FBerlin) oder Discord!
+Die Tickets gelten auch nur, wenn die Location offen hat. Informiert euch vorher im [Kalender](https://calendar.google.com/calendar/embed?src=kqg40hjscfpnkm780rhd7abr5s%40group.calendar.google.com&ctz=Europe%2FBerlin) oder [Discord](https://tinyurl.com/madgearffm)!
  
 **Tourist (Tagesgast)**: 10€, gilt am Kaufdatum bis zum nächsten Tag 4 Uhr Morgens.
 
