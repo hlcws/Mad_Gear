@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Release Session mit BBTAG"
 date:   2018-06-04 15:00:00 +0100
 categories: events
