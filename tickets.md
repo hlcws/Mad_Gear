@@ -1,7 +1,7 @@
 # Tickets
 
 Das Ticket ist ab Kauf für den angegebenen Zeitraum gültig. Ihr willigt ein, die Regeln und die Hausordnung einzuhalten.
-Vor Ort zeigt ihr einem Stamm-Member die Paypal Nachricht als Nachweis vor (auf Handy reicht). Barzahlung ist nicht möglich. Das Ticket berechtigt euch zum Eintritt und zur Nutzung der Stations und der Stream-Station in Absprache mit Stammgästen vor Ort.
+Vor Ort zeigt ihr einem Stamm-Member die Paypal Nachricht als Nachweis vor (auf Handy reicht) und bekommt ein Bändchen. Barzahlung ist nicht möglich. Das Ticket berechtigt euch zum Eintritt und zur Nutzung der Stations und der Stream-Station in Absprache mit Stammgästen vor Ort.
 
 Wenn ihr kein Paypal habt, könnt ihr vor Ort jemanden bitten euch das Ticket zu kaufen.
 
@@ -18,7 +18,7 @@ Die Tickets gelten auch nur, wenn die Location offen hat. Informiert euch vorher
 **Goon (Wochenende)**: 15€, gilt für das Wochenende.
 Maximal Freitag 18:00 - Sonntag 18:00.
 
-**Supergoon (Dauergast)**: 25€, gilt für den Monat des Kaufdatums.
+**Supergoon (Dauergast)**: 25€, gilt ab Kaufdatum für einen Monat (z.b. am 10.6. gekauft gilt bis 10.7.).
 
 **Spender (virtueller Döner)**: 5€, wir freuen uns über jede Spende und werden dir einen Shoutout auf dem Stream geben.
 
