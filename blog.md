@@ -1,6 +1,4 @@
-## Blog & Events
-
-Hier ein paar vergangene Events.
+## Blog
 
 <ul>
   {% for post in site.posts %}
