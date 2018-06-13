@@ -18,7 +18,7 @@ Die Tickets gelten auch nur, wenn die Location offen hat. Informiert euch vorher
 **Goon (Wochenende)**: 15€, gilt für das Wochenende.
 Maximal Freitag 18:00 - Sonntag 18:00.
 
-**Supergoon (Dauergast)**: 25€, gilt ab Kaufdatum für einen Monat (z.b. am 10.6. gekauft gilt bis 10.7.).
+**Supergoon (Dauergast)**: 25€, gilt für den Monat in dem ihr es gekauft habt.
 
 **Spender (virtueller Döner)**: 5€, wir freuen uns über jede Spende und werden dir einen Shoutout auf dem Stream geben.
 
