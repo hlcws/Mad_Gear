@@ -36,10 +36,9 @@ Samstags 13:00 - Sonntag 18:00
 
 | Datum | Motto |
 | --- | --- |
-| 2.6.2018 - 3.6.2018 	| BBTag Release	Session|
-| 16.6.2018 - 17.6.2018 | Everything goes |
+| 30.6.2018 	| Session (1 Tag) |
 
-Bitte den [Kalender](https://calendar.google.com/calendar/embed?src=kqg40hjscfpnkm780rhd7abr5s%40group.calendar.google.com&ctz=Europe%2FBerlin) beachten. Die Location ist sporadisch für andere Sachen gesperrt!
+Bitte den [Kalender](https://calendar.google.com/calendar/embed?src=kqg40hjscfpnkm780rhd7abr5s%40group.calendar.google.com&ctz=Europe%2FBerlin) für genauere Zeiten beachten.
 
 [Regeln & Etikette](./regeln.md)
 
