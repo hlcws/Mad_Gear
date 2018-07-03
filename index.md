@@ -37,9 +37,11 @@ Samstags 13:00 - Sonntag 18:00
 | Datum | Motto |
 | --- | --- |
 | 14.7.2018 | Tekken & DBFZ |
-|  3-5.8.2018 | Evo Viewing Party | 
+| 3-5.8.2018 | Evo Viewing Party | 
 
 Bitte den [Kalender](https://calendar.google.com/calendar/embed?src=kqg40hjscfpnkm780rhd7abr5s%40group.calendar.google.com&ctz=Europe%2FBerlin) für genauere Zeiten beachten.
+
+Fragen zum Event am Besten im [Forum ](https://forum.hardedge.org/index.php?board/380-frankfurt/) oder [Discord](https://tinyurl.com/madgearffm) stellen!
 
 [Regeln & Etikette](./regeln.md)
 
