@@ -1,5 +1,7 @@
 # Tickets
 
+**Euer erster Besuch ist umsonst!**
+
 Das Ticket ist ab Kauf für den angegebenen Zeitraum gültig. Ihr willigt ein, die Regeln und die Hausordnung einzuhalten.
 Vor Ort zeigt ihr einem Stamm-Member die Paypal Nachricht als Nachweis vor (auf Handy reicht) und bekommt ein Bändchen. Barzahlung ist nicht möglich. Das Ticket berechtigt euch zum Eintritt und zur Nutzung der Stations und der Stream-Station in Absprache mit Stammgästen vor Ort.
 
