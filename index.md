@@ -56,6 +56,8 @@ Fragen zum Event am Besten im [Forum ](https://forum.hardedge.org/index.php?boar
 
 [Tickets](./tickets.md)
 
+Euer erster Besuch ist umsonst!
+
 ## Kontakt herstellen
 
 - [Discord](https://tinyurl.com/madgearffm)
