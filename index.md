@@ -17,7 +17,14 @@ Mörfelden-Walldorf
 [Anfahrt](./anfahrt.md)
 
 ## Equipment
-Vor Ort gibt es 9 Screens und einige Konsolen. Bringt auf jeden Fall euren einen eigenen Controller mit! Falls ihr eine Playstation 4 oder andere Konsole mitbringt, könnt ihr die an einen freien Screen stecken. Wer was mitbringt wird im [Forum](https://forum.hardedge.org/index.php?board/380-madgear-ffm/) abgesprochen.
+- 9 Screens mit HDMI
+- PS2, PS3 und PS4 mit verschiedenen Fighting Games
+- Kopfhörer auf Anfrage
+- Diverse Arcade Sticks
+- Klimaanlage
+- Küche mit Backofen, Mikrowelle und Kühlschrank
+
+Bringt auf jeden Fall euren einen eigenen Controller mit! Falls ihr eine Playstation 4 oder andere Konsole mitbringt, könnt ihr die an einen freien Screen stecken. Wer was mitbringt wird im [Forum](https://forum.hardedge.org/index.php?board/380-madgear-ffm/) abgesprochen.
 
 ## Games
 
@@ -36,7 +43,7 @@ Samstags 13:00 - Sonntag 18:00
 
 | Datum | Motto |
 | --- | --- |
-| 3-5.8.2018 | Evo Viewing Party (Freitag bis Montag morgens) | 
+| 18.8.2018 | Zocken! | 
 
 Bitte den [Kalender](https://calendar.google.com/calendar/embed?src=kqg40hjscfpnkm780rhd7abr5s%40group.calendar.google.com&ctz=Europe%2FBerlin) für genauere Zeiten beachten.
 
@@ -55,7 +62,7 @@ Fragen zum Event am Besten im [Forum ](https://forum.hardedge.org/index.php?boar
 
 [Tickets](./tickets.md)
 
-**Euer erster Besuch ist umsonst!**
+**Euer erster Besuch ist umsonst für das ganze Event!**
 
 ## Kontakt herstellen
 
