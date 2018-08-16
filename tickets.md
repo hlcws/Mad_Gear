@@ -32,7 +32,21 @@ Maximal Freitag 18:00 - Sonntag 18:00.
 
 <p id="text" style="display:none">
  
-<a href="https://paypal.me/madgearfgc/">Zur Bezahlung auf PayPal</a>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="WCHKEZZZB2BJL">
+<table>
+<tr><td><input type="hidden" name="on0" value="Dauer">Dauer</td></tr><tr><td><select name="os0">
+	<option value="Tourist">Tourist €10,00 EUR</option>
+	<option value="Goon">Goon €15,00 EUR</option>
+	<option value="Supergoon">Supergoon €25,00 EUR</option>
+	<option value="Spender">Spender €5,00 EUR</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="EUR">
+<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+</form>
 
 Alternativ direkt an: MadGearFFM@gmail.com
 
