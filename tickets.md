@@ -30,8 +30,6 @@ Maximal Freitag 18:00 - Sonntag 18:00.
 
 <input type="checkbox" id="gelesen" onclick="gelesen()"> Ich akzeptiere die o.g. Bestimmungen und [Regeln](./regeln.md).
 
-
- 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="text" style="display:none">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="WCHKEZZZB2BJL">
@@ -50,4 +48,4 @@ Maximal Freitag 18:00 - Sonntag 18:00.
 <br>
 Alternativ direkt an: MadGearFFM@gmail.com<br>
 
-Betreff: Nickname + Datum<br>
+Betreff: Nickname + Datum
