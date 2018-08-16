@@ -45,9 +45,7 @@ Maximal Freitag 18:00 - Sonntag 18:00.
 <input type="hidden" name="currency_code" value="EUR">
 <input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
 <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
-</form>
-
-<p id="text" style="display:none">
+<br>
 Alternativ direkt an: MadGearFFM@gmail.com<br>
-
-Betreff: Nickname + Datum</p>
+Betreff: Nickname + Datum
+</form>
