@@ -40,11 +40,13 @@ Maximal Freitag 18:00 - Sonntag 18:00.
 	<option value="Supergoon">Supergoon €25,00 EUR</option>
 	<option value="Spender">Spender €5,00 EUR</option>
 </select> </td></tr>
+<tr><td><input type="hidden" name="on1" value="Nickname">Nickname</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
 </table>
 <input type="hidden" name="currency_code" value="EUR">
 <input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
 <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 </form>
+
 
 <p id="text" style="display:none">
 Alternativ direkt an: MadGearFFM@gmail.com<br>
