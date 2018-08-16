@@ -32,6 +32,9 @@ Maximal Freitag 18:00 - Sonntag 18:00.
 
 <p id="text" style="display:none">
  
-<a href="https://paypal.me/madgearffm/">Zur Bezahlung auf PayPal</a>
+<a href="https://paypal.me/madgearfgc/">Zur Bezahlung auf PayPal</a>
 
+Alternativ direkt an: MadGearFFM@gmail.com
+
+Betreff: Nickname + Datum
 </p>
