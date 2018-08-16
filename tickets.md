@@ -35,9 +35,9 @@ Maximal Freitag 18:00 - Sonntag 18:00.
 <input type="hidden" name="hosted_button_id" value="WCHKEZZZB2BJL">
 <table>
 <tr><td><input type="hidden" name="on0" value="Dauer">Dauer</td></tr><tr><td><select name="os0">
-	<option value="Tourist">Tourist €10,00 EUR</option>
-	<option value="Goon">Goon €15,00 EUR</option>
-	<option value="Supergoon">Supergoon €25,00 EUR</option>
+	<option value="Tourist (1 Tag)">Tourist (1 Tag) €10,00 EUR</option>
+	<option value="Goon (Wochenende)">Goon (Wochenende) €15,00 EUR</option>
+	<option value="Supergoon (Monat)">Supergoon (Monat) €25,00 EUR</option>
 	<option value="Spender">Spender €5,00 EUR</option>
 </select> </td></tr>
 <tr><td><input type="hidden" name="on1" value="Nickname">Nickname</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
@@ -46,6 +46,7 @@ Maximal Freitag 18:00 - Sonntag 18:00.
 <input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
 <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 </form>
+
 
 
 <p id="text" style="display:none">
