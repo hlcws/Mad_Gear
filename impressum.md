@@ -1,10 +1,14 @@
 # Impressum
 Khanh David To Tuan
-Mad Gear
+
+Mad Gear Gaming
+
 Dreieichstrasse 8
+
 64546 Mörfelden-Walldorf
 
 Telefon: 06103/3721741
+
 E-Mail: kontakt@madgear.club
 
 ## Disclaimer – rechtliche Hinweise
@@ -29,8 +33,11 @@ Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der V
 ### Verantwortlicher
 
 Khanh David To Tuan  
-Mad Gear  
+
+Mad Gear Gaming
+
 Dreieichstrasse 8  
+
 64546 Mörfelden-Walldorf  
   
 Telefon: 06103/3721741  
