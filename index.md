@@ -45,9 +45,9 @@ Und viele mehr!
 
 Samstags 13:00 - Mitternacht
 
-Bitte den [Kalender](https://calendar.google.com/calendar/embed?src=kqg40hjscfpnkm780rhd7abr5s%40group.calendar.google.com&ctz=Europe%2FBerlin) für genauere Zeiten beachten.
+Bitte den [Kalender](https://kalender.madgear.club) für genauere Zeiten beachten.
 
-Das nächste Event wird immer im [Forum ](https://forum.hardedge.org/index.php?board/380-frankfurt/) oder [Discord](https://tinyurl.com/madgearffm) angekündigt!
+Das nächste Event wird immer im [Forum ](https://forum.hardedge.org/index.php?board/380-frankfurt/) oder [Discord](https://discord.madgear.club) angekündigt!
 
 [Regeln & Etikette](./regeln.md)
 
@@ -66,7 +66,7 @@ Das nächste Event wird immer im [Forum ](https://forum.hardedge.org/index.php?b
 
 ## Kontakt herstellen
 
-- [Discord](https://tinyurl.com/madgearffm)
+- [Discord](https://discord.madgear.club)
 - [Forum](https://forum.hardedge.org/index.php?board/380-frankfurt/)
 - [Twitch](https://twitch.tv/madgearffm)
 - [Twitter](http://twitter.com/madgearffm)
