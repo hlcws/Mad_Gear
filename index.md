@@ -7,6 +7,8 @@ MadGearFFM bietet eine Location für Fighting Game Enthusiasten und Wettkämpfer
 
 [Fotos vom 2/3. Juni 2018: BBTAG Release Session](https://www.hardedge.org/2018/06/03/madgearffm-blazblue-cross-tag-battle-release-session/)
 
+**Nächster Termin: 10. November 2018 ab 13 Uhr**
+
 ## Adresse
 Dreieichstrasse 8
 
