@@ -37,6 +37,7 @@ Diese Spielserien werden hauptsächlich gespielt:
 - King of Fighters
 - Street Fighter
 - Tekken
+- Soul Calibur
 
 Und viele mehr!
 
