@@ -9,7 +9,7 @@ Wenn ihr kein Paypal habt, könnt ihr vor Ort jemanden bitten euch das Ticket zu
 
 Mit dem Kauf erhalte ich eure Paypal E-Mail Adresse, Namen und den Betreff den ihr angebt. Die E-Mail Adresse wird nach einem Jahr anonymisiert. Gebt als Betreff bitte die jeweilige Ticketart und den Zeitpunkt an (z.b. "kommendes Wochenende").
 
-Vor Ort werden Foto und Video-Aufnahmen gemacht, live auf Twitch übertragen sowie auf Social Media und Foren (HardEdge) geteilt um Werbung für die Location zu machen.
+Vor Ort werden Foto und Video-Aufnahmen gemacht, live auf Twitch übertragen sowie auf Social Media und Foren (HardEdge.org) geteilt um Werbung für die Location zu machen.
 
 <hr>
 
@@ -28,7 +28,7 @@ Maximal Freitag 18:00 - Sonntag 18:00.
 
 <hr>
 
-<input type="checkbox" id="gelesen" onclick="gelesen()"> Ich akzeptiere die o.g. Bestimmungen und [Regeln](./regeln.md).
+<input type="checkbox" id="gelesen" onclick="gelesen()"> Ich akzeptiere die o.g. Bestimmungen, [AGB](./agb.md) und [Regeln](./regeln.md).
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="text" style="display:none">
 <input type="hidden" name="cmd" value="_s-xclick">
