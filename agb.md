@@ -83,8 +83,16 @@ Ende der Widerrufsbelehrung**
 
 ## Haftungsausschluss
 
+Schadensersatzansprüche des Kunden sind ausgeschlossen, soweit sich aus den nachfolgenden Gründen nicht etwas anderes ergibt. Dies gilt auch für den Vertreter und Erfüllungsgehilfen des Anbieters, falls der Kunde gegen diese Ansprüche auf Schadensersatz erhebt. Ausgenommen sind Schadensersatzansprüche des Kunden wegen Verletzung des Lebens, des Körpers, der Gesundheit oder wesentlicher Vertragspflichten, welche zur Erreichung des Vertragszieles notwendigerweise erfüllt werden müssen. Ebenso gilt dies nicht für Schadensersatzansprüche nach grob fahrlässiger oder vorsätzlicher Pflichtverletzung des Anbieters oder seines gesetzlichen Vertreters oder Erfüllungsgehilfen.
+
 ## Abtretungs- und Verpfändungsverbot
+
+Ansprüche oder Rechte des Kunden gegen den Anbieter dürfen ohne dessen Zustimmung nicht abgetreten oder verpfändet werden, es sei denn der Kunde hat ein berechtigtes Interesse an der Abtretung oder Verpfändung nachgewiesen.
 
 ## Sprache, Gerichtsstand und anzuwendendes Recht
 
+Der Vertrag wird in Deutsch abgefasst. Die weitere Durchführung der Vertragsbeziehung erfolgt in Deutsch. Es findet ausschließlich das Recht der Bundesrepublik Deutschland Anwendung. Für Verbraucher gilt dies nur insoweit, als dadurch keine gesetzlichen Bestimmungen des Staates eingeschränkt werden, in dem der Kunde seinen Wohnsitz oder gewöhnlichen Aufenthalt hat. Gerichtsstand ist bei Streitigkeiten mit Kunden, die kein Verbraucher, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen sind, Sitz des Anbieters.
+
 ## Salvatorische Klausel
+
+Die Unwirksamkeit einer Bestimmung dieser AGB hat keine Auswirkungen auf die Wirksamkeit der sonstigen Bestimmungen.
