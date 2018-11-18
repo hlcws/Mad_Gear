@@ -71,7 +71,3 @@ Das nächste Event wird immer im [Forum ](https://forum.hardedge.org/index.php?b
 - [Twitch](https://twitch.tv/madgearffm)
 - [Twitter](http://twitter.com/madgearffm)
 - [E-Mail](mailto:kontakt@madgear.club)
-
-## Sonstiges
-
-[Impressum & Datenschutzerklärung](./impressum.md)
