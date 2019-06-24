@@ -4,7 +4,7 @@
 | | ![Pic](/photos/default.jpg) | 
 | Rang |Gangleader| 
 | Name | David | 
-| Games | Marvel vs Capcom 3, Street Fighter, Mortal Kombat 11, King of Fighters |
+| Games | UMVC3, Street Fighter, Mortal Kombat 11, King of Fighters, UNIEL |
 | Social Media | [Twitter @hlcws](https://twitter.com/hlcws), [SRK](http://rank.shoryuken.com/rankings/player/byname/HealingCare) |
 
 | Nummer | #2 |
@@ -40,7 +40,7 @@
 | | ![Pic](/photos/default.jpg) | 
 | Rang |Ringleader| 
 | Name | Cem | 
-| Games | King of Fighters, DragonBall FighterZ | 
+| Games | King of Fighters, DragonBall FighterZ, UNIEL | 
 | Social Media | [Twitter @Ken_Deep](Ken_Deep), [SRK](http://rank.shoryuken.com/rankings/player/byname/KenDeep) |
 
 | Nummer | #6 |
@@ -58,8 +58,8 @@
 | | ![Pic](/photos/default.jpg) | 
 | Rang |Ringleader| 
 | Name | Simon | 
-| Games | Ultimate Marvel vs Capcom 3, BlazBlue | 
-| Social Media | [Twitter @Reaper]() |
+| Games | UMVC3, BlazBlue, Persona | 
+| Social Media | [SRK](http://rank.shoryuken.com/rankings/player/byname/ReaperSK) |
 
 | Nummer | #8 |
 |---|---| 
