@@ -1,10 +1,11 @@
 | Nummer | #1 |
 |---|---| 
-| Nick |HealingCare | 
+| Nick |HealingCare (hlcws)| 
 | | ![Pic](/photos/default.jpg) | 
 | Rang |Gangleader| 
 | Name | David | 
-| Games | Ultimate Marvel vs Capcom 3, Street Fighter IV, Mortal Kombat 11 |
+| Games | Marvel vs Capcom 3, Street Fighter, Mortal Kombat 11, King of Fighters |
+| Social Media | [Twitter @hlcws](https://twitter.com/hlcws), [SRK](http://rank.shoryuken.com/rankings/player/byname/HealingCare) |
 
 | Nummer | #2 |
 |---|---| 
@@ -13,6 +14,7 @@
 | Rang |Ringleader| 
 | Name | Dave| 
 | Games | King of Fighters, Guilty Gear, Fate UC | 
+| Social Media | [Twitter @atg213](https://twitter.com/atg213), [SRK](http://rank.shoryuken.com/rankings/player/byname/ATG) |
 
 | Nummer | #3 |
 |---|---| 
@@ -21,6 +23,7 @@
 | Rang |Ringleader| 
 | Name | Julian| 
 | Games | Guilty Gear, BlazBlue | 
+| Social Media | [Twitter @kurryeis](https://twitter.com/kurryeis), [SRK](http://rank.shoryuken.com/rankings/player/byname/Kurryeis) |
 
 | Nummer | #4 |
 |---|---| 
@@ -29,6 +32,7 @@
 | Rang |Ringleader| 
 | Name | Jan | 
 | Games | King of Fighters, Groove on Fight, etc. | 
+| Social Media | [Twitter @NFBSinJul](https://twitter.com/NFBSinJul) |
 
 | Nummer | #5 |
 |---|---| 
@@ -37,6 +41,7 @@
 | Rang |Ringleader| 
 | Name | Cem | 
 | Games | King of Fighters, DragonBall FighterZ | 
+| Social Media | [Twitter @Ken_Deep](Ken_Deep), [SRK](http://rank.shoryuken.com/rankings/player/byname/KenDeep) |
 
 | Nummer | #6 |
 |---|---| 
@@ -45,6 +50,7 @@
 | Rang |Ringleader| 
 | Name | Pascal| 
 | Games | Street Fighter IV & V, Mortal Kombat 11 | 
+| Social Media | [Twitter @CatHePit](https://twitter.com/CatHePit) |
 
 | Nummer | #7 |
 |---|---| 
@@ -53,6 +59,7 @@
 | Rang |Ringleader| 
 | Name | Simon | 
 | Games | Ultimate Marvel vs Capcom 3, BlazBlue | 
+| Social Media | [Twitter @Reaper]() |
 
 | Nummer | #8 |
 |---|---| 
@@ -61,3 +68,4 @@
 | Rang |Ringleader| 
 | Name | Martin| 
 | Games | Tekken 7, King of Fighters | 
+| Social Media | [Twitter @maddo88888](https://twitter.com/maddo88888) |
