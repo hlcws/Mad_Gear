@@ -1,63 +1,63 @@
 |	|#1|
 |---|---| 
-| Nick |HealingCare                                                       | 
+| Nick |HealingCare | 
 | | ![Pic](/photos/default.jpg) | 
-| Rang |Gangleader                                                        | 
-| Name | David                                                             | 
-| Games | Ultimate Marvel vs Capcom 3                                      | 
+| Rang |Gangleader| 
+| Name | David | 
+| Games | Ultimate Marvel vs Capcom 3, Street Fighter IV, Mortal Kombat 11 |
 
 |	|#2|
 |---|---| 
-| Nick |AtTheGates (ATG)                                                  | 
+| Nick |AtTheGates (ATG)| 
 | | ![Pic](/photos/default.jpg) | 
-| Rang |Ringleader                                                        | 
-| Name | Dave                                                              | 
-| Games | King of Fighters XI                                              | 
+| Rang |Ringleader| 
+| Name | Dave| 
+| Games | King of Fighters, Guilty Gear, Fate UC | 
 
-|	|#3|
+|	|	|
 |---|---| 
-| Nick |Kurryeis                                                          | 
+| Nick |Kurryeis| 
 | | ![Pic](/photos/default.jpg) | 
-| Rang |Ringleader                                                        | 
-| Name | Julian                                                            | 
-| Games | Guilty Gear Xrd                                                  | 
+| Rang |Ringleader| 
+| Name | Julian| 
+| Games | Guilty Gear, BlazBlue | 
 
-|	|#4|
+|	|	|
 |---|---| 
-| Nick |SinJul                                                            | 
+| Nick |SinJul| 
 | | ![Pic](/photos/default.jpg) | 
-| Rang |Ringleader                                                        | 
-| Name | Jan                                                               | 
-| Games | King of Fighters                                                 | 
+| Rang |Ringleader| 
+| Name | Jan | 
+| Games | King of Fighters, Groove on Fight, etc. | 
 
-|	|#5|
+|	|	|
 |---|---| 
-| Nick |KenDeep                                                           | 
+| Nick |KenDeep | 
 | | ![Pic](/photos/default.jpg) | 
-| Rang |Ringleader                                                        | 
-| Name | Cem                                                               | 
-| Games | King of Fighters                                                 | 
+| Rang |Ringleader| 
+| Name | Cem | 
+| Games | King of Fighters, DragonBall FighterZ | 
 
-|	|#6|
+|	|	|
 |---|---| 
-| Nick |Pit                                                               | 
+| Nick |Pit | 
 | | ![Pic](/photos/default.jpg) | 
-| Rang |Ringleader                                                        | 
-| Name | Pascal                                                            | 
-| Games | Street Fighter IV / V                                            | 
+| Rang |Ringleader| 
+| Name | Pascal| 
+| Games | Street Fighter IV & V, Mortal Kombat 11 | 
 
-|	|#7|
+|	|	|
 |---|---| 
-| Nick |ReaperSK                                                          | 
+| Nick |ReaperSK| 
 | | ![Pic](/photos/default.jpg) | 
-| Rang |Ringleader                                                        | 
-| Name | Simon                                                             | 
-| Games | Ultimate Marvel vs Capcom 3                                      | 
+| Rang |Ringleader| 
+| Name | Simon | 
+| Games | Ultimate Marvel vs Capcom 3, BlazBlue | 
 
-|	|#8|
+|	|	|
 |---|---| 
-| Nick |Maddo                                                             | 
+| Nick |Maddo | 
 | | ![Pic](/photos/default.jpg) | 
-| Rang |Ringleader                                                        | 
-| Name | Martin                                                            | 
-| Games | Tekken 7                                                         | 
+| Rang |Ringleader| 
+| Name | Martin| 
+| Games | Tekken 7, King of Fighters | 
