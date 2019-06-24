@@ -1,7 +1,7 @@
 |                                                                         | 
 |-------------------------------------------------------------------------| 
 | Nick: HealingCare                                                       | 
-| ![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100) | 
+| ![Pic](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100) | 
 | Rang: Gangleader                                                        | 
 | Name: David                                                             | 
 | Games: Ultimate Marvel vs Capcom 3                                      | 
