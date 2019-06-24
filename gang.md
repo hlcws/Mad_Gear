@@ -1,7 +1,7 @@
 |                                                                         | 
 |-------------------------------------------------------------------------| 
 | Nick: HealingCare                                                       | 
-| ![Pic](/photos/location1.jpg | width=100) | 
+| ![Pic](/photos/location1.jpg) | 
 | Rang: Gangleader                                                        | 
 | Name: David                                                             | 
 | Games: Ultimate Marvel vs Capcom 3                                      | 
