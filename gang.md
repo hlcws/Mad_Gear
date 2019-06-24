@@ -1,10 +1,10 @@
 # Die Gang
 
-Es gibt 8 Stamm-Mitglieder sind langjährige Mitglieder der deutschen FGC und feste Größen auf Turnieren. Ihr könnt bei Fragen gerne jeden ansprechen oder anschreiben. Die Angabe der Games dient nur zur Orientierung, aktuelle Games werden von den meisten gespielt.
+Die 8 Stamm-Member sind langjährige Mitglieder der deutschen FGC und feste Größen auf Turnieren. Ihr könnt bei Fragen gerne jeden ansprechen oder anschreiben. Die Angabe der Games dient nur zur Orientierung, aktuelle Games werden von den Meisten gespielt. Ihr erkennt sie im [Discord](http://discord.madgear.club) an der Ringleader Rolle. Bei jedem Termin ist mindestens ein Ringleader anwesend.
 
 | Nummer | #1 |
 |---|---| 
-| Nick |HealingCare (hlcws)| 
+| Nick | HealingCare (hlcws) | 
 | | ![Pic](/photos/hlcws.jpg) | 
 | Rang |Gangleader| 
 | Name | David | 
@@ -13,7 +13,7 @@ Es gibt 8 Stamm-Mitglieder sind langjährige Mitglieder der deutschen FGC und fe
 
 | Nummer | #2 |
 |---|---| 
-| Nick |AtTheGates (ATG)| 
+| Nick | AtTheGates (ATG) | 
 | | ![Pic](/photos/atg.jpg) | 
 | Rang |Ringleader| 
 | Name | Dave| 
@@ -22,7 +22,7 @@ Es gibt 8 Stamm-Mitglieder sind langjährige Mitglieder der deutschen FGC und fe
 
 | Nummer | #3 |
 |---|---| 
-| Nick |Kurryeis| 
+| Nick | Kurryeis | 
 | | ![Pic](/photos/kurryeis.jpg) | 
 | Rang |Ringleader| 
 | Name | Julian| 
@@ -31,7 +31,7 @@ Es gibt 8 Stamm-Mitglieder sind langjährige Mitglieder der deutschen FGC und fe
 
 | Nummer | #4 |
 |---|---| 
-| Nick |SinJul| 
+| Nick | SinJul | 
 | | ![Pic](/photos/sinjul.jpg) | 
 | Rang |Ringleader| 
 | Name | Jan | 
@@ -40,7 +40,7 @@ Es gibt 8 Stamm-Mitglieder sind langjährige Mitglieder der deutschen FGC und fe
 
 | Nummer | #5 |
 |---|---| 
-| Nick |KenDeep | 
+| Nick | KenDeep | 
 | | ![Pic](/photos/kendeep.jpg) | 
 | Rang |Ringleader| 
 | Name | Cem | 
@@ -49,7 +49,7 @@ Es gibt 8 Stamm-Mitglieder sind langjährige Mitglieder der deutschen FGC und fe
 
 | Nummer | #6 |
 |---|---| 
-| Nick |Pit | 
+| Nick | Pit | 
 | | ![Pic](/photos/pit.jpg) | 
 | Rang |Ringleader| 
 | Name | Pascal| 
@@ -58,7 +58,7 @@ Es gibt 8 Stamm-Mitglieder sind langjährige Mitglieder der deutschen FGC und fe
 
 | Nummer | #7 |
 |---|---| 
-| Nick |ReaperSK| 
+| Nick | ReaperSK| 
 | | ![Pic](/photos/reaper.jpg) | 
 | Rang |Ringleader| 
 | Name | Simon | 
@@ -67,7 +67,7 @@ Es gibt 8 Stamm-Mitglieder sind langjährige Mitglieder der deutschen FGC und fe
 
 | Nummer | #8 |
 |---|---| 
-| Nick |Maddo | 
+| Nick | Maddo | 
 | | ![Pic](/photos/maddo.jpg) | 
 | Rang |Ringleader| 
 | Name | Martin| 
