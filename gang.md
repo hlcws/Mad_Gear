@@ -1,7 +1,7 @@
 |	|#1|
 |---|---| 
 | Nick |HealingCare                                                       | 
-| | ![Pic](/photos/location1.jpg) | 
+| | ![Pic](/photos/default.jpg) | 
 | Rang |Gangleader                                                        | 
 | Name | David                                                             | 
 | Games | Ultimate Marvel vs Capcom 3                                      | 
