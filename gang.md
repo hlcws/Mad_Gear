@@ -1,3 +1,7 @@
+# Die Gang
+
+Es gibt 8 Stamm-Mitglieder sind langjährige Mitglieder der deutschen FGC und feste Größen auf Turnieren. Ihr könnt bei Fragen gerne jeden ansprechen oder anschreiben. Die Angabe der Games dient nur zur Orientierung, aktuelle Games werden von den meisten gespielt.
+
 | Nummer | #1 |
 |---|---| 
 | Nick |HealingCare (hlcws)| 
