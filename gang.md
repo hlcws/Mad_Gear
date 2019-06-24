@@ -1,7 +1,7 @@
 | Nummer | #1 |
 |---|---| 
 | Nick |HealingCare (hlcws)| 
-| | ![Pic](/photos/default.jpg) | 
+| | ![Pic](/photos/hlcws.jpg) | 
 | Rang |Gangleader| 
 | Name | David | 
 | Games | UMVC3, Street Fighter, Mortal Kombat 11, King of Fighters, UNIEL |
@@ -10,7 +10,7 @@
 | Nummer | #2 |
 |---|---| 
 | Nick |AtTheGates (ATG)| 
-| | ![Pic](/photos/default.jpg) | 
+| | ![Pic](/photos/atg.jpg) | 
 | Rang |Ringleader| 
 | Name | Dave| 
 | Games | King of Fighters, Guilty Gear, Fate UC | 
@@ -19,7 +19,7 @@
 | Nummer | #3 |
 |---|---| 
 | Nick |Kurryeis| 
-| | ![Pic](/photos/default.jpg) | 
+| | ![Pic](/photos/kurryeis.jpg) | 
 | Rang |Ringleader| 
 | Name | Julian| 
 | Games | Guilty Gear, BlazBlue | 
@@ -28,7 +28,7 @@
 | Nummer | #4 |
 |---|---| 
 | Nick |SinJul| 
-| | ![Pic](/photos/default.jpg) | 
+| | ![Pic](/photos/sinjul.jpg) | 
 | Rang |Ringleader| 
 | Name | Jan | 
 | Games | King of Fighters, Groove on Fight, etc. | 
@@ -37,7 +37,7 @@
 | Nummer | #5 |
 |---|---| 
 | Nick |KenDeep | 
-| | ![Pic](/photos/default.jpg) | 
+| | ![Pic](/photos/kendeep.jpg) | 
 | Rang |Ringleader| 
 | Name | Cem | 
 | Games | King of Fighters, DragonBall FighterZ, UNIEL | 
@@ -46,7 +46,7 @@
 | Nummer | #6 |
 |---|---| 
 | Nick |Pit | 
-| | ![Pic](/photos/default.jpg) | 
+| | ![Pic](/photos/pit.jpg) | 
 | Rang |Ringleader| 
 | Name | Pascal| 
 | Games | Street Fighter IV & V, Mortal Kombat 11 | 
@@ -55,7 +55,7 @@
 | Nummer | #7 |
 |---|---| 
 | Nick |ReaperSK| 
-| | ![Pic](/photos/default.jpg) | 
+| | ![Pic](/photos/reaper.jpg) | 
 | Rang |Ringleader| 
 | Name | Simon | 
 | Games | UMVC3, BlazBlue, Persona | 
@@ -64,7 +64,7 @@
 | Nummer | #8 |
 |---|---| 
 | Nick |Maddo | 
-| | ![Pic](/photos/default.jpg) | 
+| | ![Pic](/photos/maddo.jpg) | 
 | Rang |Ringleader| 
 | Name | Martin| 
 | Games | Tekken 7, King of Fighters | 
