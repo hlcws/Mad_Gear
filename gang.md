@@ -1,9 +1,19 @@
 # Die Gang
 
-Nick: HealingCare
-Rang: Gangleader
-Name: David
-Games: Ultimate Marvel vs Capcom 3, Street Fighter IV, Mortal Kombat 11
+
++--+
+| Nick: HealingCare  |
++--+
+| Rang: Gangleader |
++--+
+| Name: David |
++--+
+| Games: Ultimate Marvel vs Capcom 3, Street Fighter IV, Mortal Kombat 11 |
++--+
+
+
+
+
 
 Nick: AtTheGates (ATG)
 Rang: Ringleader
