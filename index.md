@@ -7,6 +7,14 @@ MadGearFFM bietet eine Location für Fighting Game Enthusiasten und Wettkämpfer
 
 [Fotos vom 2/3. Juni 2018: BBTAG Release Session](https://www.hardedge.org/2018/06/03/madgearffm-blazblue-cross-tag-battle-release-session/)
 
+Aktuelle Informationen (17. Juli 2020):
+Wir haben weiterhin offen, die Anzahl der Teilnehmer ist jedoch auf 10 begrenzt um den Mindestabstand wahren zu können.
+Daher unbedingt vorher im Discord Bescheid geben, falls ihr kommen möchtet!
+
+Bitte tragt einen Mundschutz sobald ihr den Abstand nicht einhalten könnt (z.B. wenn ihr Aufsteht). Die Sitzgelegenheiten sind mit Klebeband markiert um 1.5m Abstand zu gewährleisten.
+
+Ferner müsst ihr eure [Kontaktdaten](kontakt.madgear.club/) hinterlassen. Diese werden nach einem Monat gelöscht und nur an Behörden auf Anfrage weitergegeben.
+
 **Nächster Termin: [Kalender](https://kalender.madgear.club)**
 
 ## Adresse
@@ -34,6 +42,7 @@ Bringt auf jeden Fall euren einen eigenen Controller mit! Falls ihr eine Playsta
 
 Diese Spielserien werden hauptsächlich gespielt:
 - Guilty Gear
+- Granblue Fantasy Versus
 - BlazBlue
 - DragonBall FighterZ
 - King of Fighters
@@ -46,7 +55,7 @@ Und viele mehr!
 
 ## Events/Zeiten
 
-Samstags 13:00 - Mitternacht
+Samstags 14:00 - Mitternacht
 
 Bitte den [Kalender](https://kalender.madgear.club) für genauere Zeiten beachten.
 
