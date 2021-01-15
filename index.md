@@ -7,6 +7,9 @@ MadGearFFM bietet eine Location für Fighting Game Enthusiasten und Wettkämpfer
 
 [Fotos vom 2/3. Juni 2018: BBTAG Release Session](https://www.hardedge.org/2018/06/03/madgearffm-blazblue-cross-tag-battle-release-session/)
 
+Aktuelle Informationen (15. Januar 2021):
+Aufgrund der aktuellen Lage haben wir leider weiterhin geschlossen.
+
 Aktuelle Informationen (17. Juli 2020):
 Wir haben weiterhin offen, die Anzahl der Teilnehmer ist jedoch auf 10 begrenzt um den Mindestabstand wahren zu können.
 Daher unbedingt vorher im Discord Bescheid geben, falls ihr kommen möchtet!
