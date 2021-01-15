@@ -9,6 +9,7 @@ MadGearFFM bietet eine Location für Fighting Game Enthusiasten und Wettkämpfer
 
 Aktuelle Informationen (15. Januar 2021):
 Aufgrund der aktuellen Lage haben wir leider weiterhin geschlossen.
+Wer möchte, kann das Projekt gerne per [Ko-Fi](https://ko-fi.com/madgearffm) oder direkt per [PayPal](https://paypal.me/madgearfgc) unterstützen.
 
 Aktuelle Informationen (17. Juli 2020):
 Wir haben weiterhin offen, die Anzahl der Teilnehmer ist jedoch auf 10 begrenzt um den Mindestabstand wahren zu können.
