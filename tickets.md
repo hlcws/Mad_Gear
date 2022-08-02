@@ -30,6 +30,28 @@ Maximal Freitag 18:00 - Sonntag 18:00.
 
 <input type="checkbox" id="gelesen" onclick="gelesen()"> Ich akzeptiere die o.g. Bestimmungen, [AGB](./agb.md) und [Regeln](./regeln.md).
 
+<div id="paypal-button-container-P-04C428923N755423BMLUOVNI"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AYgAZUl1zBsCbMSFFQShxUdl8pZc-31kqnd6O3vK4Xte8SUxty9JdRRs9diySzXW0AKXObdYTreh5-vs&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-04C428923N755423BMLUOVNI'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-04C428923N755423BMLUOVNI'); // Renders the PayPal button
+</script>
+
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="text" style="display:none">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="WCHKEZZZB2BJL">
