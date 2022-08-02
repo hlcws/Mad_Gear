@@ -30,6 +30,27 @@ Maximal Freitag 18:00 - Sonntag 18:00.
 
 <input type="checkbox" id="gelesen" onclick="gelesen()"> Ich akzeptiere die o.g. Bestimmungen, [AGB](./agb.md) und [Regeln](./regeln.md).
 
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="text" style="display:none">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="WCHKEZZZB2BJL">
+<table>
+<tr><td><input type="hidden" name="on0" value="Dauer">Dauer</td></tr><tr><td><select name="os0">
+	<option value="Tourist (1 Tag)">Tourist (1 Tag) €10,00 EUR</option>
+	<option value="Goon (Wochenende)">Goon (Wochenende) €15,00 EUR</option>
+	<option value="Supergoon (Monat)">Supergoon (Monat) €25,00 EUR</option>
+	<option value="Spender">Spender €5,00 EUR</option>
+</select> </td></tr>
+<tr><td><input type="hidden" name="on1" value="Nickname">Nickname</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
+</table>
+<input type="hidden" name="currency_code" value="EUR">
+<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+<br>
+Alternativ direkt an: MadGearFFM@gmail.com<br>
+Betreff: Nickname + Datum
+</form>
+
+Supergoon Abo via Paypal:
 <div id="paypal-button-container-P-04C428923N755423BMLUOVNI"></div>
 <script src="https://www.paypal.com/sdk/js?client-id=AYgAZUl1zBsCbMSFFQShxUdl8pZc-31kqnd6O3vK4Xte8SUxty9JdRRs9diySzXW0AKXObdYTreh5-vs&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
 <script>
@@ -51,23 +72,3 @@ Maximal Freitag 18:00 - Sonntag 18:00.
       }
   }).render('#paypal-button-container-P-04C428923N755423BMLUOVNI'); // Renders the PayPal button
 </script>
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="text" style="display:none">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="WCHKEZZZB2BJL">
-<table>
-<tr><td><input type="hidden" name="on0" value="Dauer">Dauer</td></tr><tr><td><select name="os0">
-	<option value="Tourist (1 Tag)">Tourist (1 Tag) €10,00 EUR</option>
-	<option value="Goon (Wochenende)">Goon (Wochenende) €15,00 EUR</option>
-	<option value="Supergoon (Monat)">Supergoon (Monat) €25,00 EUR</option>
-	<option value="Spender">Spender €5,00 EUR</option>
-</select> </td></tr>
-<tr><td><input type="hidden" name="on1" value="Nickname">Nickname</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
-</table>
-<input type="hidden" name="currency_code" value="EUR">
-<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
-<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
-<br>
-Alternativ direkt an: MadGearFFM@gmail.com<br>
-Betreff: Nickname + Datum
-</form>
