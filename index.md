@@ -7,17 +7,7 @@ MadGearFFM bietet eine Location für Fighting Game Enthusiasten und Wettkämpfer
 
 [Fotos vom 2/3. Juni 2018: BBTAG Release Session](https://www.hardedge.org/2018/06/03/madgearffm-blazblue-cross-tag-battle-release-session/)
 
-Aktuelle Informationen (15. Januar 2021):
-Aufgrund der aktuellen Lage haben wir leider weiterhin geschlossen.
-Wer möchte, kann das Projekt gerne per [Ko-Fi](https://ko-fi.com/madgearffm) oder direkt per [PayPal](https://paypal.me/madgearfgc) unterstützen.
-
-Aktuelle Informationen (17. Juli 2020):
-Wir haben weiterhin offen, die Anzahl der Teilnehmer ist jedoch auf 10 begrenzt um den Mindestabstand wahren zu können.
-Daher unbedingt vorher im Discord Bescheid geben, falls ihr kommen möchtet!
-
-Bitte tragt einen Mundschutz sobald ihr den Abstand nicht einhalten könnt (z.B. wenn ihr Aufsteht). Die Sitzgelegenheiten sind mit Klebeband markiert um 1.5m Abstand zu gewährleisten.
-
-Ferner müsst ihr eure [Kontaktdaten](kontakt.madgear.club/) hinterlassen. Diese werden nach einem Monat gelöscht und nur an Behörden auf Anfrage weitergegeben.
+Wer möchte, kann das Projekt gerne per [PayPal](https://paypal.me/madgearfgc) unterstützen.
 
 **Nächster Termin: [Kalender](https://kalender.madgear.club)**
 
@@ -33,14 +23,14 @@ Mörfelden-Walldorf
 Parken bitte nur an der Straße oder unmarkierten Parkplätzen.
 
 ## Equipment
-- 9 Screens mit HDMI
-- PS2, PS3 und PS4 mit verschiedenen Fighting Games
+- 12 Screens mit HDMI
+- PS2, PS3, PS4 und PCs mit verschiedenen Fighting Games
 - Kopfhörer auf Anfrage
 - Diverse Arcade Sticks
 - Klimaanlage
 - Küche mit Backofen, Mikrowelle und Kühlschrank
 
-Bringt auf jeden Fall euren einen eigenen Controller mit! Falls ihr eine Playstation 4 oder andere Konsole mitbringt, könnt ihr die an einen freien Screen stecken. Wer was mitbringt wird im [Forum](https://forum.hardedge.org/index.php?board/380-madgear-ffm/) abgesprochen.
+Bringt auf jeden Fall euren einen eigenen Controller mit! Falls ihr eine Playstation 4 oder andere Konsole mitbringt, könnt ihr die an einen freien Screen stecken. Wer was mitbringt wird im [Discord](https://discord.madgear.club) abgesprochen.
 
 ## Games
 
@@ -59,11 +49,11 @@ Und viele mehr!
 
 ## Events/Zeiten
 
-Samstags 14:00 - Mitternacht
+Alle zwei Samstage 14:00 - Mitternacht
 
 Bitte den [Kalender](https://kalender.madgear.club) für genauere Zeiten beachten.
 
-Das nächste Event wird immer im [Forum ](https://forum.hardedge.org/index.php?board/380-frankfurt/) oder [Discord](https://discord.madgear.club) angekündigt!
+Das nächste Event wird immer im [Discord](https://discord.madgear.club) angekündigt!
 
 [Regeln & Etikette](./regeln.md)
 
@@ -83,7 +73,7 @@ Das nächste Event wird immer im [Forum ](https://forum.hardedge.org/index.php?b
 ## Kontakt herstellen
 
 - [Discord](https://discord.madgear.club)
-- [Forum](https://forum.hardedge.org/index.php?board/380-frankfurt/)
 - [Twitch](https://twitch.tv/madgearffm)
 - [Twitter](http://twitter.com/madgearffm)
 - [E-Mail](mailto:kontakt@madgear.club)
+- [HardEdge - Allgemeine deutsche Community](https://hardedge.org/)
