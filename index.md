@@ -5,8 +5,6 @@ MadGearFFM bietet eine Location für Fighting Game Enthusiasten und Wettkämpfer
 ![Location](/photos/location1.jpg)
 ![Location](/photos/location2.jpg)
 
-[Fotos vom 2/3. Juni 2018: BBTAG Release Session](https://www.hardedge.org/2018/06/03/madgearffm-blazblue-cross-tag-battle-release-session/)
-
 Wer möchte, kann das Projekt gerne per [PayPal](https://paypal.me/madgearfgc) unterstützen.
 
 **Nächster Termin: [Kalender](https://kalender.madgear.club)**
@@ -21,6 +19,23 @@ Mörfelden-Walldorf
 [Anfahrt](./anfahrt.md)
 
 Parken bitte nur an der Straße oder unmarkierten Parkplätzen.
+
+    <!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed JavaScript file -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "madgearffm",
+        // Only needed if this page is going to be embedded on other websites
+        parent: ["embed.example.com", "othersite.example.com"]
+      });
+    </script>
 
 ## Equipment
 - 12 Screens mit HDMI
@@ -40,7 +55,7 @@ Diese Spielserien werden hauptsächlich gespielt:
 - BlazBlue
 - DragonBall FighterZ
 - King of Fighters
-- Street Fighter
+- Street Fighter VI
 - Tekken
 - Soul Calibur
 - Mortal Kombat
