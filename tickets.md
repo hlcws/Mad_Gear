@@ -72,26 +72,3 @@ Supergoon Abo via Paypal:
       }
   }).render('#paypal-button-container-P-04C428923N755423BMLUOVNI'); // Renders the PayPal button
 </script>
-
-Ringleader Abo via Paypal:
-<div id="paypal-button-container-P-21Y73155VA509045KMLV5JFI"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=AYgAZUl1zBsCbMSFFQShxUdl8pZc-31kqnd6O3vK4Xte8SUxty9JdRRs9diySzXW0AKXObdYTreh5-vs&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-<script>
-  paypal.Buttons({
-      style: {
-          shape: 'rect',
-          color: 'gold',
-          layout: 'vertical',
-          label: 'subscribe'
-      },
-      createSubscription: function(data, actions) {
-        return actions.subscription.create({
-          /* Creates the subscription */
-          plan_id: 'P-21Y73155VA509045KMLV5JFI'
-        });
-      },
-      onApprove: function(data, actions) {
-        alert(data.subscriptionID); // You can add optional success message for the subscriber here
-      }
-  }).render('#paypal-button-container-P-21Y73155VA509045KMLV5JFI'); // Renders the PayPal button
-</script>
