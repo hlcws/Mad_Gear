@@ -34,15 +34,11 @@ Bringt auf jeden Fall euren einen eigenen Controller mit! Falls ihr eine Playsta
 ## Games
 
 Diese Spielserien werden hauptsächlich gespielt:
+- Street Fighter
+- King of Fighters
+- Tekken
 - Guilty Gear
 - Granblue Fantasy Versus
-- BlazBlue
-- DragonBall FighterZ
-- King of Fighters
-- Street Fighter VI
-- Tekken
-- Soul Calibur
-- Mortal Kombat
 
 Und viele mehr!
 
@@ -50,9 +46,9 @@ Und viele mehr!
 
 Alle zwei Samstage 14:00 - Mitternacht
 
-Bitte den [Kalender](https://kalender.madgear.club) für genauere Zeiten beachten.
+Bitte den [Kalender](https://kalender.madgear.org) für genauere Zeiten beachten.
 
-Das nächste Event wird immer im [Discord](https://discord.madgear.club) angekündigt!
+Das nächste Event wird immer im [Discord](https://discord.madgear.org) angekündigt!
 
 [Regeln & Etikette](./regeln.md)
 
@@ -71,8 +67,8 @@ Das nächste Event wird immer im [Discord](https://discord.madgear.club) angekü
 
 ## Kontakt herstellen
 
-- [Discord](https://discord.madgear.club)
+- [Discord](https://discord.madgear.org)
 - [Twitch](https://twitch.tv/madgearffm)
 - [Twitter](http://twitter.com/madgearffm)
-- [E-Mail](mailto:kontakt@madgear.club)
+- [E-Mail](mailto:kontakt@madgear.org)
 - [HardEdge - Allgemeine deutsche Community](https://hardedge.org/)
