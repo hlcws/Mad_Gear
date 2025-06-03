@@ -1,13 +1,22 @@
-# Überblick
+# MadGearFFM – Deine Fighting Game Location im Rhein-Main-Gebiet
 
-MadGearFFM bietet eine Location für Fighting Game Enthusiasten und Wettkämpfer. Ihr könnt hier zocken, üben, euch mit Gleichgesinnten austauschen oder Matches auf dem Stream austragen.
+Willkommen bei MadGearFFM!
+Hier treffen sich Fighting Game Enthusiasten und Wettkämpfer zum Zocken, Üben, Austauschen und für spannende Matches – auch auf dem Stream.
 
 ![Location](/photos/location1.jpg)
 ![Location](/photos/location2.jpg)
 
-Wer möchte, kann das Projekt gerne per [PayPal](https://paypal.me/madgearfgc) unterstützen.
+💡 Was ist MadGearFFM?
+- Community-Treffpunkt für alle, die Fighting Games lieben.
+- Nutze unsere Ausstattung, bring deine Konsole mit oder probiere verschiedene Games aus.
+- Support: Unterstütze uns gerne via [PayPal](https://paypal.me/madgearfgc)
 
-**Nächster Termin: [Kalender](https://kalender.madgear.club)**
+📅 Nächster Termin
+Generell - an Samstagen im Monat von 14:00 – Mitternacht
+
+Das nächste Event findest du im **[Kalender](https://kalender.madgear.org)**.
+
+Aktuelle Infos gibt’s auch im **[Discord](https://discord.madgear.org)**!
 
 ## Adresse
 Dreieichstrasse 8
@@ -16,22 +25,24 @@ Mörfelden-Walldorf
 
 2\. OG links
 
-[Anfahrt](./anfahrt.md)
+[Anfahrt & Details](./anfahrt.md)
 
 Parken bitte nur an der Straße oder unmarkierten Parkplätzen.
 
 
-## Equipment
+## 🕹️ Ausstattung
 - 12 Screens mit HDMI
 - PS2, PS3, PS4 und PCs mit verschiedenen Fighting Games
-- Kopfhörer auf Anfrage
-- Diverse Arcade Sticks
+- 4 Original Arcade Cabinets
+- Arcade Sticks & Kopfhörer (auf Anfrage)
 - Klimaanlage
 - Küche mit Backofen, Mikrowelle und Kühlschrank
 
-Bringt auf jeden Fall euren einen eigenen Controller mit! Falls ihr eine Playstation 4 oder andere Konsole mitbringt, könnt ihr die an einen freien Screen stecken. Wer was mitbringt wird im [Discord](https://discord.madgear.club) abgesprochen.
+Bitte eigenen Controller mitbringen!
+Wer eine eigene Konsole mitbringt, kann diese an einen freien Screen anschließen.
+Absprachen dazu laufen im [Discord](https://discord.madgear.org).
 
-## Games
+## 🎮 Gespielte Games
 
 Diese Spielserien werden hauptsächlich gespielt:
 - Street Fighter
@@ -42,17 +53,7 @@ Diese Spielserien werden hauptsächlich gespielt:
 
 Und viele mehr!
 
-## Events/Zeiten
-
-Alle zwei Samstage 14:00 - Mitternacht
-
-Bitte den [Kalender](https://kalender.madgear.org) für genauere Zeiten beachten.
-
-Das nächste Event wird immer im [Discord](https://discord.madgear.org) angekündigt!
-
-[Regeln & Etikette](./regeln.md)
-
-## Preise
+## 💸 Preise
 
 | Tier | Dauer | Preis |
 | --- | --- | --- |
@@ -61,9 +62,12 @@ Das nächste Event wird immer im [Discord](https://discord.madgear.org) angekün
 | Supergoon ⚙️⚙️⚙️ | Monat | 25€ |
 | Spender 🙏🙏🙏🙏|  | 5€ |
 
-[Tickets](./tickets.md)
+[Tickets kaufen](./tickets.md)
 
-**Euer erster Besuch ist umsonst für das ganze Event!**
+**Erster Besuch? Das ganze Event ist für dich kostenlos!**
+
+## 📋 Regeln & Etikette
+Bitte unsere [Regeln & Etikette](./regeln.md) beachten.
 
 ## Kontakt herstellen
 
