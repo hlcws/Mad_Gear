@@ -32,7 +32,7 @@ Parken bitte nur an der Straße oder unmarkierten Parkplätzen.
 
 ## 🕹️ Ausstattung
 - 12 Screens mit HDMI
-- PS2, PS3, PS4 und PCs mit verschiedenen Fighting Games
+- PS2, PS3, PS4, PS5 und PCs mit verschiedenen Fighting Games
 - 4 Original Arcade Cabinets
 - Arcade Sticks & Kopfhörer (auf Anfrage)
 - Klimaanlage
@@ -50,15 +50,15 @@ Diese Spielserien werden hauptsächlich gespielt:
 - Tekken
 - Guilty Gear
 - Granblue Fantasy Versus
-
-Und viele mehr!
+- Marvel Tokon
+- Avatar Fighting Legends
+- und alles mögliche an Retrogames!
 
 ## 💸 Preise
 
 | Tier | Dauer | Preis |
 | --- | --- | --- |
 | Tourist ☀️ | Tag | 10€ |
-| Goon ☀️☀️ | Wochenende | 15€ | 
 | Supergoon ⚙️⚙️⚙️ | Monat | 25€ |
 | Spender 🙏🙏🙏🙏|  | 5€ |
 
