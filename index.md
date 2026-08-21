@@ -71,7 +71,7 @@ Bitte unsere [Regeln & Etikette](./regeln.md) beachten.
 
 ## Kontakt herstellen
 
-- [Discord](https://discord.madgear.org)
+- [Discord](https://discord.gg/vNG3E345hk)
 - [Twitch](https://twitch.tv/madgearffm)
 - [Twitter](http://twitter.com/madgearffm)
 - [E-Mail](mailto:kontakt@madgear.org)
