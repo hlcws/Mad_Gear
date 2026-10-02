@@ -5,7 +5,7 @@ import '../styles/global.css';
 
 interface Props { title?: string; description?: string; }
 const { title, description = `${site.name} – ${site.tagline}. ${site.usualSchedule}.` } = Astro.props;
-const fullTitle = title ? `${title} · ${site.name}` : `${site.name} – Fighting Game Clubhaus Rhein-Main`;
+const fullTitle = title ? `${title} · ${site.name}` : `${site.name} – Fighting Game Locals Frankfurt / Rhein-Main`;
 const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
 const textLogo = logo('logo-text');
 const markLogo = logo('logo-mark');

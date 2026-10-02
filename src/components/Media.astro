@@ -11,12 +11,13 @@ const twitchEmbed =
   `https://player.twitch.tv/?channel=${site.feeds.twitchLogin}&parent=${host}&parent=www.${host}&parent=localhost&muted=true`;
 const twitchDuration = (d: string) => d?.replace(/(\d+)h(\d+)m\d+s/, '$1:$2 h').replace(/^(\d+)m\d+s$/, '$1 min');
 const hasVideos = tw?.videos?.length || yt?.videos?.length;
+const anyLive = tw?.live || yt?.live;
 ---
 <section id="streams">
   <div class="wrap">
     <span class="kutte-label">Auf Sendung</span>
     <h2>Streams <span class="accent">&</span> Videos</h2>
-    <p class="lead">Turniere, Money Matches und Casuals aus dem Clubhaus, live auf Twitch und als Videos zum Nachschauen.</p>
+    <p class="lead">Turniere, Money Matches und Casuals aus dem Clubhaus, live auf Twitch und YouTube und zum Nachschauen.</p>
 
     {tw?.live && (
       <>
@@ -25,6 +26,16 @@ const hasVideos = tw?.videos?.length || yt?.videos?.length;
           <a class="btn btn-twitch btn-sm" href={site.links.twitch}>Auf Twitch öffnen</a>
         </div>
         <iframe class="player" src={twitchEmbed} allowfullscreen title="Twitch Livestream" loading="lazy"></iframe>
+      </>
+    )}
+
+    {!tw?.live && yt?.live && (
+      <>
+        <div class="subhead">
+          <h3><span class="pill pill-live"><span class="dot"></span>Live</span> {yt.live.title}</h3>
+          <a class="btn btn-primary btn-sm" href={yt.live.url}>Auf YouTube öffnen</a>
+        </div>
+        <iframe class="player" src={`https://www.youtube-nocookie.com/embed/${yt.live.id}?mute=1`} allowfullscreen title="YouTube Livestream" loading="lazy"></iframe>
       </>
     )}
 
@@ -53,8 +64,8 @@ const hasVideos = tw?.videos?.length || yt?.videos?.length;
     {yt?.videos?.length > 0 && (
       <>
         <div class="subhead">
-          <h3>Neu auf YouTube</h3>
-          {site.links.youtube && <a class="btn btn-sm" href={site.links.youtube}>Kanal öffnen</a>}
+          <h3>Letzte Streams auf YouTube</h3>
+          {site.links.youtube && <a class="btn btn-sm" href={`${site.links.youtube}/streams`}>Alle Streams</a>}
         </div>
         <div class="media-grid">
           {yt.videos.slice(0, 4).map((v: any) => (
@@ -70,7 +81,7 @@ const hasVideos = tw?.videos?.length || yt?.videos?.length;
       </>
     )}
 
-    {!hasVideos && !tw?.live && (
+    {!hasVideos && !anyLive && (
       <div class="channel-cards">
         <div class="channel-card">
           <h3>Twitch</h3>

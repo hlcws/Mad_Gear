@@ -28,18 +28,29 @@ function metaLine(feed, now) {
   if (feed?.discord?.members) {
     parts.push(`<span>Discord: ${feed.discord.members} Mitglieder · ${feed.discord.online} online</span>`);
   }
-  const lastVod = feed?.twitch?.videos?.[0];
-  if (lastVod) parts.push(`<span>Letzter Stream ${ago(lastVod.publishedAt, now)}</span>`);
+  const lastStream = [feed?.twitch?.videos?.[0], feed?.youtube?.videos?.[0]]
+    .filter(Boolean)
+    .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))[0];
+  if (lastStream) parts.push(`<span>Letzter Stream ${ago(lastStream.publishedAt, now)}</span>`);
   return `<p class="status-meta">${parts.join('')}</p>`;
 }
 
 function liveBanner(feed) {
-  const s = feed?.twitch?.live && feed.twitch.stream;
-  if (!s) return '';
-  return `<a class="live-banner" href="${esc(site.links.twitch)}">
-    <span class="pill pill-live"><span class="dot"></span>Live</span>
-    <span><strong>${esc(s.title)}</strong><small>${esc(s.game)} · ${s.viewers} Zuschauer</small></span>
-  </a>`;
+  const tw = feed?.twitch?.live && feed.twitch.stream;
+  if (tw) {
+    return `<a class="live-banner" href="${esc(site.links.twitch)}">
+      <span class="pill pill-live"><span class="dot"></span>Live</span>
+      <span><strong>${esc(tw.title)}</strong><small>Twitch · ${esc(tw.game)} · ${tw.viewers} Zuschauer</small></span>
+    </a>`;
+  }
+  const yt = feed?.youtube?.live;
+  if (yt) {
+    return `<a class="live-banner" href="${esc(yt.url)}">
+      <span class="pill pill-live"><span class="dot"></span>Live</span>
+      <span><strong>${esc(yt.title)}</strong><small>Jetzt live auf YouTube</small></span>
+    </a>`;
+  }
+  return '';
 }
 
 export function renderStatus(feed, now = new Date()) {

@@ -8,13 +8,13 @@ import { renderStatus, renderEvents, statusKind } from '../lib/render.js';
 const feed = loadFeed();
 const webcal = site.feeds.calendarIcs.replace(/^https:/, 'webcal:');
 ---
-<Base title="Termine" description={`Alle kommenden Sessions bei ${site.name}. ${site.usualSchedule}.`}>
+<Base title="Termine" description={`Die nächsten Sessions bei ${site.name}. ${site.usualSchedule}.`}>
   <section>
     <div class="wrap grid-2">
       <div>
         <span class="kutte-label">Treffen</span>
         <h2>Termine</h2>
-        <div data-live="events" data-limit="20" data-streams="true" set:html={renderEvents(feed, { limit: 20, withStreams: true })} />
+        <div data-live="events" data-limit="5" data-streams="true" set:html={renderEvents(feed, { limit: 5, withStreams: true })} />
       </div>
       <div>
         <div class="status-card" data-live="status" data-kind={statusKind(feed)} aria-live="polite" set:html={renderStatus(feed)} />

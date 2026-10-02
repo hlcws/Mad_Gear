@@ -15,11 +15,33 @@ const feed = loadFeed();
     <div class="wrap">
       <div>
         <span class="kanji">{site.kanji}</span>
-        <h1><span class="sr-only">MadGearFFM – </span>Fighting Game <b>Clubhaus</b></h1>
-        <p class="tagline">Mad Gear Frankfurt, die Fighting-Game-Location im Rhein-Main-Gebiet. Zocken, üben, Sets spielen und auf dem Stream landen.</p>
+        <h1><span class="sr-only">MadGearFFM – </span>Fighting Game <b>Locals</b></h1>
+        <p class="tagline">Regelmäßige Offline-Sessions im Rhein-Main-Gebiet. Street Fighter, Tekken, KOF & Co. gegen echte Leute, an echten Setups, für jedes Skill-Level.</p>
         <div class="status-card" data-live="status" data-kind={statusKind(feed)} aria-live="polite" set:html={renderStatus(feed)} />
       </div>
       <HeroLogo />
+    </div>
+  </section>
+
+  <section id="was-ist-ein-local">
+    <div class="wrap">
+      <span class="kutte-label">Neu hier?</span>
+      <h2>Was ist ein <span class="accent">Local</span>?</h2>
+      <p class="lead">Ein Local ist das regelmäßige Offline-Treffen der Fighting-Game-Community in deiner Gegend. So spielt die FGC weltweit, und die meisten Profis haben genau so angefangen.</p>
+      <div class="locals-grid">
+        <div class="local-point">
+          <h3>Gegen Menschen statt Ranked</h3>
+          <p>Kein Lag, kein Rage-Quit. Du sitzt neben deinem Gegner, und nach dem Set wird gefachsimpelt.</p>
+        </div>
+        <div class="local-point">
+          <h3>Jedes Level willkommen</h3>
+          <p>Ob du gerade erst angefangen hast oder Turniere spielst: Frag einfach nach einem Match. Hier lernst du schneller als in jedem Training-Mode.</p>
+        </div>
+        <div class="local-point">
+          <h3>Einfach vorbeikommen</h3>
+          <p>Keine Anmeldung, keine Mitgliedschaft. Controller mitbringen, dazusetzen. Dein erster Besuch ist kostenlos.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -34,7 +56,7 @@ const feed = loadFeed();
           <p class="lead">Sessions werden im Kalender eingetragen und automatisch im Discord angekündigt. Dort siehst du auch, wer kommt.</p>
           <div class="btn-row">
             <a class="btn btn-discord" href={site.links.discord}>Discord beitreten</a>
-            <a class="btn" href="/termine.html">Alle Termine</a>
+            <a class="btn" href="/termine.html">Termine &amp; Kalender</a>
           </div>
         </div>
       </div>
@@ -88,6 +110,7 @@ const feed = loadFeed();
         <h2>So findest du uns</h2>
         <p class="address">{site.address.street}<br />{site.address.city}<br /><small>{site.address.floor} · kein Aufzug</small></p>
         <p class="lead">Parken bitte nur an der Straße oder auf unmarkierten Parkplätzen. Bushaltestelle „Hessenring“ direkt vor der Tür.</p>
+        <p class="lead"><strong style="color:var(--teal)">Fahrgemeinschaft?</strong> Viele kommen aus Frankfurt City oder Wiesbaden/Mainz. Sprecht euch im <a href={site.links.discord}>Discord</a> ab.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="/anfahrt.html">Anfahrt & Details</a>
           <a class="btn" href="/regeln.html">Clubregeln lesen</a>

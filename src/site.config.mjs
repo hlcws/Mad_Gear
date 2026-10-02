@@ -5,7 +5,7 @@ export const site = {
   name: 'MadGearFFM',
   url: 'https://madgear.org',
   kanji: '魔奴義亜',
-  tagline: 'Fighting Games Location & Studio im Rhein-Main-Gebiet',
+  tagline: 'Fighting Game Locals in Frankfurt / Rhein-Main',
   email: 'kontakt@madgear.org',
 
   address: {
@@ -23,7 +23,7 @@ export const site = {
   links: {
     discord: 'https://discord.gg/vNG3E345hk',
     twitch: 'https://twitch.tv/madgearffm',
-    youtube: '', // e.g. 'https://youtube.com/@madgearffm'
+    youtube: 'https://www.youtube.com/@madgearffm7547',
     twitter: 'https://twitter.com/madgearffm',
     paypal: 'https://paypal.me/madgearfgc',
     hardedge: 'https://hardedge.org/',
@@ -39,7 +39,7 @@ export const site = {
     // Calendar entries whose title matches this are private and never shown.
     calendarHidePattern: '^blocked',
     twitchLogin: 'madgearffm',
-    youtubeChannelId: '', // 'UC…' — find it under YouTube Studio → Settings → Channel → Advanced
+    youtubeChannelId: 'UCNiYLCtsPmiYseTgwZHCyHQ',
   },
 
   // Google Calendar → Discord: the bot creates Discord events for the next
@@ -52,7 +52,8 @@ export const site = {
     genericTitles: '^(madgear(ffm)?(:\\s*(casuals?|zocken))?|session|casuals?)$',
     name: 'Casual Session',
     description: [
-      'Casual Session im Clubhaus – {date}, {time}.',
+      'Fighting Game Local im Mad Gear Clubhaus – {date}, {time}.',
+      'Offene Casuals für jedes Skill-Level: SF, Tekken, KOF, GG & mehr.',
       'Bring deinen Controller mit, Konsolen & Screens sind da.',
       'Erster Besuch? Komplett kostenlos!',
       '',

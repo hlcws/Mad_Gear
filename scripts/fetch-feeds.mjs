@@ -177,7 +177,23 @@ async function youtube() {
       views: Number(pick(b, /<media:statistics views="(\d+)"/)) || null,
     };
   });
-  return { status: 'ok', youtube: { videos } };
+  return { status: 'ok', youtube: { videos, live: await youtubeLive() } };
+}
+
+// No API key: while a stream is running, /channel/<id>/live points its canonical URL at the stream.
+async function youtubeLive() {
+  try {
+    const res = await fetch(`https://www.youtube.com/channel/${feeds.youtubeChannelId}/live`, {
+      headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'de-DE', Cookie: 'SOCS=CAI' },
+    });
+    const html = await res.text();
+    const id = html.match(/<link rel="canonical" href="https:\/\/www\.youtube\.com\/watch\?v=([\w-]{11})"/)?.[1];
+    if (!id || !/"isLiveNow":true/.test(html)) return null;
+    const title = html.match(/<meta name="title" content="([^"]*)"/)?.[1] ?? 'Live';
+    return { id, title, url: `https://www.youtube.com/watch?v=${id}` };
+  } catch {
+    return null; // live detection is best-effort
+  }
 }
 
 // ---------- assemble ----------
