@@ -13,10 +13,12 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => (
 const generic = new RegExp(site.discordSync?.genericTitles ?? '^$', 'i');
 const displayTitle = (e) => (generic.test(e.title.trim()) ? 'Casual Session' : e.title);
 
+// Discord is optional: people can just turn up. It's only "who else is coming?".
 function eventCta(e) {
-  if (e.source === 'discord') return `<a class="btn btn-discord" href="${esc(e.url)}">Im Discord zusagen</a>`;
-  return `<a class="btn btn-discord" href="${esc(site.links.discord)}">Im Discord Bescheid geben</a>`;
+  const href = e.source === 'discord' ? e.url : site.links.discord;
+  return `<a class="btn btn-discord" href="${esc(href)}">Wer kommt noch?</a>`;
 }
+const noSignup = '<p class="status-note">Keine Anmeldung nötig, einfach spontan vorbeikommen.</p>';
 
 function metaLine(feed, now) {
   const parts = [];
@@ -63,14 +65,14 @@ export function renderStatus(feed, now = new Date()) {
       <span class="pill pill-open"><span class="dot"></span>Clubhaus offen</span>
       <p class="status-when">Jetzt geöffnet</p>
       <p class="status-sub"><strong>${esc(displayTitle(st.event))}</strong> · bis ${formatTime(st.event.end)} Uhr (noch ${duration(st.remaining)})</p>
-      <div class="btn-row"><a class="btn btn-primary" href="/anfahrt.html">Vorbeikommen</a>${eventCta(st.event)}</div>`;
+      <div class="btn-row"><a class="btn btn-primary" href="/anfahrt.html">Vorbeikommen</a>${eventCta(st.event)}</div>${noSignup}`;
   } else if (st.kind === 'soon' || st.kind === 'next') {
     const soon = st.kind === 'soon';
     body = `
       <span class="pill ${soon ? 'pill-soon' : 'pill-next'}"><span class="dot"></span>${soon ? `Heute · in ${duration(st.until)}` : 'Nächste Session'}</span>
       <p class="status-when">${formatDay(st.event.start)}</p>
       <p class="status-sub"><strong>${formatRange(st.event.start, st.event.end)} Uhr</strong> · ${relativeDay(st.event.start, now)} · ${esc(displayTitle(st.event))}</p>
-      <div class="btn-row">${eventCta(st.event)}${directions}</div>`;
+      <div class="btn-row"><a class="btn btn-primary" href="/anfahrt.html">Vorbeikommen</a>${eventCta(st.event)}</div>${noSignup}`;
   } else {
     body = `
       <span class="pill"><span class="dot"></span>Clubhaus zu</span>
