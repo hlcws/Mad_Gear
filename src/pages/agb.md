@@ -13,7 +13,7 @@ Auf Grundlage dieser Allgemeinen Geschäftsbedingungen (AGB) kommt zwischen dem 
 Mad Gear Gaming  
 Vertreten durch Khanh David To Tuan  
 Adresse: Dreieichstrasse 8 64546 Mörfelden-Walldorf  
-E-Mail-Adresse: kontakt@madgear.club  
+E-Mail-Adresse: kontakt@madgear.org  
 , nachfolgend Anbieter genannt, der Vertrag zustande.
 
 ## Vertragsgegenstand
@@ -70,7 +70,7 @@ Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag,
 
 ***   Im Falle eines Kaufvertrags: an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen haben bzw. hat.*   Im Falle einer Vertrags über mehrere Waren, die der Verbraucher im Rahmen einer einheitlichen Bestellung bestellt hat und die getrennt geliefert werden: an dem Sie oder ein von Ihnen benannter Dritter, der nicht Beförderer ist, die letzte Ware in Besitz genommen haben bzw. hat.*   Im Falle eines Vertrags über die Lieferung einer Ware in mehreren Teilsendungen oder Stücken: an dem Sie oder ein von Ihnen benannter Dritter, der nicht Beförderer ist, die letzte Teilsendung oder das letzte Stück in Besitz genommen haben bzw. hat.*   Im Falle eines Vertrages zur regelmäßigen Lieferung von Waren über einen festgelegten Zeitraum hinweg: an dem Sie oder ein von Ihnen benannter Dritter, der nicht Beförderer ist, die erste Ware in Besitz genommen haben bzw. hat.Beim Zusammentreffen mehrerer Alternativen ist der jeweils letzte Zeitpunkt maßgeblich.  
 
-Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Mad Gear Gaming, Khanh David To Tuan, Dreieichstrasse 8 64546 Mörfelden-Walldorf kontakt@madgear.club) mittels einer eindeutigen Erklärung (z.B. ein mit der Post versandter Brief, Telefax, oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist.  
+Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Mad Gear Gaming, Khanh David To Tuan, Dreieichstrasse 8 64546 Mörfelden-Walldorf kontakt@madgear.org) mittels einer eindeutigen Erklärung (z.B. ein mit der Post versandter Brief, Telefax, oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist.  
 
 Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.  
 
@@ -78,7 +78,7 @@ Folgen des Widerrufs
 
 Wenn Sie diesen Vertag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, einschließlich der Lieferkosten (mit Ausnahmen der zusätzlichen Kosten, die sich daraus ergeben, dass Sie einer andere Art der Lieferung als die von uns angebotene, günstige Standardlieferung gewählt haben), unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf dieses Vertrags bei uns eingegangen ist. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet. Wir können die Rückzahlung verweigern, bis wir die Waren wieder zurückerhalten haben oder bis Sie den Nachweis erbracht haben, dass Sie die Waren zurückgesandt haben, je nachdem, welches der frühere Zeitpunkt ist.  
 
-Sie haben die Waren unverzüglich und in jedem Fall spätestens binnen vierzehn Tagen ab dem Tag, an dem Sie uns über den Widerruf dieses Vertrags unterrichten, an Mad Gear Gaming, Khanh David To Tuan, Dreieichstrasse 8 64546 Mörfelden-Walldorf kontakt@madgear.club uns zurückzusenden oder zu übergeben. Die Frist ist gewahrt, wenn Sie die Waren vor Ablauf der Frist von vierzehn Tagen absenden.  
+Sie haben die Waren unverzüglich und in jedem Fall spätestens binnen vierzehn Tagen ab dem Tag, an dem Sie uns über den Widerruf dieses Vertrags unterrichten, an Mad Gear Gaming, Khanh David To Tuan, Dreieichstrasse 8 64546 Mörfelden-Walldorf kontakt@madgear.org uns zurückzusenden oder zu übergeben. Die Frist ist gewahrt, wenn Sie die Waren vor Ablauf der Frist von vierzehn Tagen absenden.  
 
 Sie tragen die unmittelbaren Kosten der Rücksendung der Waren.  
 

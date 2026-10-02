@@ -14,7 +14,7 @@ Dreieichstrasse 8
 
 Telefon: 06103/3721741
 
-E-Mail: kontakt@madgear.club
+E-Mail: kontakt@madgear.org
 
 ## Disclaimer – rechtliche Hinweise
 § 1 Warnhinweis zu Inhalten
@@ -46,7 +46,7 @@ Dreieichstrasse 8
 64546 Mörfelden-Walldorf  
   
 Telefon: 06103/3721741  
-E-Mail: kontakt@madgear.club
+E-Mail: kontakt@madgear.org
 
 ### Arten der verarbeiteten Daten:
 
