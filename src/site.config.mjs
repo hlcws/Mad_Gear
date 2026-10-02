@@ -31,6 +31,7 @@ export const site = {
     youtube: 'https://www.youtube.com/@madgearffm7547',
     twitter: 'https://twitter.com/madgearffm',
     paypal: 'https://paypal.me/madgearfgc',
+    shop: 'https://madgear.myspreadshop.de/',
     hardedge: 'https://hardedge.org/',
     calendar:
       'https://calendar.google.com/calendar/embed?src=kqg40hjscfpnkm780rhd7abr5s%40group.calendar.google.com&ctz=Europe%2FBerlin',

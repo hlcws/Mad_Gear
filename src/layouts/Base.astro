@@ -17,6 +17,7 @@ const nav = [
   ['/tickets.html', 'Tickets'],
   ['/regeln.html', 'Clubregeln'],
   ['/gang.html', 'Die Gang'],
+  [site.links.shop, 'Merch'],
 ];
 const current = (href: string) => (href.replace('.html', '') === path ? 'page' : undefined);
 ---
@@ -74,6 +75,7 @@ const current = (href: string) => (href.replace('.html', '') === path ? 'page' :
         <a href={site.links.twitch}>Twitch</a>
         {site.links.youtube && <a href={site.links.youtube}>YouTube</a>}
         <a href={site.links.twitter}>Twitter</a>
+        <a href={site.links.shop}>Merch-Shop</a>
         <a href={site.links.hardedge}>HardEdge</a>
         <a href="/impressum.html">Impressum & Datenschutz</a>
         <a href="/agb.html">AGB</a>
