@@ -228,7 +228,9 @@ a.event:hover { color: var(--text); border-color: #3b3b4b; background: var(--sur
 }
 
 /* ---------- "Was ist ein Local?" ---------- */
-.locals-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 24px; }
+.locals-grid { display: grid; gap: 14px; grid-template-columns: 1fr; margin-top: 24px; }
+@media (min-width: 620px) { .locals-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1100px) { .locals-grid { grid-template-columns: repeat(4, 1fr); } }
 .local-point { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--red); border-radius: var(--radius); padding: 18px 20px; }
 .local-point h3 { font-size: 1.3rem; margin: 0 0 6px; }
 .local-point p { color: var(--muted); margin: 0; }
