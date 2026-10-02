@@ -92,19 +92,19 @@ export const site = {
 
   team: [
     { nick: 'HealingCare', handle: 'hlcws', name: 'David', role: 'Gangleader', photo: 'hlcws.jpg',
-      games: 'UMVC3, Street Fighter, Mortal Kombat 11, King of Fighters, UNIEL',
+      games: 'Avatar Fighting Legends, UMVC3, Street Fighter VI, King of Fighters',
       links: [['Twitter', 'https://twitter.com/hlcws']] },
     { nick: 'AtTheGates', handle: 'ATG', name: 'Dave', role: 'Ringleader', photo: 'atg.jpg',
       games: 'King of Fighters, Guilty Gear, Fate UC',
       links: [['Twitter', 'https://twitter.com/atg213']] },
     { nick: 'KenDeep', name: 'Cem', role: 'Ringleader', photo: 'kendeep.jpg',
-      games: 'King of Fighters, DragonBall FighterZ, UNIEL',
+      games: 'Avatar Fighting Legends, King of Fighters',
       links: [['Twitter', 'https://twitter.com/Ken_Deep']] },
     { nick: 'Pit', name: 'Pascal', role: 'Ringleader', photo: 'pit.jpg',
-      games: 'Street Fighter IV & V, Mortal Kombat 11',
+      games: 'Street Fighter VI, Mortal Kombat',
       links: [['Twitter', 'https://twitter.com/CatHePit']] },
     { nick: 'Maddo', name: 'Martin', role: 'Ringleader', photo: 'maddo.jpg',
-      games: 'Tekken 7, King of Fighters',
+      games: 'Tekken, King of Fighters',
       links: [['Twitter', 'https://twitter.com/maddo88888']] },
   ],
 };
