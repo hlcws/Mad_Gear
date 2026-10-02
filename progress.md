@@ -18,6 +18,12 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-02.
 - [x] Pages: Termine, Anfahrt (with carpool tip FFM City / Wiesbaden / Mainz), Tickets (PayPal, weekend ticket removed), Clubregeln, Die Gang (5 Stamm members), AGB, Impressum
 - [x] All wording in Markdown under `src/content/` and `src/pages/*.md` (see README)
 - [x] Contact email: kontakt@madgear.org
+- [x] Hero shows 魔奴義亜 with the reading `[MA-DO-GI-A]`, T-shirt style (`site.kanjiReading`)
+- [x] Merch shop link (https://madgear.myspreadshop.de/): header menu "Merch", footer, and a button in the prices section (`site.links.shop`)
+
+### Merch
+- [x] Shop: Spreadshop, linked from the site (see above)
+- [ ] T-shirt design 魔奴義亜 `[MA-DO-GI-A]` dictionary print: rough draft in `merch/`, being iterated in a separate chat. `sh merch/export.sh` turns the source into the print files (outlined SVG + PDF) and a preview
 
 ### "Is it actually open?"
 - [x] Status card: *Clubhaus offen* / *Heute · in X* / *Nächste Session* / *Clubhaus zu*, recomputed in the browser every minute
