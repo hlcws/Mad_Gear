@@ -1,9 +1,10 @@
 ---
 import { site } from '../site.config.mjs';
 import { ago } from '../lib/status.js';
+import SectionHead from './SectionHead.astro';
 
-interface Props { feed: any }
-const { feed } = Astro.props;
+interface Props { feed: any; head: { label?: string; title?: string } }
+const { feed, head } = Astro.props;
 const tw = feed.twitch;
 const yt = feed.youtube;
 const host = new URL(site.url).hostname;
@@ -15,9 +16,8 @@ const anyLive = tw?.live || yt?.live;
 ---
 <section id="streams">
   <div class="wrap">
-    <span class="kutte-label">Auf Sendung</span>
-    <h2>Streams <span class="accent">&</span> Videos</h2>
-    <p class="lead">Turniere, Money Matches und Casuals aus dem Clubhaus, live auf Twitch und YouTube und zum Nachschauen.</p>
+    <SectionHead fm={head} />
+    <div class="lead md"><slot /></div>
 
     {tw?.live && (
       <>

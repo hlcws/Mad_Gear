@@ -1,23 +1,26 @@
 ---
+// Layout only. Members and text live in src/content/gang.md
 import Base from '../layouts/Base.astro';
+import SectionHead from '../components/SectionHead.astro';
 import { site } from '../site.config.mjs';
+import * as gang from '../content/gang.md';
+const members = gang.frontmatter.members ?? [];
 ---
 <Base title="Die Gang" description={`Die Ringleader von ${site.name}.`}>
   <section>
     <div class="wrap">
-      <span class="kutte-label">Members</span>
-      <h2>Die <span class="accent">Gang</span></h2>
-      <p class="lead">Die Stamm-Member sind langjährige Mitglieder der deutschen FGC und feste Größen auf Turnieren. Sprecht bei Fragen gerne jeden an. Im <a href={site.links.discord}>Discord</a> erkennt ihr sie an der Ringleader-Rolle. Bei jeder Session ist mindestens ein Ringleader da.</p>
+      <SectionHead fm={gang.frontmatter} />
+      <div class="lead md"><gang.Content /></div>
       <div class="team" style="margin-top:28px">
-        {site.team.map((m) => (
+        {members.map((m) => (
           <div class="member">
-            <img src={`/photos/${m.photo}`} alt={m.nick} loading="lazy" />
+            <img src={`/photos/${m.photo || 'default.jpg'}`} alt={m.nick} loading="lazy" />
             <div class="body">
               <div class="role">{m.role}</div>
               <p class="nick">{m.nick}</p>
               <div>{m.name}{m.handle ? ` · ${m.handle}` : ''}</div>
               <p class="games">{m.games}</p>
-              {m.links.map(([label, href]) => <a href={href}>{label}</a>)}
+              {m.links?.map((l) => <a href={l.url}>{l.label}</a>)}
             </div>
           </div>
         ))}

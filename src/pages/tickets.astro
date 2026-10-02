@@ -1,33 +1,20 @@
 ---
 import Base from '../layouts/Base.astro';
-import { site } from '../site.config.mjs';
+import Prices from '../components/Prices.astro';
+import { inline } from '../lib/inline.js';
+import * as tickets from '../content/tickets.md';
+// Text lives in src/content/tickets.md, prices in src/content/preise.md.
+// The PayPal options below must match the hosted PayPal button.
 const subscriptionPlan = 'P-04C428923N755423BMLUOVNI';
 ---
 <Base title="Tickets">
   <div class="wrap">
     <article class="prose">
       <span class="kutte-label">Eintritt</span>
-      <h1>Tickets</h1>
-      <div class="callout"><strong>Euer erster Besuch einer Casual Session ist umsonst!</strong></div>
-
-      <div class="prices">
-        {site.prices.map((p) => (
-          <div class="price">
-            <div class="tier">{p.tier} {p.icon}</div>
-            <div class="amount">{p.price}€</div>
-            <div class="dur">{p.duration}</div>
-            <div class="note">{p.note}</div>
-          </div>
-        ))}
-      </div>
-      <p><strong>Ringleader</strong>: Stamm-Member mit Verantwortung. Auf Anfrage.</p>
-
-      <h2>So funktioniert's</h2>
-      <p>Das Ticket ist ab Kauf für den angegebenen Zeitraum gültig. Ihr willigt ein, die Clubregeln und die Hausordnung einzuhalten. Vor Ort zeigt ihr einem Stamm-Member die PayPal-Nachricht als Nachweis (auf dem Handy reicht) und bekommt ein Bändchen. Barzahlung ist nicht möglich. Das Ticket berechtigt euch zum Eintritt und zur Nutzung der Stations und der Stream-Station in Absprache mit Stammgästen vor Ort.</p>
-      <p>Wenn ihr kein PayPal habt, könnt ihr vor Ort jemanden bitten, euch das Ticket zu kaufen.</p>
-      <p>Mit dem Kauf erhalten wir eure PayPal E-Mail-Adresse, Namen und den Betreff, den ihr angebt. Die E-Mail-Adresse wird nach einem Jahr anonymisiert. Gebt als Betreff bitte die Ticketart und den Zeitpunkt an (z.B. „kommendes Wochenende“).</p>
-      <p>Vor Ort werden Foto- und Videoaufnahmen gemacht, live auf Twitch übertragen sowie auf Social Media und Foren (HardEdge.org) geteilt, um Werbung für das Clubhaus zu machen.</p>
-      <p>Die Tickets gelten nur, wenn das Clubhaus offen hat. Schaut vorher bei den <a href="/termine.html">Terminen</a> oder im <a href={site.links.discord}>Discord</a>.</p>
+      <h1>{tickets.frontmatter.title}</h1>
+      {tickets.frontmatter.callout && <div class="callout" set:html={inline(tickets.frontmatter.callout)} />}
+      <Prices />
+      <tickets.Content />
 
       <hr />
       <label class="accept">

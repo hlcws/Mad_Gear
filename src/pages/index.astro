@@ -1,11 +1,24 @@
 ---
+// Layout only. All wording lives in src/content/start/*.md
 import Base from '../layouts/Base.astro';
 import HeroLogo from '../components/HeroLogo.astro';
 import Media from '../components/Media.astro';
+import Prices from '../components/Prices.astro';
+import SectionHead from '../components/SectionHead.astro';
 import LiveUpdater from '../components/LiveUpdater.astro';
 import { site } from '../site.config.mjs';
 import { loadFeed } from '../lib/feed.js';
+import { inline } from '../lib/inline.js';
 import { renderStatus, renderEvents, statusKind } from '../lib/render.js';
+
+import * as hero from '../content/start/1-hero.md';
+import * as locals from '../content/start/2-was-ist-ein-local.md';
+import * as sessions from '../content/start/3-sessions.md';
+import * as streams from '../content/start/4-streams.md';
+import * as clubhaus from '../content/start/5-clubhaus.md';
+import * as anfahrt from '../content/start/6-anfahrt.md';
+import * as kontakt from '../content/start/7-kontakt.md';
+import * as preise from '../content/preise.md';
 
 const feed = loadFeed();
 ---
@@ -15,8 +28,8 @@ const feed = loadFeed();
     <div class="wrap">
       <div>
         <span class="kanji">{site.kanji}</span>
-        <h1><span class="sr-only">MadGearFFM – </span>Fighting Game <b>Locals</b></h1>
-        <p class="tagline">Regelmäßige Offline-Sessions im Rhein-Main-Gebiet. Street Fighter, Tekken, KOF & Co. gegen echte Leute, an echten Setups, für jedes Skill-Level.</p>
+        <h1><span class="sr-only">MadGearFFM – </span><Fragment set:html={inline(hero.frontmatter.title)} /></h1>
+        <div class="tagline md"><hero.Content /></div>
         <div class="status-card" data-live="status" data-kind={statusKind(feed)} aria-live="polite" set:html={renderStatus(feed)} />
       </div>
       <HeroLogo />
@@ -25,40 +38,28 @@ const feed = loadFeed();
 
   <section id="was-ist-ein-local">
     <div class="wrap">
-      <span class="kutte-label">Neu hier?</span>
-      <h2>Was ist ein <span class="accent">Local</span>?</h2>
-      <p class="lead">Ein Local ist das regelmäßige Offline-Treffen der Fighting-Game-Community in deiner Gegend. So spielt die FGC weltweit, und die meisten Profis haben genau so angefangen.</p>
+      <SectionHead fm={locals.frontmatter} />
+      <div class="lead md"><locals.Content /></div>
       <div class="locals-grid">
-        <div class="local-point">
-          <h3>Gegen Menschen statt Ranked</h3>
-          <p>Kein Lag, kein Rage-Quit. Du sitzt neben deinem Gegner, und nach dem Set wird gefachsimpelt.</p>
-        </div>
-        <div class="local-point">
-          <h3>Jedes Level willkommen</h3>
-          <p>Ob du gerade erst angefangen hast oder Turniere spielst: Frag einfach nach einem Match. Hier lernst du schneller als in jedem Training-Mode.</p>
-        </div>
-        <div class="local-point">
-          <h3>Chillen & Spaß haben</h3>
-          <p>Es geht nicht nur ums Gewinnen. Wir hängen ab, quatschen, essen zusammen, schauen Matches und haben einfach Spaß mit Leuten, die Fighting Games genauso lieben wie du.</p>
-        </div>
-        <div class="local-point">
-          <h3>Einfach vorbeikommen</h3>
-          <p>Keine Anmeldung, keine Mitgliedschaft. Controller mitbringen, dazusetzen. Dein erster Besuch ist kostenlos.</p>
-        </div>
+        {locals.frontmatter.cards?.map((c) => (
+          <div class="local-point">
+            <h3>{c.title}</h3>
+            <p set:html={inline(c.text)} />
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
   <section id="termine">
     <div class="wrap">
-      <span class="kutte-label">Treffen</span>
-      <h2>Kommende <span class="accent">Sessions</span></h2>
+      <SectionHead fm={sessions.frontmatter} />
       <div class="grid-2">
         <div data-live="events" data-limit="5" set:html={renderEvents(feed, { limit: 5 })} />
         <div>
-          <div class="callout"><strong>Erster Besuch?</strong> Die ganze Session ist für dich kostenlos. Einfach vorbeikommen, Controller mitbringen.</div>
-          <p class="lead">Sessions werden im Kalender eingetragen und automatisch im Discord angekündigt. Dort siehst du auch, wer kommt.</p>
-          <div class="btn-row">
+          {sessions.frontmatter.callout && <div class="callout" set:html={inline(sessions.frontmatter.callout)} />}
+          <div class="lead md"><sessions.Content /></div>
+          <div class="btn-row" style="margin-top:18px">
             <a class="btn btn-discord" href={site.links.discord}>Discord beitreten</a>
             <a class="btn" href="/termine.html">Termine &amp; Kalender</a>
           </div>
@@ -67,17 +68,16 @@ const feed = loadFeed();
     </div>
   </section>
 
-  <Media feed={feed} />
+  <Media feed={feed} head={streams.frontmatter}><streams.Content /></Media>
 
   <section id="clubhaus">
     <div class="wrap grid-2">
       <div>
-        <span class="kutte-label">Das Clubhaus</span>
-        <h2>Ausstattung</h2>
-        <ul class="check-list">{site.equipment.map((e) => <li>{e}</li>)}</ul>
-        <p class="lead" style="margin-top:16px">Bitte eigenen Controller mitbringen! Eigene Konsole? Einfach an einen freien Screen anschließen. Absprachen laufen im <a href={site.links.discord}>Discord</a>.</p>
-        <h3 style="font-size:1.4rem;margin:28px 0 12px">Was gespielt wird</h3>
-        <ul class="chips">{site.games.map((g) => <li>{g}</li>)}</ul>
+        <SectionHead fm={clubhaus.frontmatter} />
+        <ul class="check-list">{clubhaus.frontmatter.equipment?.map((e) => <li>{e}</li>)}</ul>
+        <div class="lead md" style="margin-top:16px"><clubhaus.Content /></div>
+        <h3 style="font-size:1.4rem;margin:28px 0 12px">{clubhaus.frontmatter.games_title}</h3>
+        <ul class="chips">{clubhaus.frontmatter.games?.map((g) => <li>{g}</li>)}</ul>
       </div>
       <div class="photos">
         <img src="/photos/location1.jpg" alt="Spielstationen im Clubhaus" loading="lazy" />
@@ -88,18 +88,8 @@ const feed = loadFeed();
 
   <section id="preise">
     <div class="wrap">
-      <span class="kutte-label">Eintritt</span>
-      <h2>Preise</h2>
-      <div class="prices">
-        {site.prices.map((p) => (
-          <div class="price">
-            <div class="tier">{p.tier} {p.icon}</div>
-            <div class="amount">{p.price}€</div>
-            <div class="dur">{p.duration}</div>
-            <div class="note">{p.note}</div>
-          </div>
-        ))}
-      </div>
+      <SectionHead fm={preise.frontmatter} />
+      <Prices />
       <div class="btn-row">
         <a class="btn btn-primary" href="/tickets.html">Tickets kaufen</a>
         <a class="btn" href={site.links.paypal}>Spenden via PayPal</a>
@@ -110,21 +100,18 @@ const feed = loadFeed();
   <section id="anfahrt">
     <div class="wrap grid-2">
       <div>
-        <span class="kutte-label">Anfahrt</span>
-        <h2>So findest du uns</h2>
+        <SectionHead fm={anfahrt.frontmatter} />
         <p class="address">{site.address.street}<br />{site.address.city}<br /><small>{site.address.floor} · kein Aufzug</small></p>
-        <p class="lead">Parken bitte nur an der Straße oder auf unmarkierten Parkplätzen. Bushaltestelle „Hessenring“ direkt vor der Tür.</p>
-        <p class="lead"><strong style="color:var(--teal)">Fahrgemeinschaft?</strong> Viele kommen aus Frankfurt City oder Wiesbaden/Mainz. Sprecht euch im <a href={site.links.discord}>Discord</a> ab.</p>
-        <div class="btn-row">
+        <div class="lead md"><anfahrt.Content /></div>
+        <div class="btn-row" style="margin-top:18px">
           <a class="btn btn-primary" href="/anfahrt.html">Anfahrt & Details</a>
           <a class="btn" href="/regeln.html">Clubregeln lesen</a>
         </div>
       </div>
       <div>
-        <span class="kutte-label">Kontakt</span>
-        <h2>Die Gang</h2>
-        <p class="lead">Bei jeder Session ist mindestens ein Ringleader da. Fragen? Sprich uns an oder schreib im Discord.</p>
-        <div class="btn-row">
+        <SectionHead fm={kontakt.frontmatter} />
+        <div class="lead md"><kontakt.Content /></div>
+        <div class="btn-row" style="margin-top:18px">
           <a class="btn" href="/gang.html">Die Gang kennenlernen</a>
           <a class="btn" href={`mailto:${site.email}`}>E-Mail</a>
         </div>

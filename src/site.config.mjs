@@ -1,4 +1,5 @@
-// Everything a non-developer might want to change lives here.
+// Settings: links, address, data sources, Discord event template.
+// Page wording lives in src/content/*.md and src/pages/*.md
 // Used both by the Astro pages and by scripts/fetch-feeds.mjs.
 
 export const site = {
@@ -63,48 +64,4 @@ export const site = {
     cover: 'public/photos/location1.jpg', // optional, shown as event banner
   },
 
-  prices: [
-    { tier: 'Tourist', icon: '☀️', duration: 'Tag', price: 10, note: 'Am Kaufdatum bis 4 Uhr morgens' },
-    { tier: 'Goon', icon: '⚙️', duration: 'Wochenende', price: 15, note: 'Fr 18:00 – So 18:00' },
-    { tier: 'Supergoon', icon: '⚙️⚙️⚙️', duration: 'Monat', price: 25, note: 'Für den Kaufmonat' },
-    { tier: 'Spender', icon: '🙏', duration: 'Virtueller Döner', price: 5, note: 'Shoutout auf dem Stream' },
-  ],
-
-  equipment: [
-    '12 Screens mit HDMI',
-    'PS2, PS3, PS4, PS5 und PCs',
-    '4 Original Arcade Cabinets',
-    'Arcade Sticks & Kopfhörer (auf Anfrage)',
-    'Klimaanlage',
-    'Küche mit Backofen, Mikrowelle und Kühlschrank',
-  ],
-
-  games: [
-    'Street Fighter',
-    'King of Fighters',
-    'Tekken',
-    'Guilty Gear',
-    'Granblue Fantasy Versus',
-    'Marvel Tokon',
-    'Avatar Fighting Legends',
-    'Retro & alles andere',
-  ],
-
-  team: [
-    { nick: 'HealingCare', handle: 'hlcws', name: 'David', role: 'Gangleader', photo: 'hlcws.jpg',
-      games: 'Avatar Fighting Legends, UMVC3, Street Fighter VI, King of Fighters',
-      links: [['Twitter', 'https://twitter.com/hlcws']] },
-    { nick: 'AtTheGates', handle: 'ATG', name: 'Dave', role: 'Ringleader', photo: 'atg.jpg',
-      games: 'King of Fighters, Guilty Gear, Fate UC',
-      links: [['Twitter', 'https://twitter.com/atg213']] },
-    { nick: 'KenDeep', name: 'Cem', role: 'Ringleader', photo: 'kendeep.jpg',
-      games: 'Avatar Fighting Legends, King of Fighters',
-      links: [['Twitter', 'https://twitter.com/Ken_Deep']] },
-    { nick: 'Pit', name: 'Pascal', role: 'Ringleader', photo: 'pit.jpg',
-      games: 'Street Fighter VI, Mortal Kombat',
-      links: [['Twitter', 'https://twitter.com/CatHePit']] },
-    { nick: 'Maddo', name: 'Martin', role: 'Ringleader', photo: 'maddo.jpg',
-      games: 'Tekken, King of Fighters',
-      links: [['Twitter', 'https://twitter.com/maddo88888']] },
-  ],
 };

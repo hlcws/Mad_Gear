@@ -1,0 +1,7 @@
+---
+import { inline } from '../lib/inline.js';
+interface Props { fm: { label?: string; title?: string } }
+const { fm } = Astro.props;
+---
+{fm.label && <span class="kutte-label">{fm.label}</span>}
+{fm.title && <h2 set:html={inline(fm.title)} />}

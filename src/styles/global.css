@@ -104,9 +104,9 @@ section + section { border-top: 1px solid var(--border); }
 .hero .wrap { position: relative; z-index: 1; padding-top: 48px; padding-bottom: 48px; display: grid; gap: 32px; }
 @media (min-width: 900px) { .hero .wrap { grid-template-columns: 1.1fr .9fr; align-items: center; padding-top: 72px; padding-bottom: 72px; } }
 .hero h1 { font-size: clamp(2.6rem, 8vw, 4.6rem); margin: 0; }
-.hero h1 b { color: var(--red-text); font-weight: 400; }
+.hero h1 b, .hero h1 .accent { color: var(--red-text); font-weight: 400; }
 .hero .kanji { display: block; font-family: var(--body); font-size: .9rem; letter-spacing: .4em; color: var(--teal); margin-bottom: 10px; font-weight: 600; }
-.hero p.tagline { color: var(--muted); font-size: 1.1rem; margin: 12px 0 24px; max-width: 46ch; }
+.hero .tagline { color: var(--muted); font-size: 1.1rem; margin: 12px 0 24px; max-width: 46ch; }
 
 .status-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
@@ -235,3 +235,16 @@ a.event:hover { color: var(--text); border-color: #3b3b4b; background: var(--sur
 .local-point h3 { font-size: 1.3rem; margin: 0 0 6px; }
 .local-point p { color: var(--muted); margin: 0; }
 .status-note { margin: 10px 0 0; font-size: .88rem; color: var(--muted); }
+
+/* ---------- rendered Markdown ---------- */
+.md > :first-child { margin-top: 0; }
+.md > :last-child { margin-bottom: 0; }
+.md p { margin: 0 0 .9em; }
+.md strong { color: var(--text); }
+.prose blockquote, .md blockquote {
+  margin: 0 0 28px; padding: 18px 20px; border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(212,0,12,.16), rgba(75,184,201,.1));
+  border: 1px solid rgba(212,0,12,.35);
+}
+.prose blockquote p { margin: 0; color: var(--text); }
+.prose blockquote strong, .callout strong { color: var(--teal); }

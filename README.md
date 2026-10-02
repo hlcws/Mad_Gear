@@ -10,13 +10,24 @@ Whether the venue is "open now" is computed in the visitor's browser from the ev
 
 ## Editing content
 
-| What | Where |
+All wording is Markdown. Edit, save, and the local preview updates instantly; on GitHub, every commit redeploys in ~2 minutes.
+
+| What | File |
 |---|---|
-| Links, address, prices, equipment, games, team, Discord event template | `src/site.config.mjs` |
-| Rules, AGB, Impressum | `src/pages/regeln.md`, `agb.md`, `impressum.md` (plain Markdown) |
-| Directions, tickets | `src/pages/anfahrt.astro`, `tickets.astro` |
-| Photos | `public/photos/` |
-| Logos (transparent SVG or PNG) | `public/logo-full.svg` (helmet + text, hero & social preview), `public/logo-mark.svg` (helmet only, favicon), `public/logo-text.svg` (text only, header) |
+| Homepage sections, in order | `src/content/start/1-hero.md` … `7-kontakt.md` |
+| Prices (homepage + tickets) | `src/content/preise.md` |
+| Team members | `src/content/gang.md` |
+| Ticket info text | `src/content/tickets.md` |
+| Anfahrt, Clubregeln, AGB, Impressum | `src/pages/anfahrt.md`, `regeln.md`, `agb.md`, `impressum.md` |
+| Links, address, Discord event template, data sources | `src/site.config.mjs` |
+| Photos / logos | `public/photos/`, `public/logo-*.svg` |
+
+How the Markdown files work:
+- The part between the `---` lines at the top is settings (title, lists like cards, members, prices). Keep the indentation; if a value contains a `:` wrap it in quotes.
+- Everything below the second `---` is normal Markdown text.
+- In titles, `*Wort*` turns the word red. In short fields `**fett**` and `[Link](url)` work.
+- A line starting with `>` becomes a highlighted tip box.
+- Lines starting with `#` inside the top block are comments.
 
 ### Planning sessions
 

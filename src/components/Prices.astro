@@ -1,0 +1,13 @@
+---
+import * as preise from '../content/preise.md';
+---
+<div class="prices">
+  {preise.frontmatter.prices.map((p) => (
+    <div class="price">
+      <div class="tier">{p.tier} {p.icon}</div>
+      <div class="amount">{p.price}€</div>
+      <div class="dur">{p.duration}</div>
+      <div class="note">{p.note}</div>
+    </div>
+  ))}
+</div>
