@@ -47,22 +47,31 @@ export const site = {
     youtubeChannelId: 'UCNiYLCtsPmiYseTgwZHCyHQ',
   },
 
-  // Google Calendar → Discord: the bot creates Discord events for the next
-  // sessions in the calendar, using this template. {date} = "Samstag, 10. Oktober".
+  // Google Calendar → Discord: the bot creates and updates Discord events for
+  // the next sessions in the calendar. Title and description come straight
+  // from the calendar entry; the values below are only fallbacks for entries
+  // without them. {date} = "Samstag, 10. Oktober", {time} = "14:00 – 00:00".
   discordSync: {
     enabled: true,
     upcoming: 5,
-    // Calendar titles matching this get the template name; anything else
-    // (e.g. "MadGearFFM x Q-Rash League") keeps its own title.
+    // Website only: calendar titles matching this are listed as "Casual Session"
+    // without description. Discord always gets the calendar title.
     genericTitles: '^(madgear(ffm)?(:\\s*(casuals?|zocken))?|session|casuals?)$',
     name: 'Casual Session',
+    // Same text as the Google Calendar entries. Written so it survives the ICS
+    // line-break repair: every line ends in . ! ? or : (not followed by a digit),
+    // no abbreviations like "usw." mid-sentence.
     description: [
-      'Fighting Game Local im Mad Gear Clubhaus – {date}, {time}.',
-      'Offene Casuals für jedes Skill-Level: SF, Tekken, KOF, GG & mehr.',
-      'Bring deinen Controller mit, Konsolen & Screens sind da.',
-      'Erster Besuch? Komplett kostenlos!',
-      '',
-      'Tickets & Infos: https://madgear.org',
+      'Casual Fighting Games im MadGear Clubhaus!',
+      'Street Fighter, Tekken, Guilty Gear oder dein Lieblingsgame – alles ist willkommen, egal ob Neuling oder Turnierprofi.',
+      'PS4, Steam-PCs, Screens und Controller sind da, dein eigenes Pad kannst du gerne mitbringen.',
+      'Keine Anmeldung nötig, einfach vorbeikommen!',
+      'Dein erster Besuch ist kostenlos.',
+      'Klick auf „Interessiert“, damit wir sehen, wer kommt.',
+      'Infos, Preise und Streams:',
+      'https://madgear.org',
+      'https://twitch.tv/madgearffm',
+      'https://www.youtube.com/@madgearffm7547/streams',
     ].join('\n'),
     location: 'MadGearFFM, Dreieichstrasse 8, Mörfelden-Walldorf (2. OG links)',
     cover: 'public/photos/location1.jpg', // optional, shown as event banner

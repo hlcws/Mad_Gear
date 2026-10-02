@@ -18,7 +18,7 @@ export async function loadCalendarSessions({ from, to }) {
     if (ev.type !== 'VEVENT' || ev.recurrenceid) continue;
     if (ev.class === 'PRIVATE' || hide.test(String(ev.summary ?? ''))) continue;
     for (const inst of ical.expandRecurringEvent(ev, { from, to, expandOngoing: true })) {
-      const title = String(inst.summary ?? ev.summary ?? 'Session');
+      const title = String(inst.summary ?? ev.summary ?? 'Session').trim();
       if (hide.test(title) || inst.event?.status === 'CANCELLED') continue;
       const start = inst.start;
       const end = inst.end && inst.end > start
@@ -27,7 +27,7 @@ export async function loadCalendarSessions({ from, to }) {
       sessions.push({
         uid: ev.uid,
         title,
-        description: String(inst.event?.description ?? ev.description ?? '').trim(),
+        description: restoreLineBreaks(String(inst.event?.description ?? ev.description ?? '')),
         location: String(ev.location ?? '').trim(),
         start,
         end,
@@ -36,4 +36,22 @@ export async function loadCalendarSessions({ from, to }) {
     }
   }
   return sessions.sort((a, b) => a.start - b.start);
+}
+
+const LINK = /(https?:\/\/.+?(?=https?:\/\/|\s|$))/; // stops where the next glued-on link starts
+
+/**
+ * Google's ICS feed drops all line breaks from descriptions ("willkommen!PS4",
+ * "…ffmhttps://"). Put them back: after every punctuation mark except commas,
+ * and around links.
+ */
+export function restoreLineBreaks(text) {
+  return text
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<[^>]+>/g, '')
+    .split(LINK) // odd entries are links
+    .map((part, i) => (i % 2 ? `\n${part}\n` : part.replace(/([.!?:;])(?!\d)/g, '$1\n'))) // not in 14:00
+    .join('')
+    .replace(/[ \t]*\n\s*/g, '\n')
+    .trim();
 }

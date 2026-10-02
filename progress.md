@@ -37,7 +37,9 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-02.
 
 ### Google Calendar → Discord events (`scripts/sync-discord-events.mjs`)
 - [x] Script written and tested against a mocked Discord API
-- [x] Creates "Casual Session" events with cover image for the next 5 sessions
+- [x] Creates events with cover image for the next 5 sessions, using the calendar entry's title + description
+- [x] Updates existing bot events when title/description/time/location change in the calendar; moved sessions keep their Discord event
+- [x] Description line breaks (lost in Google's ICS) restored after punctuation (except commas) and around links
 - [x] Only edits/deletes events the bot created; never deletes on an empty calendar
 - [x] `SYNC_DRY_RUN=1` preview mode
 - [x] Wired into the deploy workflow (skipped until a token exists)
