@@ -4,3 +4,7 @@ dist/
 .env
 src/data/feed.json
 public/feed.json
+
+# merch: generated print files (run merch/export.sh)
+merch/*-print.*
+merch/.shirt-inlined.svg
