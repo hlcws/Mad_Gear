@@ -5,8 +5,10 @@ import SectionHead from './SectionHead.astro';
 
 interface Props { feed: any; head: { label?: string; title?: string } }
 const { feed, head } = Astro.props;
-const tw = feed.twitch;
-const yt = feed.youtube;
+const cutoff = Date.now() - site.maxVideoAgeDays * 864e5;
+const recent = (vids: any[] = []) => vids.filter((v) => new Date(v.publishedAt).getTime() > cutoff);
+const tw = feed.twitch && { ...feed.twitch, videos: recent(feed.twitch.videos) };
+const yt = feed.youtube && { ...feed.youtube, videos: recent(feed.youtube.videos) };
 const host = new URL(site.url).hostname;
 const twitchEmbed =
   `https://player.twitch.tv/?channel=${site.feeds.twitchLogin}&parent=${host}&parent=www.${host}&parent=localhost&muted=true`;

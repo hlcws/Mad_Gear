@@ -18,6 +18,9 @@ export const site = {
 
   // Shown as a hint only. "Open now" is decided purely from real events.
   usualSchedule: 'Meist samstags, 14:00 – Mitternacht',
+  // Videos older than this are hidden, so old uploads never make the site look dead.
+  maxVideoAgeDays: 180,
+
   // Used when an event has no end time (Discord events often don't).
   defaultSessionHours: 10,
 

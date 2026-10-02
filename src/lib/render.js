@@ -33,7 +33,8 @@ function metaLine(feed, now) {
   const lastStream = [feed?.twitch?.videos?.[0], feed?.youtube?.videos?.[0]]
     .filter(Boolean)
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))[0];
-  if (lastStream) parts.push(`<span>Letzter Stream ${ago(lastStream.publishedAt, now)}</span>`);
+  const fresh = lastStream && now - new Date(lastStream.publishedAt) < (site.maxVideoAgeDays ?? 180) * 864e5;
+  if (fresh) parts.push(`<span>Letzter Stream ${ago(lastStream.publishedAt, now)}</span>`);
   return `<p class="status-meta">${parts.join('')}</p>`;
 }
 
