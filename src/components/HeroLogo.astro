@@ -1,0 +1,8 @@
+---
+import { logo } from '../lib/assets.js';
+import { site } from '../site.config.mjs';
+const src = logo('logo-full');
+---
+{src
+  ? <img class="hero-logo" src={src} alt={site.name} width="420" height="420" />
+  : <div class="hero-logo hero-logo-text" aria-hidden="true"><span>Mad</span><span>Gear</span></div>}

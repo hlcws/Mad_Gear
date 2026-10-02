@@ -1,0 +1,41 @@
+---
+// Re-renders every [data-live] block each minute (so "open now" flips on time)
+// and pulls /feed.json every 5 minutes (so an open tab sees new deploys).
+interface Props { feed: unknown }
+const { feed } = Astro.props;
+---
+<script type="application/json" id="feed-data" set:html={JSON.stringify(feed).replace(/</g, '\u003c')} />
+<script>
+  import { renderStatus, renderEvents, statusKind } from '../lib/render.js';
+
+  let feed = JSON.parse(document.getElementById('feed-data')!.textContent || '{}');
+
+  function paint() {
+    const now = new Date();
+    document.querySelectorAll<HTMLElement>('[data-live]').forEach((el) => {
+      if (el.dataset.live === 'status') {
+        el.innerHTML = renderStatus(feed, now);
+        el.dataset.kind = statusKind(feed, now);
+      } else if (el.dataset.live === 'events') {
+        el.innerHTML = renderEvents(feed, {
+          now,
+          limit: Number(el.dataset.limit) || 6,
+          withStreams: el.dataset.streams === 'true',
+        });
+      }
+    });
+  }
+
+  async function refresh() {
+    try {
+      const res = await fetch('/feed.json', { cache: 'no-store' });
+      if (res.ok) feed = await res.json();
+    } catch { /* offline: keep what we have */ }
+    paint();
+  }
+
+  paint();
+  setInterval(paint, 60_000);
+  setInterval(refresh, 5 * 60_000);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) refresh(); });
+</script>

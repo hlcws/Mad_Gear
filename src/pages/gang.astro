@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../site.config.mjs';
+---
+<Base title="Die Gang" description={`Die Ringleader von ${site.name}.`}>
+  <section>
+    <div class="wrap">
+      <span class="kutte-label">Members</span>
+      <h2>Die <span class="accent">Gang</span></h2>
+      <p class="lead">Die Stamm-Member sind langjährige Mitglieder der deutschen FGC und feste Größen auf Turnieren. Sprecht bei Fragen gerne jeden an. Im <a href={site.links.discord}>Discord</a> erkennt ihr sie an der Ringleader-Rolle. Bei jeder Session ist mindestens ein Ringleader da.</p>
+      <div class="team" style="margin-top:28px">
+        {site.team.map((m) => (
+          <div class="member">
+            <img src={`/photos/${m.photo}`} alt={m.nick} loading="lazy" />
+            <div class="body">
+              <div class="role">{m.role}</div>
+              <p class="nick">{m.nick}</p>
+              <div>{m.name}{m.handle ? ` · ${m.handle}` : ''}</div>
+              <p class="games">{m.games}</p>
+              {m.links.map(([label, href]) => <a href={href}>{label}</a>)}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

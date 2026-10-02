@@ -1,3 +1,8 @@
+---
+layout: ../layouts/Prose.astro
+title: "Impressum"
+---
+
 # Impressum
 Khanh David To Tuan
 

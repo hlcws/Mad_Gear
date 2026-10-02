@@ -1,0 +1,109 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroLogo from '../components/HeroLogo.astro';
+import Media from '../components/Media.astro';
+import LiveUpdater from '../components/LiveUpdater.astro';
+import { site } from '../site.config.mjs';
+import { loadFeed } from '../lib/feed.js';
+import { renderStatus, renderEvents, statusKind } from '../lib/render.js';
+
+const feed = loadFeed();
+---
+<Base>
+  <section class="hero">
+    <div class="hero-bg" style="background-image:url('/photos/location1.jpg')"></div>
+    <div class="wrap">
+      <div>
+        <span class="kanji">{site.kanji}</span>
+        <h1>Mad<b>Gear</b> FFM</h1>
+        <p class="tagline">Das Fighting-Game-Clubhaus im Rhein-Main-Gebiet. Zocken, üben, Sets spielen und auf dem Stream landen.</p>
+        <div class="status-card" data-live="status" data-kind={statusKind(feed)} aria-live="polite" set:html={renderStatus(feed)} />
+      </div>
+      <HeroLogo />
+    </div>
+  </section>
+
+  <section id="termine">
+    <div class="wrap">
+      <span class="kutte-label">Treffen</span>
+      <h2>Kommende <span class="accent">Sessions</span></h2>
+      <div class="grid-2">
+        <div data-live="events" data-limit="5" set:html={renderEvents(feed, { limit: 5 })} />
+        <div>
+          <div class="callout"><strong>Erster Besuch?</strong> Die ganze Session ist für dich kostenlos. Einfach vorbeikommen, Controller mitbringen.</div>
+          <p class="lead">Sessions werden im Kalender eingetragen und automatisch im Discord angekündigt. Dort siehst du auch, wer kommt.</p>
+          <div class="btn-row">
+            <a class="btn btn-discord" href={site.links.discord}>Discord beitreten</a>
+            <a class="btn" href="/termine.html">Alle Termine</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Media feed={feed} />
+
+  <section id="clubhaus">
+    <div class="wrap grid-2">
+      <div>
+        <span class="kutte-label">Das Clubhaus</span>
+        <h2>Ausstattung</h2>
+        <ul class="check-list">{site.equipment.map((e) => <li>{e}</li>)}</ul>
+        <p class="lead" style="margin-top:16px">Bitte eigenen Controller mitbringen! Eigene Konsole? Einfach an einen freien Screen anschließen. Absprachen laufen im <a href={site.links.discord}>Discord</a>.</p>
+        <h3 style="font-size:1.4rem;margin:28px 0 12px">Was gespielt wird</h3>
+        <ul class="chips">{site.games.map((g) => <li>{g}</li>)}</ul>
+      </div>
+      <div class="photos">
+        <img src="/photos/location1.jpg" alt="Spielstationen im Clubhaus" loading="lazy" />
+        <img src="/photos/location2.jpg" alt="Arcade Cabinets im Clubhaus" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section id="preise">
+    <div class="wrap">
+      <span class="kutte-label">Eintritt</span>
+      <h2>Preise</h2>
+      <div class="prices">
+        {site.prices.map((p) => (
+          <div class="price">
+            <div class="tier">{p.tier} {p.icon}</div>
+            <div class="amount">{p.price}€</div>
+            <div class="dur">{p.duration}</div>
+            <div class="note">{p.note}</div>
+          </div>
+        ))}
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="/tickets.html">Tickets kaufen</a>
+        <a class="btn" href={site.links.paypal}>Spenden via PayPal</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="anfahrt">
+    <div class="wrap grid-2">
+      <div>
+        <span class="kutte-label">Anfahrt</span>
+        <h2>So findest du uns</h2>
+        <p class="address">{site.address.street}<br />{site.address.city}<br /><small>{site.address.floor} · kein Aufzug</small></p>
+        <p class="lead">Parken bitte nur an der Straße oder auf unmarkierten Parkplätzen. Bushaltestelle „Hessenring“ direkt vor der Tür.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="/anfahrt.html">Anfahrt & Details</a>
+          <a class="btn" href="/regeln.html">Clubregeln lesen</a>
+        </div>
+      </div>
+      <div>
+        <span class="kutte-label">Kontakt</span>
+        <h2>Die Gang</h2>
+        <p class="lead">Bei jeder Session ist mindestens ein Ringleader da. Fragen? Sprich uns an oder schreib im Discord.</p>
+        <div class="btn-row">
+          <a class="btn" href="/gang.html">Die Gang kennenlernen</a>
+          <a class="btn" href={`mailto:${site.email}`}>E-Mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <LiveUpdater feed={feed} />
+</Base>

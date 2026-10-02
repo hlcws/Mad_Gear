@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import LiveUpdater from '../components/LiveUpdater.astro';
+import { site } from '../site.config.mjs';
+import { loadFeed } from '../lib/feed.js';
+import { renderStatus, renderEvents, statusKind } from '../lib/render.js';
+
+const feed = loadFeed();
+const webcal = site.feeds.calendarIcs.replace(/^https:/, 'webcal:');
+---
+<Base title="Termine" description={`Alle kommenden Sessions bei ${site.name}. ${site.usualSchedule}.`}>
+  <section>
+    <div class="wrap grid-2">
+      <div>
+        <span class="kutte-label">Treffen</span>
+        <h2>Termine</h2>
+        <div data-live="events" data-limit="20" data-streams="true" set:html={renderEvents(feed, { limit: 20, withStreams: true })} />
+      </div>
+      <div>
+        <div class="status-card" data-live="status" data-kind={statusKind(feed)} aria-live="polite" set:html={renderStatus(feed)} />
+        <h3 style="font-size:1.4rem;margin:32px 0 10px">Nichts verpassen</h3>
+        <p class="lead">Jede Session wird automatisch als Event im Discord angelegt. Dort auf „Interessiert“ klicken und du bekommst eine Erinnerung. Oder abonniere den Kalender direkt im Handy.</p>
+        <div class="btn-row">
+          <a class="btn btn-discord" href={site.links.discord}>Discord</a>
+          <a class="btn" href={webcal}>Kalender abonnieren</a>
+          <a class="btn" href={site.links.calendar}>Google Kalender</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <LiveUpdater feed={feed} />
+</Base>

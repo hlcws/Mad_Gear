@@ -1,39 +1,50 @@
-## Mad Gear Frankfurt
+# MadGearFFM – madgear.org
 
-Willkommen!
+Static site (Astro) on GitHub Pages. A GitHub Action runs every 30 minutes and:
 
-You can use the [editor on GitHub](https://github.com/hlcws/madgear/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+1. **Syncs Google Calendar → Discord**: makes sure the next 5 calendar sessions exist as Discord events (template in `src/site.config.mjs` → `discordSync`).
+2. **Fetches** upcoming events (Discord + Google Calendar + Twitch schedule), Discord member counts, Twitch live status/VODs and YouTube uploads.
+3. **Builds and deploys** the site.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Whether the venue is "open now" is computed in the visitor's browser from the event times, so it's always correct to the minute. If the data is more than 2 days old, the site says so instead of pretending.
 
-### Markdown
+## Editing content
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+| What | Where |
+|---|---|
+| Links, address, prices, equipment, games, team, Discord event template | `src/site.config.mjs` |
+| Rules, AGB, Impressum | `src/pages/regeln.md`, `agb.md`, `impressum.md` (plain Markdown) |
+| Directions, tickets | `src/pages/anfahrt.astro`, `tickets.astro` |
+| Photos | `public/photos/` |
+| Logos (transparent SVG or PNG) | `public/logo-full.svg` (helmet + text, hero & social preview), `public/logo-mark.svg` (helmet only, favicon), `public/logo-text.svg` (text only, header) |
 
-```markdown
-Syntax highlighted code block
+### Planning sessions
 
-# Header 1
-## Header 2
-### Header 3
+Add or delete sessions in the **Google Calendar** (one-off or recurring). Within 30 minutes they show up on the site and as Discord events.
+- Cancel one Saturday: delete that single occurrence in Google Calendar. The bot removes its Discord event.
+- Special event (tournament, league night): give the calendar entry its own title. It keeps that name in Discord instead of "Casual Session".
+- Discord events you create by hand are never touched by the bot and also count as "announced".
+- Entries titled "Blocked…" are private and never shown.
 
-- Bulleted
-- List
+## One-time setup
 
-1. Numbered
-2. List
+1. **Pages source**: repo → Settings → Pages → Source: **GitHub Actions**. The custom domain stays `madgear.org` (`public/CNAME`).
+2. **Discord bot** (for reading and creating events):
+   - https://discord.com/developers/applications → New Application → Bot → Reset Token → copy.
+   - OAuth2 → URL Generator → scope `bot`, permissions **View Channels**, **Create Events**, **Manage Events** → open the URL and add the bot to the server.
+   - Repo → Settings → Secrets and variables → Actions → `DISCORD_BOT_TOKEN`.
+3. **Twitch** (live status, VODs, schedule): https://dev.twitch.tv/console/apps → Register (OAuth redirect `http://localhost`, category Website) → secrets `TWITCH_CLIENT_ID`, `TWITCH_CLIENT_SECRET`.
+4. **YouTube**: put the channel ID (`UC…`) into `feeds.youtubeChannelId` and the URL into `links.youtube`. No key needed.
 
-**Bold** and _Italic_ and `Code` text
+Each source is optional; missing secrets just hide that part. Discord member counts and the calendar work without any setup.
 
-[Link](url) and ![Image](src)
+Note: GitHub pauses scheduled workflows in repos with no commits for 60 days. If the site shows "Termindaten zuletzt vor … aktualisiert", re-enable the workflow under Actions, or push any commit.
+
+## Local development
+
+```bash
+npm install
+npm run fetch          # optional: pull live data (set env vars for Discord/Twitch)
+npm run dev            # http://localhost:4321
+SYNC_DRY_RUN=1 DISCORD_BOT_TOKEN=… node scripts/sync-discord-events.mjs   # preview the Discord sync
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hlcws/madgear/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.

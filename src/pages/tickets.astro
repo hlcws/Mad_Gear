@@ -1,0 +1,90 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../site.config.mjs';
+const subscriptionPlan = 'P-04C428923N755423BMLUOVNI';
+---
+<Base title="Tickets">
+  <div class="wrap">
+    <article class="prose">
+      <span class="kutte-label">Eintritt</span>
+      <h1>Tickets</h1>
+      <div class="callout"><strong>Euer erster Besuch einer Casual Session ist umsonst!</strong></div>
+
+      <div class="prices">
+        {site.prices.map((p) => (
+          <div class="price">
+            <div class="tier">{p.tier} {p.icon}</div>
+            <div class="amount">{p.price}€</div>
+            <div class="dur">{p.duration}</div>
+            <div class="note">{p.note}</div>
+          </div>
+        ))}
+      </div>
+      <p><strong>Ringleader</strong>: Stamm-Member mit Verantwortung. Auf Anfrage.</p>
+
+      <h2>So funktioniert's</h2>
+      <p>Das Ticket ist ab Kauf für den angegebenen Zeitraum gültig. Ihr willigt ein, die Clubregeln und die Hausordnung einzuhalten. Vor Ort zeigt ihr einem Stamm-Member die PayPal-Nachricht als Nachweis (auf dem Handy reicht) und bekommt ein Bändchen. Barzahlung ist nicht möglich. Das Ticket berechtigt euch zum Eintritt und zur Nutzung der Stations und der Stream-Station in Absprache mit Stammgästen vor Ort.</p>
+      <p>Wenn ihr kein PayPal habt, könnt ihr vor Ort jemanden bitten, euch das Ticket zu kaufen.</p>
+      <p>Mit dem Kauf erhalten wir eure PayPal E-Mail-Adresse, Namen und den Betreff, den ihr angebt. Die E-Mail-Adresse wird nach einem Jahr anonymisiert. Gebt als Betreff bitte die Ticketart und den Zeitpunkt an (z.B. „kommendes Wochenende“).</p>
+      <p>Vor Ort werden Foto- und Videoaufnahmen gemacht, live auf Twitch übertragen sowie auf Social Media und Foren (HardEdge.org) geteilt, um Werbung für das Clubhaus zu machen.</p>
+      <p>Die Tickets gelten nur, wenn das Clubhaus offen hat. Schaut vorher bei den <a href="/termine.html">Terminen</a> oder im <a href={site.links.discord}>Discord</a>.</p>
+
+      <hr />
+      <label class="accept">
+        <input type="checkbox" id="accept" />
+        <span>Ich akzeptiere die o.g. Bestimmungen, <a href="/agb.html">AGB</a> und <a href="/regeln.html">Clubregeln</a>.</span>
+      </label>
+
+      <div id="checkout" hidden>
+        <h2>Ticket kaufen</h2>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick" />
+          <input type="hidden" name="hosted_button_id" value="WCHKEZZZB2BJL" />
+          <input type="hidden" name="on0" value="Dauer" />
+          <input type="hidden" name="on1" value="Nickname" />
+          <input type="hidden" name="currency_code" value="EUR" />
+          <p><label>Ticket<br />
+            <select name="os0" class="field">
+              <option value="Tourist (1 Tag)">Tourist (1 Tag) – 10,00 €</option>
+              <option value="Goon (Wochenende)">Goon (Wochenende) – 15,00 €</option>
+              <option value="Supergoon (Monat)">Supergoon (Monat) – 25,00 €</option>
+              <option value="Spender">Spender – 5,00 €</option>
+            </select></label></p>
+          <p><label>Nickname<br /><input type="text" name="os1" maxlength="200" class="field" /></label></p>
+          <button class="btn btn-primary" type="submit">Weiter zu PayPal</button>
+        </form>
+        <p style="margin-top:16px">Alternativ direkt an: MadGearFFM@gmail.com · Betreff: Nickname + Datum</p>
+
+        <h2>Supergoon-Abo</h2>
+        <div id="paypal-subscribe"></div>
+      </div>
+    </article>
+  </div>
+
+  <style>
+    .accept { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; }
+    .accept input { margin-top: 6px; }
+    .field { width: 100%; max-width: 360px; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface-2); color: var(--text); font: inherit; }
+    #paypal-subscribe { max-width: 360px; background: #fff; border-radius: 12px; padding: 12px; }
+    #paypal-subscribe:empty { display: none; }
+  </style>
+
+  <script is:inline define:vars={{ plan: subscriptionPlan }}>
+    const box = document.getElementById('accept');
+    const checkout = document.getElementById('checkout');
+    let sdkLoaded = false;
+    box.addEventListener('change', () => {
+      checkout.hidden = !box.checked;
+      if (!box.checked || sdkLoaded) return;
+      sdkLoaded = true;
+      const s = document.createElement('script');
+      s.src = 'https://www.paypal.com/sdk/js?client-id=AYgAZUl1zBsCbMSFFQShxUdl8pZc-31kqnd6O3vK4Xte8SUxty9JdRRs9diySzXW0AKXObdYTreh5-vs&vault=true&intent=subscription';
+      s.onload = () => window.paypal.Buttons({
+        style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'subscribe' },
+        createSubscription: (data, actions) => actions.subscription.create({ plan_id: plan }),
+        onApprove: (data) => alert('Danke! Abo-ID: ' + data.subscriptionID),
+      }).render('#paypal-subscribe');
+      document.head.appendChild(s);
+    });
+  </script>
+</Base>

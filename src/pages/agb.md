@@ -1,3 +1,8 @@
+---
+layout: ../layouts/Prose.astro
+title: "Allgemeine Geschäftsbedingungen"
+---
+
 # Allgemeine Geschäftsbedingungen
 
 [AGB erstellt](http://www.deutsche-anwaltshotline.de/recht-auf-ihrer-website/agb-generator) über den Generator der Deutschen Anwaltshotline AG  

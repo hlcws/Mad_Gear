@@ -1,4 +1,9 @@
-# Regeln
+---
+layout: ../layouts/Prose.astro
+title: "Clubregeln"
+---
+
+# Clubregeln
 
 ## Hausordnung
 
