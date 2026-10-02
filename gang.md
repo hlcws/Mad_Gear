@@ -22,24 +22,6 @@ Die 8 Stamm-Member sind langjährige Mitglieder der deutschen FGC und feste Grö
 
 | Nummer | #3 |
 |---|---| 
-| Nick | Kurryeis | 
-| | ![Pic](/photos/kurryeis.jpg) | 
-| Rang |Ringleader| 
-| Name | Julian| 
-| Games | Guilty Gear, BlazBlue | 
-| Social Media | [Twitter @kurryeis](https://twitter.com/kurryeis), [SRK](http://rank.shoryuken.com/rankings/player/byname/Kurryeis) |
-
-| Nummer | #4 |
-|---|---| 
-| Nick | SinJul | 
-| | ![Pic](/photos/sinjul.jpg) | 
-| Rang |Ringleader| 
-| Name | Jan | 
-| Games | King of Fighters, Groove on Fight, etc. | 
-| Social Media | [Twitter @NFBSinJul](https://twitter.com/NFBSinJul) |
-
-| Nummer | #5 |
-|---|---| 
 | Nick | KenDeep | 
 | | ![Pic](/photos/kendeep.jpg) | 
 | Rang |Ringleader| 
@@ -47,7 +29,7 @@ Die 8 Stamm-Member sind langjährige Mitglieder der deutschen FGC und feste Grö
 | Games | King of Fighters, DragonBall FighterZ, UNIEL | 
 | Social Media | [Twitter @Ken_Deep](Ken_Deep), [SRK](http://rank.shoryuken.com/rankings/player/byname/KenDeep) |
 
-| Nummer | #6 |
+| Nummer | #4 |
 |---|---| 
 | Nick | Pit | 
 | | ![Pic](/photos/pit.jpg) | 
@@ -56,16 +38,7 @@ Die 8 Stamm-Member sind langjährige Mitglieder der deutschen FGC und feste Grö
 | Games | Street Fighter IV & V, Mortal Kombat 11 | 
 | Social Media | [Twitter @CatHePit](https://twitter.com/CatHePit) |
 
-| Nummer | #7 |
-|---|---| 
-| Nick | ReaperSK| 
-| | ![Pic](/photos/reaper.jpg) | 
-| Rang |Ringleader| 
-| Name | Simon | 
-| Games | UMVC3, BlazBlue, Persona | 
-| Social Media | [SRK](http://rank.shoryuken.com/rankings/player/byname/ReaperSK) |
-
-| Nummer | #8 |
+| Nummer | #5 |
 |---|---| 
 | Nick | Maddo | 
 | | ![Pic](/photos/maddo.jpg) | 
