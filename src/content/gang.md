@@ -45,7 +45,7 @@ members:
     name: Martin
     role: Ringleader
     photo: maddo.jpg
-    games: Tekken, King of Fighters
+    games: Tekken, Virtua Fighter, King of Fighters
     links:
       - label: Twitter
         url: https://twitter.com/maddo88888
