@@ -6,6 +6,7 @@ export const site = {
   name: 'MadGearFFM',
   url: 'https://madgear.org',
   kanji: '魔奴義亜',
+  kanjiReading: 'MA-DO-GI-A', // shown as [MA-DO-GI-A], T-shirt style
   tagline: 'Fighting Game Locals in Frankfurt / Rhein-Main',
   email: 'kontakt@madgear.org',
 

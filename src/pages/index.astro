@@ -27,7 +27,7 @@ const feed = loadFeed();
     <div class="hero-bg" style="background-image:url('/photos/location1.jpg')"></div>
     <div class="wrap">
       <div>
-        <span class="kanji">{site.kanji}</span>
+        <span class="kanji" lang="ja">{site.kanji}{site.kanjiReading && <span class="reading" lang="en">[{site.kanjiReading}]</span>}</span>
         <h1><span class="sr-only">MadGearFFM – </span><Fragment set:html={inline(hero.frontmatter.title)} /></h1>
         <div class="tagline md"><hero.Content /></div>
         <div class="status-card" data-live="status" data-kind={statusKind(feed)} aria-live="polite" set:html={renderStatus(feed)} />
