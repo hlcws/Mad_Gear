@@ -15,8 +15,8 @@ const feed = loadFeed();
     <div class="wrap">
       <div>
         <span class="kanji">{site.kanji}</span>
-        <h1>Mad<b>Gear</b> FFM</h1>
-        <p class="tagline">Das Fighting-Game-Clubhaus im Rhein-Main-Gebiet. Zocken, üben, Sets spielen und auf dem Stream landen.</p>
+        <h1><span class="sr-only">MadGearFFM – </span>Fighting Game <b>Clubhaus</b></h1>
+        <p class="tagline">Mad Gear Frankfurt, die Fighting-Game-Location im Rhein-Main-Gebiet. Zocken, üben, Sets spielen und auf dem Stream landen.</p>
         <div class="status-card" data-live="status" data-kind={statusKind(feed)} aria-live="polite" set:html={renderStatus(feed)} />
       </div>
       <HeroLogo />
