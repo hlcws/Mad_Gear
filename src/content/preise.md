@@ -8,17 +8,12 @@ prices:
     icon: ☀️
     price: 10
     duration: Tag
-    note: Am Kaufdatum bis 4 Uhr morgens
-  - tier: Goon
-    icon: ⚙️
-    price: 15
-    duration: Wochenende
-    note: Fr 18:00 – So 18:00
+    note: Am Kaufdatum bis Mitternacht
   - tier: Supergoon
     icon: ⚙️⚙️⚙️
     price: 25
     duration: Monat
-    note: Für den Kaufmonat
+    note: Für den Kaufmonat (auch rückwirkend)
   - tier: Spender
     icon: 🙏
     price: 5

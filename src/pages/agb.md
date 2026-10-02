@@ -37,7 +37,7 @@ Mit der Zusendung der Bestellbestätigung kommt der Vertrag zustande.
 
 ## Vertragsdauer
 
-Der Vertrag hat vorbehaltlich einer Kündigung eine Laufzeit von 1 Monate. Der Gesamtpreis errechnet sich aus den folgenden Komponenten: Tourist (Tagesgast): 10€, gilt am Kaufdatum bis zum nächsten Tag 4 Uhr Morgens. Goon (Wochenende): 15€, gilt für das Wochenende. Maximal Freitag 18:00 - Sonntag 18:00. Supergoon (Dauergast): 25€, gilt für den Monat in dem ihr es gekauft habt.
+Der Vertrag hat vorbehaltlich einer Kündigung eine Laufzeit von 1 Monate. Der Gesamtpreis errechnet sich aus den folgenden Komponenten: Tourist (Tagesgast): 10€, gilt am Kaufdatum bis Mitternacht. Supergoon (Dauergast): 25€, gilt für den Monat in dem ihr es gekauft habt.
 
 ## Preise, Versandkosten, Rücksendekosten
 

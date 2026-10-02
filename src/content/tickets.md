@@ -11,7 +11,7 @@ Das Ticket ist ab Kauf für den angegebenen Zeitraum gültig. Ihr willigt ein, d
 
 Wenn ihr kein PayPal habt, könnt ihr vor Ort jemanden bitten, euch das Ticket zu kaufen.
 
-Mit dem Kauf erhalten wir eure PayPal E-Mail-Adresse, Namen und den Betreff, den ihr angebt. Die E-Mail-Adresse wird nach einem Jahr anonymisiert. Gebt als Betreff bitte die Ticketart und den Zeitpunkt an (z.B. „kommendes Wochenende“).
+Mit dem Kauf erhalten wir eure PayPal E-Mail-Adresse, Namen und den Betreff, den ihr angebt. Die E-Mail-Adresse wird nach einem Jahr anonymisiert. Gebt als Betreff bitte die Ticketart und den Zeitpunkt an (z.B. „kommender Samstag“).
 
 Vor Ort werden Foto- und Videoaufnahmen gemacht, live auf Twitch und YouTube übertragen sowie auf Social Media und Foren (HardEdge.org) geteilt, um Werbung für das Clubhaus zu machen.
 
