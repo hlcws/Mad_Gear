@@ -66,4 +66,4 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-02.
 - [x] 60-day cron shutoff: `keepalive` job re-enables the workflow on every scheduled run. If updates ever stop anyway, the stale warning on the site shows it; re-enable in the Actions tab
 - [x] Feed fetch retries on Discord 429 (the sync step right before it used up the rate limit, so Discord events fell back to stale data)
 - [x] Cron moved to `7,37 * * * *` (GitHub delays :00/:30 runs the most; runs were 4–6 h apart on 2026-10-03)
-- [ ] External cron (cron-job.org) calling `workflow_dispatch` for reliable 30-minute updates. Steps in README → *Reliable 30-minute updates*
+- [x] External cron (cron-job.org) calls `workflow_dispatch` every 30 minutes (set up 2026-10-04, fine-grained token: renew before it expires). Steps in README → *Reliable 30-minute updates*
