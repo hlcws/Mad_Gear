@@ -9,13 +9,17 @@ INKSCAPE="${INKSCAPE:-/c/Program Files/Inkscape/bin/inkscape.exe}"
 src=shirt-madogia.svg
 tmp=.shirt-inlined.svg
 
-# Inline the linked logo so the print files are self-contained.
+# Inline the linked logos so the print files are self-contained.
+# Each copy gets its own id prefix, so the same logo can appear more than once.
 node -e '
 const fs = require("fs");
 let svg = fs.readFileSync(process.argv[1], "utf8");
+let n = 0;
 svg = svg.replace(/<image href="([^"]+\.svg)" x="([\d.]+)" y="([\d.]+)" width="([\d.]+)" height="([\d.]+)"\s*\/>/g,
-  (_, file, x, y, w, h) => fs.readFileSync(file, "utf8")
+  (_, file, x, y, w, h) => (n++, fs.readFileSync(file, "utf8"))
     .replace(/<\?xml[^>]*>/, "")
+    .replace(/\bid="([^"]+)"/g, `id="i${n}-$1"`)
+    .replace(/(url\(#|href="#)([^)"]+)/g, `$1i${n}-$2`)
     .replace(/<svg\b[^>]*>/, (tag) => tag
       .replace(/\s(width|height)="[^"]*"/g, "")
       .replace(/<svg\b/, `<svg x="${x}" y="${y}" width="${w}" height="${h}"`)));
