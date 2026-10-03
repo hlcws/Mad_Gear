@@ -1,0 +1,161 @@
+{
+  "_comment": "Layers per OBS scene, bottom to top. rect = [x, y, width, height]. Used by obs/build.mjs and preview.html.",
+  "Starting Soon": [
+    {
+      "type": "image",
+      "file": "frames/starting.png"
+    },
+    {
+      "type": "file",
+      "file": "chat.html",
+      "rect": [
+        1444,
+        0,
+        476,
+        1080
+      ]
+    },
+    {
+      "type": "file",
+      "file": "session.html",
+      "rect": [
+        220,
+        780,
+        1000,
+        130
+      ]
+    }
+  ],
+  "Match": [
+    {
+      "type": "game",
+      "rect": [
+        0,
+        0,
+        1600,
+        900
+      ]
+    },
+    {
+      "type": "cam",
+      "rect": [
+        1600,
+        0,
+        320,
+        180
+      ]
+    },
+    {
+      "type": "image",
+      "file": "frames/match.png"
+    },
+    {
+      "type": "file",
+      "file": "chat.html",
+      "rect": [
+        1603,
+        180,
+        317,
+        720
+      ]
+    },
+    {
+      "type": "file",
+      "file": "session.html",
+      "rect": [
+        180,
+        1027,
+        340,
+        24
+      ]
+    },
+    {
+      "type": "score",
+      "url": "match.html?part=live"
+    }
+  ],
+  "Match · Fullscreen": [
+    {
+      "type": "game",
+      "rect": [
+        0,
+        0,
+        1920,
+        1080
+      ]
+    },
+    {
+      "type": "cam",
+      "rect": [
+        800,
+        900,
+        320,
+        180
+      ]
+    },
+    {
+      "type": "image",
+      "file": "frames/fullscreen.png"
+    },
+    {
+      "type": "score",
+      "url": "fullscreen.html?part=live"
+    }
+  ],
+  "On Break": [
+    {
+      "type": "image",
+      "file": "frames/break.png"
+    },
+    {
+      "type": "file",
+      "file": "chat.html",
+      "rect": [
+        1444,
+        0,
+        476,
+        1080
+      ]
+    },
+    {
+      "type": "file",
+      "file": "session.html",
+      "rect": [
+        220,
+        780,
+        1000,
+        130
+      ]
+    },
+    {
+      "type": "score",
+      "url": "screen.html?mode=break&part=live"
+    }
+  ],
+  "Ending": [
+    {
+      "type": "image",
+      "file": "frames/ending.png"
+    },
+    {
+      "type": "file",
+      "file": "chat.html",
+      "rect": [
+        1444,
+        0,
+        476,
+        1080
+      ]
+    },
+    {
+      "type": "file",
+      "file": "session.html",
+      "rect": [
+        220,
+        780,
+        1000,
+        130
+      ]
+    }
+  ]
+}

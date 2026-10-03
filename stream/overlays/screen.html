@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MadGear · Screen</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  /* Full-screen scene: ?mode=starting | break | ending
+     Layers on top in OBS: chat.html (1444,0 476x1080), session.html (220,780 1000x130),
+     on break also the live "current set" line (this page with part=live). */
+  body { background: var(--bg); }
+  .bg { inset: 0; overflow: hidden; }
+  .bg::before { content: ''; position: absolute; inset: -200px; background: repeating-linear-gradient(135deg, rgba(255,255,255,.025) 0 3px, transparent 3px 26px); }
+  .bg::after { content: ''; position: absolute; left: -300px; top: 830px; width: 2400px; height: 90px; background: var(--red); transform: rotate(-8deg); opacity: .9; }
+  .watermark { right: 520px; top: 40px; writing-mode: vertical-rl; font-size: 230px; font-weight: 800; color: rgba(255,255,255,.035); letter-spacing: .05em; }
+
+  .center { left: 0; width: 1440px; text-align: center; }
+  .logo { top: 70px; height: 340px; display: flex; justify-content: center; }
+  .logo img { height: 100%; }
+  .headline { top: 440px; font-size: 150px; text-shadow: 0 6px 0 rgba(0,0,0,.4); }
+  .headline em { font-style: normal; color: var(--red-text); }
+  .sub { top: 610px; font-size: 40px; font-weight: 600; color: var(--muted); }
+
+  .scoreline { top: 690px; display: flex; justify-content: center; }
+  .scoreline > div { display: inline-flex; align-items: center; gap: 16px; padding: 10px 26px; font-size: 30px; font-weight: 600; background: var(--surface-2); border-left: 5px solid var(--red); }
+  .scoreline .label { font-family: var(--display); text-transform: uppercase; color: var(--red-text); letter-spacing: .08em; font-size: 26px; }
+  .scoreline .ft { font-family: var(--display); color: var(--muted); }
+  body:not(.has-score) .scoreline { display: none; }
+
+  .foot { top: 990px; display: flex; justify-content: center; }
+  .side { left: 1440px; top: 0; width: 480px; height: 1080px; border-left: 4px solid var(--red); }
+</style>
+</head>
+<body>
+  <div class="abs bg"></div>
+  <div class="abs watermark" data-config="kanji"></div>
+
+  <div class="abs center logo"><img src="assets/logo-full.svg" alt=""></div>
+  <div class="abs center headline display" id="headline"></div>
+  <div class="abs center sub" id="sub"></div>
+  <div class="abs center scoreline live"><div>
+    <span class="label">Current set</span>
+    <span data-bind="p1"></span> <b data-bind="s1"></b> – <b data-bind="s2"></b> <span data-bind="p2"></span>
+    <span class="ft" data-bind="ft"></span>
+  </div></div>
+
+  <div class="abs center foot"><div class="socials row" data-socials></div></div>
+  <div class="abs side panel"><div class="chat-head" data-icon="twitch"><span>Chat</span></div></div>
+
+  <script type="module">
+    import { start } from './common.js';
+    const mode = new URLSearchParams(location.search).get('mode') || 'break';
+    const headlines = { starting: 'Starting <em>soon</em>', break: 'On <em>break</em>', ending: 'See you <em>next time</em>' };
+    document.getElementById('headline').innerHTML = headlines[mode] || headlines.break;
+    document.getElementById('sub').dataset.text = mode + 'Text';
+    // Only the break screen shows the current set
+    if (mode !== 'break') document.querySelector('.scoreline').remove();
+    start();
+  </script>
+</body>
+</html>

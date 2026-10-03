@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MadGear · Fullscreen</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  /* Game fills the screen. Cam hole: 800,900 320x180 (bottom center, between SF6's super meters) */
+  .cam-frame { left: 800px; top: 900px; width: 320px; height: 180px; box-shadow: inset 0 0 0 3px var(--red); }
+  .tab { left: 800px; top: 864px; width: 320px; height: 36px; display: flex; align-items: center; justify-content: center; gap: 12px; font-size: 22px; letter-spacing: .1em; background: var(--red); }
+  .tab span:first-child { color: #fff; }
+  .side { top: 1020px; height: 60px; display: grid; }
+  .side.l { right: 1120px; grid-template-columns: 300px 70px; }
+  .side.r { left: 1120px; grid-template-columns: 70px 300px; }
+  .side .name { font-size: 28px; border-bottom-width: 3px; background: rgba(21, 21, 29, .92); }
+  .side.l .name { justify-content: flex-end; }
+  .side .score { font-size: 40px; }
+</style>
+</head>
+<body>
+  <div class="abs tab display live"><span data-bind="title"></span><span data-bind="ft"></span></div>
+  <div class="abs cam-frame"></div>
+  <div class="abs side l live">
+    <div class="name" data-side="1" data-bind="p1"></div>
+    <div class="score" data-side="1" data-bind="s1"></div>
+  </div>
+  <div class="abs side r live">
+    <div class="score" data-side="2" data-bind="s2"></div>
+    <div class="name" data-side="2" data-bind="p2"></div>
+  </div>
+  <script type="module">import { start } from './common.js'; start();</script>
+</body>
+</html>
