@@ -52,6 +52,19 @@ Add or delete sessions in the **Google Calendar** (one-off or recurring). Within
 
 Each source is optional; missing secrets just hide that part. Discord member counts and the calendar work without any setup.
 
+### Reliable 30-minute updates (external cron)
+
+GitHub's own schedule often runs hours late. An external cron fixes that by starting the workflow directly:
+
+1. GitHub → Settings → Developer settings → Fine-grained tokens → Generate. Repository access: only `hlcws/Mad_Gear`. Permissions: **Actions: Read and write**. Pick a long expiry and note the date.
+2. https://cron-job.org → Create cronjob:
+   - URL: `https://api.github.com/repos/hlcws/Mad_Gear/actions/workflows/deploy.yml/dispatches`, every 30 minutes
+   - Advanced → Request method **POST**, body `{"ref":"master"}`
+   - Headers: `Authorization: Bearer <token>`, `Accept: application/vnd.github+json`, `User-Agent: madgear-cron`
+3. Test run should return **204**; a new run appears under Actions as *workflow_dispatch*.
+
+The GitHub schedule stays on as a backup. When the token expires, the site falls back to it.
+
 Note: GitHub pauses scheduled workflows in repos with no commits for 60 days. If the site shows "Termindaten zuletzt vor … aktualisiert", re-enable the workflow under Actions, or push any commit.
 
 ## Local development

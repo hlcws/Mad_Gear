@@ -4,7 +4,10 @@ on:
   push:
     branches: [master]
   schedule:
-    - cron: '*/30 * * * *' # keep events, streams and videos fresh
+    # Keep events, streams and videos fresh. Off the :00/:30 marks, where
+    # GitHub's scheduler is busiest and delays or drops runs the most.
+    # An external cron can also trigger workflow_dispatch (see README).
+    - cron: '7,37 * * * *'
   workflow_dispatch:
 
 permissions:

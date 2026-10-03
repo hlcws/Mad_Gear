@@ -64,4 +64,6 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-02.
 - [ ] Replace `public/favicon.ico` with the new logo mark
 - [x] GitHub Actions bumped to checkout v7, setup-node v7, upload-pages-artifact v5, deploy-pages v5 (Node 24)
 - [x] 60-day cron shutoff: `keepalive` job re-enables the workflow on every scheduled run. If updates ever stop anyway, the stale warning on the site shows it; re-enable in the Actions tab
-- [ ] Optional: external cron (e.g. cron-job.org) calling `workflow_dispatch` if GitHub's schedule delays become a problem
+- [x] Feed fetch retries on Discord 429 (the sync step right before it used up the rate limit, so Discord events fell back to stale data)
+- [x] Cron moved to `7,37 * * * *` (GitHub delays :00/:30 runs the most; runs were 4–6 h apart on 2026-10-03)
+- [ ] External cron (cron-job.org) calling `workflow_dispatch` for reliable 30-minute updates. Steps in README → *Reliable 30-minute updates*

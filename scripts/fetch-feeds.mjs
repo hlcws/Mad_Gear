@@ -19,10 +19,20 @@ const windowFrom = new Date(now.getTime() - 24 * 3600e3);
 const windowTo = new Date(now.getTime() + 180 * 24 * 3600e3);
 const HOUR = 3600e3;
 
+// Retries on 429: the Discord sync step runs right before this and can use up
+// the rate limit bucket.
 async function getJson(url, init) {
-  const res = await fetch(url, init);
-  if (!res.ok) throw new Error(`${res.status} ${res.statusText} for ${url.split('?')[0]}`);
-  return res.json();
+  for (let attempt = 0; ; attempt++) {
+    const res = await fetch(url, init);
+    if (res.status === 429 && attempt < 3) {
+      const body = await res.json().catch(() => ({}));
+      const wait = Number(body.retry_after ?? res.headers.get('retry-after') ?? 1);
+      await new Promise((r) => setTimeout(r, Math.min(wait, 30) * 1000 + 250));
+      continue;
+    }
+    if (!res.ok) throw new Error(`${res.status} ${res.statusText} for ${url.split('?')[0]}`);
+    return res.json();
+  }
 }
 
 async function getText(url) {
