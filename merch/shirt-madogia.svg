@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Back print, dark shirt. 30 x 40 cm. Edit here, then run merch/export.sh for the print files. -->
+<!-- Back print, dark shirt. 30 x 28 cm (canvas cropped to the content; the logo stamp goes on the front). Edit here, then run merch/export.sh for the print files. -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="300mm" height="400mm" viewBox="0 0 1200 1600">
+     width="300mm" height="280mm" viewBox="0 100 1200 1120">
   <style>
     .kanji { font-family: 'Yu Mincho', 'MS Mincho', serif; font-weight: 600; fill: #d4000c; }
     .word  { font-family: Georgia, 'Times New Roman', serif; fill: #f2f2f2; }
@@ -28,6 +28,4 @@
     <tspan class="pron" x="120" y="1160">4.</tspan><tspan x="175" y="1160">Real people. Real cabs. Real matches.</tspan>
   </text>
 
-  <!-- Logo stamp, bottom right (stamp-logo.svg, traced from the Gemini stamp in stamps/) -->
-  <image href="stamp-logo.svg" x="780" y="1230" width="300" height="300" />
 </svg>
