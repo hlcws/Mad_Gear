@@ -3,6 +3,7 @@
 #   *-print.svg    text converted to outlines, logo embedded — send this to the printer
 #   *-print.pdf    same, as PDF
 #   *-print.png    transparent 300 dpi PNG for Spreadshop
+#   stamp-*-print.png  each stamp alone, transparent 4000 px (sleeve prints)
 #   *-preview.png  on a black background, for looking at
 set -e
 cd "$(dirname "$0")"
@@ -33,3 +34,8 @@ fs.writeFileSync(process.argv[2], svg);
 "$INKSCAPE" "$tmp" --export-background-opacity=0 --export-dpi=300 --export-filename=shirt-madogia-print.png
 "$INKSCAPE" "$tmp" --export-background=#111111 --export-background-opacity=1 --export-width=900 --export-filename=shirt-madogia-preview.png
 rm -f "$tmp"
+
+# Stamps on their own (e.g. sleeve print): transparent, 4000 px square, red ink only.
+for s in seal logo; do
+  "$INKSCAPE" "stamp-$s.svg" --export-background-opacity=0 --export-width=4000 --export-filename="stamp-$s-print.png"
+done
