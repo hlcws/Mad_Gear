@@ -2,6 +2,7 @@
 # Turns shirt-madogia.svg into print files (needs Inkscape + Node):
 #   *-print.svg    text converted to outlines, logo embedded — send this to the printer
 #   *-print.pdf    same, as PDF
+#   *-print.png    transparent 300 dpi PNG for Spreadshop
 #   *-preview.png  on a black background, for looking at
 set -e
 cd "$(dirname "$0")"
@@ -28,5 +29,7 @@ fs.writeFileSync(process.argv[2], svg);
 
 "$INKSCAPE" "$tmp" --export-text-to-path --export-plain-svg --export-filename=shirt-madogia-print.svg
 "$INKSCAPE" "$tmp" --export-text-to-path --export-filename=shirt-madogia-print.pdf
+# Spreadshop: transparent RGB PNG, >= 4000 px on the long side, <= 10 MB. 300 dpi at 30 x 40 cm = 3543 x 4724 px.
+"$INKSCAPE" "$tmp" --export-background-opacity=0 --export-dpi=300 --export-filename=shirt-madogia-print.png
 "$INKSCAPE" "$tmp" --export-background=#111111 --export-background-opacity=1 --export-width=900 --export-filename=shirt-madogia-preview.png
 rm -f "$tmp"

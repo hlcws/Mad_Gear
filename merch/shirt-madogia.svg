@@ -3,53 +3,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="300mm" height="400mm" viewBox="0 0 1200 1600">
   <style>
-    .kanji { font-family: 'Yu Gothic', 'MS Gothic', sans-serif; font-weight: 700; fill: #d4000c; }
-    .head  { font-family: Impact, 'Anton', sans-serif; fill: #f2f2f2; }
-    .read  { font-family: Impact, 'Anton', sans-serif; fill: #4bb8c9; }
-    .mean  { font-family: Impact, 'Anton', sans-serif; fill: #f2f2f2; }
-    .note  { font-family: 'Bahnschrift', 'Inter', sans-serif; fill: #9a9aa6; }
-    .rule  { stroke: #f2f2f2; stroke-width: 4; }
-    .slot  { fill: none; stroke: #9a9aa6; stroke-width: 3; stroke-dasharray: 6 6; }
-    .thin  { stroke: #4bb8c9; stroke-width: 2; stroke-dasharray: 10 8; }
+    .kanji { font-family: 'Yu Mincho', 'MS Mincho', serif; font-weight: 600; fill: #d4000c; }
+    .word  { font-family: Georgia, 'Times New Roman', serif; fill: #f2f2f2; }
+    .pron  { font-family: Georgia, 'Times New Roman', serif; fill: #4bb8c9; }
+    .pos   { font-family: Georgia, 'Times New Roman', serif; font-style: italic; fill: #9a9aa6; }
+    .def   { font-family: Georgia, 'Yu Mincho', serif; fill: #d8d8de; }
   </style>
 
-  <!-- Header -->
-  <image href="../public/logo-text.svg" x="370" y="22" width="460" height="217" />
-  <text class="kanji" x="600" y="345" font-size="96" text-anchor="middle" letter-spacing="24">魔奴義亜</text>
-  <text class="read" x="600" y="410" font-size="44" text-anchor="middle" letter-spacing="14">[MA-DO-GI-A]</text>
-  <line class="rule" x1="120" y1="455" x2="1080" y2="455" />
+  <!-- Headword as a company seal (角印): 2 x 2 grid, read right column first, top to bottom.
+       stamp-seal.svg is traced from the Gemini stamp in stamps/: red ink only, gaps are holes. -->
+  <image href="stamp-seal.svg" x="120" y="140" width="300" height="300" />
 
-  <!-- Dictionary rows: kanji | [reading] | meaning -->
-  <g>
-    <text class="kanji" x="150" y="635" font-size="170">魔</text>
-    <text class="read"  x="400" y="560" font-size="60">[MA]</text>
-    <text class="mean"  x="400" y="640" font-size="72">DEMON</text>
-    <line class="thin" x1="120" y1="690" x2="1080" y2="690" />
+  <!-- Romaji / pronunciation + part of speech -->
+  <text class="word"  x="120" y="600" font-size="130">MadGear<tspan style="font-family: 'Yu Mincho', 'MS Mincho', serif">ＦＦＭ</tspan></text>
+  <text class="pron"  x="120" y="680" font-size="46">/ma-do-gi-a e-fu e-fu e-mu/ <tspan class="pos">noun</tspan></text>
 
-    <text class="kanji" x="150" y="870" font-size="170">奴</text>
-    <text class="read"  x="400" y="795" font-size="60">[DO]</text>
-    <text class="mean"  x="400" y="875" font-size="72">ROUGH GUY</text>
-    <line class="thin" x1="120" y1="925" x2="1080" y2="925" />
+  <!-- Numbered facts: number at x=120, text hangs at x=175 -->
+  <text class="def" font-size="42">
+    <tspan class="pron" x="120" y="800">1.</tspan><tspan x="175" y="800">Frankfurt’s home for fighting game locals.</tspan>
+    <tspan x="175" y="860">Since 2018.</tspan>
+    <tspan class="pron" x="120" y="940">2.</tspan><tspan x="175" y="940">FFM stands for Frankfurt am Main.</tspan>
+    <tspan class="pron" x="120" y="1020">3.</tspan><tspan x="175" y="1020">魔demon, 奴rough guy, 義honour and 亜Asia</tspan>
+    <tspan x="175" y="1080">(mostly there for the sound).</tspan>
+    <tspan class="pron" x="120" y="1160">4.</tspan><tspan x="175" y="1160">Real people. Real cabs. Real matches.</tspan>
+  </text>
 
-    <text class="kanji" x="150" y="1105" font-size="170">義</text>
-    <text class="read"  x="400" y="1030" font-size="60">[GI]</text>
-    <text class="mean"  x="400" y="1110" font-size="72">HONOUR</text>
-    <line class="thin" x1="120" y1="1160" x2="1080" y2="1160" />
-
-    <text class="kanji" x="150" y="1340" font-size="170">亜</text>
-    <text class="read"  x="400" y="1265" font-size="60">[A]</text>
-    <text class="mean"  x="400" y="1345" font-size="72">ASIA</text>
-    <text class="note"  x="400" y="1385" font-size="30">(mostly here for the sound)</text>
-  </g>
-
-  <!-- Caricature slots (placeholders, swap for <image> later) -->
-  <!-- Mockups: demon.jpg / guy.jpg with the black knocked out (*-cut.png) -->
-  <image href="demon-cut.png" x="870" y="472" width="180" height="205" />
-  <image href="guy-cut.png" x="874" y="704" width="173" height="210" />
-  <image href="../public/logo-mark.svg" x="860" y="943" width="200" height="202" />
-
-  <!-- Footer -->
-  <line class="rule" x1="120" y1="1430" x2="1080" y2="1430" />
-  <text class="head" x="600" y="1510" font-size="64" text-anchor="middle" letter-spacing="6">FRANKFURT · RHEIN-MAIN</text>
-  <text class="note" x="600" y="1560" font-size="30" text-anchor="middle" letter-spacing="8">FIGHTING GAME LOCALS</text>
+  <!-- Logo stamp, bottom right (stamp-logo.svg, traced from the Gemini stamp in stamps/) -->
+  <image href="stamp-logo.svg" x="780" y="1230" width="300" height="300" />
 </svg>
