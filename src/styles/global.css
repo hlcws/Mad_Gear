@@ -130,7 +130,7 @@ section + section { border-top: 1px solid var(--border); }
 /* ---------- events ---------- */
 .events { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .event {
-  display: grid; grid-template-columns: 64px 1fr; gap: 16px; align-items: center;
+  display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; align-items: center;
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 14px 16px; color: var(--text); text-decoration: none;
 }
@@ -140,9 +140,9 @@ a.event:hover { color: var(--text); border-color: #3b3b4b; background: var(--sur
 .event-date .day { font-family: var(--display); font-size: 1.9rem; line-height: 1; }
 .event-date .mon { font-size: .72rem; text-transform: uppercase; color: var(--muted); letter-spacing: .08em; }
 .event-title { font-weight: 700; font-size: 1.05rem; margin: 0; overflow-wrap: anywhere; }
-.event-info { color: var(--muted); font-size: .9rem; margin: 2px 0 6px; }
+.event-info { color: var(--muted); font-size: .9rem; margin: 2px 0 6px; overflow-wrap: anywhere; }
 .event-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.event-desc { color: var(--muted); font-size: .9rem; margin: 6px 0 0; white-space: pre-line; }
+.event-desc { color: var(--muted); font-size: .9rem; margin: 6px 0 0; white-space: pre-line; overflow-wrap: anywhere; }
 .event.is-now { border-color: rgba(75, 184, 201, .5); }
 .empty { background: var(--surface); border: 1px dashed var(--border); border-radius: var(--radius); padding: 24px; color: var(--muted); }
 
@@ -165,12 +165,16 @@ a.event:hover { color: var(--text); border-color: #3b3b4b; background: var(--sur
 
 /* ---------- info blocks ---------- */
 .grid-2 { display: grid; gap: 28px; }
+.grid-2 > * { min-width: 0; }
 @media (min-width: 860px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
 .check-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
 .check-list li { padding-left: 28px; position: relative; }
 .check-list li::before { content: '▸'; position: absolute; left: 6px; color: var(--red-text); }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
 .chips li { background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; font-weight: 500; font-size: .92rem; }
+.games { align-items: center; }
+.games .tier-1 { font-size: 1.15rem; padding: 10px 20px; }
+.games .tier-2 { font-size: 1rem; padding: 8px 16px; }
 .callout { background: linear-gradient(135deg, rgba(212, 0, 12,.16), rgba(255,203,31,.1)); border: 1px solid rgba(212, 0, 12,.35); border-radius: var(--radius); padding: 18px 20px; margin: 0 0 28px; }
 .callout strong { color: var(--teal); }
 

@@ -21,6 +21,10 @@ import * as kontakt from '../content/start/7-kontakt.md';
 import * as preise from '../content/preise.md';
 
 const feed = loadFeed();
+// Games: plain names or { name, tier }. Bigger tiers (1) first, bubble size by tier.
+const games = (clubhaus.frontmatter.games ?? [])
+  .map((g) => (typeof g === 'string' ? { name: g, tier: 3 } : { tier: 3, ...g }))
+  .sort((a, b) => a.tier - b.tier);
 ---
 <Base>
   <section class="hero">
@@ -77,7 +81,7 @@ const feed = loadFeed();
         <ul class="check-list">{clubhaus.frontmatter.equipment?.map((e) => <li>{e}</li>)}</ul>
         <div class="lead md" style="margin-top:16px"><clubhaus.Content /></div>
         <h3 style="font-size:1.4rem;margin:28px 0 12px">{clubhaus.frontmatter.games_title}</h3>
-        <ul class="chips">{clubhaus.frontmatter.games?.map((g) => <li>{g}</li>)}</ul>
+        <ul class="chips games">{games.map((g) => <li class={`tier-${g.tier}`}>{g.name}</li>)}</ul>
       </div>
       <div class="photos">
         <img class="wide" src="/photos/club1.jpg" alt="Der Club mit Arcade Cabinets und Spielstationen" loading="lazy" />

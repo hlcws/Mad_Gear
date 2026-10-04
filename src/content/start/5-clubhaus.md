@@ -9,14 +9,20 @@ equipment:
   - Klimaanlage
   - Küche mit Backofen, Mikrowelle und Kühlschrank
 games_title: Was gespielt wird
+# tier: 1 = größte Bubble, 2 = mittel, 3 = normal (Standard). Reihenfolge wie hier.
 games:
-  - Street Fighter
-  - King of Fighters
+  - name: Street Fighter 6
+    tier: 1
+  - name: King of Fighters XI
+    tier: 1
+  - name: Avatar Fighting Legends
+    tier: 2
+  - name: Guilty Gear
+    tier: 2
+  - name: Marvel Tokon
+    tier: 2
   - Tekken
-  - Guilty Gear
   - Granblue Fantasy Versus
-  - Marvel Tokon
-  - Avatar Fighting Legends
   - Retro & alles andere
 ---
 
