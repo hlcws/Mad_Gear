@@ -58,15 +58,13 @@ const games = (clubhaus.frontmatter.games ?? [])
   <section id="termine">
     <div class="wrap">
       <SectionHead fm={sessions.frontmatter} />
-      <div class="grid-2">
-        <div data-live="events" data-limit="5" set:html={renderEvents(feed, { limit: 5 })} />
-        <div>
-          {sessions.frontmatter.callout && <div class="callout" set:html={inline(sessions.frontmatter.callout)} />}
-          <div class="lead md"><sessions.Content /></div>
-          <div class="btn-row" style="margin-top:18px">
-            <a class="btn btn-discord" href={site.links.discord}>Discord beitreten</a>
-            <a class="btn" href="/termine.html">Termine &amp; Kalender</a>
-          </div>
+      <div class="events-2col" data-live="events" data-limit="6" set:html={renderEvents(feed, { limit: 6 })} />
+      <div class="sessions-info">
+        {sessions.frontmatter.callout && <div class="callout" set:html={inline(sessions.frontmatter.callout)} />}
+        <div class="lead md"><sessions.Content /></div>
+        <div class="btn-row" style="margin-top:18px">
+          <a class="btn btn-discord" href={site.links.discord}>Discord beitreten</a>
+          <a class="btn" href="/termine.html">Termine &amp; Kalender</a>
         </div>
       </div>
     </div>

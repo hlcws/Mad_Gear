@@ -144,6 +144,17 @@ a.event:hover { color: var(--text); border-color: #3b3b4b; background: var(--sur
 .event-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .event-desc { color: var(--muted); font-size: .9rem; margin: 6px 0 0; white-space: pre-line; overflow-wrap: anywhere; }
 .event.is-now { border-color: rgba(75, 184, 201, .5); }
+@media (min-width: 860px) {
+  .events-2col .events { grid-template-columns: 1fr 1fr; }
+  .events-2col .events > li { display: grid; }
+  .events-2col .event-desc { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+}
+@media (max-width: 859px) { .events-2col .events > li:nth-child(n+6) { display: none; } }
+.sessions-info { max-width: 680px; margin: 32px auto 0; }
+@media (min-width: 860px) {
+  .sessions-info { text-align: center; }
+  .sessions-info .btn-row { justify-content: center; }
+}
 .empty { background: var(--surface); border: 1px dashed var(--border); border-radius: var(--radius); padding: 24px; color: var(--muted); }
 
 /* ---------- media ---------- */
