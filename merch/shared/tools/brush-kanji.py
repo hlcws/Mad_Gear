@@ -1,6 +1,6 @@
 # Replaces every <text class="kanji" ...>X</text> in an SVG with outlines from a font file,
 # so a brush font can be used without installing it.
-#   python brush-kanji.py in.svg out.svg fonts/YujiBoku-Regular.ttf
+#   python brush-kanji.py in.svg out.svg merch/shared/fonts/YujiBoku-Regular.ttf
 import re, sys
 from fontTools.ttLib import TTFont
 from fontTools.pens.svgPathPen import SVGPathPen

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Back print, dark shirt. 30 x 28 cm (canvas cropped to the content; the logo stamp goes on the front). Edit here, then run merch/export.sh for the print files. -->
+<!-- Back print, dark shirt. 30 x 28 cm (canvas cropped to the content; the logo stamp goes on the front). Edit here, then run merch/dictionary/export.sh for the print files. -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="300mm" height="280mm" viewBox="0 100 1200 1120">
   <style>
@@ -11,8 +11,8 @@
   </style>
 
   <!-- Headword as a company seal (角印): 2 x 2 grid, read right column first, top to bottom.
-       stamp-seal.svg is traced from the Gemini stamp in stamps/: red ink only, gaps are holes. -->
-  <image href="stamp-seal.svg" x="120" y="140" width="300" height="300" />
+       the seal is traced from shared/gemini/seal-stamp.png: red ink only, gaps are holes. -->
+  <image href="../shared/stamps/stamp-seal.svg" x="120" y="140" width="300" height="300" />
 
   <!-- Romaji / pronunciation + part of speech -->
   <text class="word"  x="120" y="600" font-size="130">MadGear<tspan style="font-family: 'Yu Mincho', 'MS Mincho', serif">ＦＦＭ</tspan></text>

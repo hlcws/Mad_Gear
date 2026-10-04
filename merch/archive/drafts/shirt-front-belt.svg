@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Front print, dark shirt: diagonal bullet belt (bandolier). 30 x 40 cm, same canvas as the back.
+     Red ink only: everything is drawn white in the mask, gaps/details black (= holes, shirt shows through). -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="300mm" height="400mm" viewBox="0 0 1200 1600">
+  <defs>
+    <!-- One cartridge in its loop, strap centre line at y = 0 -->
+    <g id="cartridge">
+      <rect x="-23" y="-150" width="46" height="232" fill="#fff" />
+      <rect x="-28" y="80" width="56" height="13" rx="3" fill="#fff" />
+      <path d="M -23 -150 C -23 -192 -6 -218 0 -226 C 6 -218 23 -192 23 -150 Z" fill="#fff" />
+      <rect x="-30" y="-157" width="60" height="9" fill="#000" />
+      <rect x="-34" y="-70" width="68" height="140" rx="8" fill="#fff" stroke="#000" stroke-width="10" />
+    </g>
+  </defs>
+
+  <mask id="belt-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="1600">
+    <rect width="1200" height="1600" fill="#000" />
+    <!-- Belt runs from the right shoulder (viewer's top right) to the left hip -->
+    <g transform="translate(600 820) rotate(-52)">
+      <rect x="-1200" y="-55" width="2400" height="110" fill="#fff" />
+      <line x1="-1200" y1="-42" x2="1200" y2="-42" stroke="#000" stroke-width="5" stroke-dasharray="16 10" />
+      <line x1="-1200" y1="42" x2="1200" y2="42" stroke="#000" stroke-width="5" stroke-dasharray="16 10" />
+      <use href="#cartridge" x="-910" /><use href="#cartridge" x="-780" /><use href="#cartridge" x="-650" /><use href="#cartridge" x="-520" />
+      <use href="#cartridge" x="-390" /><use href="#cartridge" x="-260" /><use href="#cartridge" x="-130" /><use href="#cartridge" x="0" />
+      <use href="#cartridge" x="130" /><use href="#cartridge" x="260" /><use href="#cartridge" x="390" /><use href="#cartridge" x="520" />
+      <use href="#cartridge" x="650" /><use href="#cartridge" x="780" /><use href="#cartridge" x="910" />
+    </g>
+  </mask>
+  <rect width="1200" height="1600" fill="#d4000c" mask="url(#belt-cut)" />
+</svg>
