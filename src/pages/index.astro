@@ -28,7 +28,7 @@ const feed = loadFeed();
     <div class="wrap">
       <div>
         <span class="kanji" lang="ja">{site.kanji}{site.kanjiReading && <span class="reading" lang="en">[{site.kanjiReading}]</span>}</span>
-        <h1><span class="sr-only">MadGearFFM – </span><Fragment set:html={inline(hero.frontmatter.title)} /></h1>
+        <h1><span class="club-name">{site.name}<span class="sr-only"> – </span></span><Fragment set:html={inline(hero.frontmatter.title)} /></h1>
         <div class="tagline md"><hero.Content /></div>
         <div class="status-card" data-live="status" data-kind={statusKind(feed)} aria-live="polite" set:html={renderStatus(feed)} />
       </div>

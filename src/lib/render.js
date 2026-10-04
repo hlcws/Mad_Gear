@@ -66,14 +66,14 @@ export function renderStatus(feed, now = new Date()) {
       <span class="pill pill-open"><span class="dot"></span>Clubhaus offen</span>
       <p class="status-when">Jetzt geöffnet</p>
       <p class="status-sub"><strong>${esc(displayTitle(st.event))}</strong> · bis ${formatTime(st.event.end)} Uhr (noch ${duration(st.remaining)})</p>
-      <div class="btn-row"><a class="btn btn-primary" href="/anfahrt.html">Vorbeikommen</a>${eventCta(st.event)}</div>${noSignup}`;
+      <div class="btn-row"><a class="btn btn-primary" href="/anfahrt.html">Wie komme ich hin?</a>${eventCta(st.event)}</div>${noSignup}`;
   } else if (st.kind === 'soon' || st.kind === 'next') {
     const soon = st.kind === 'soon';
     body = `
       <span class="pill ${soon ? 'pill-soon' : 'pill-next'}"><span class="dot"></span>${soon ? `Heute · in ${duration(st.until)}` : 'Nächste Session'}</span>
       <p class="status-when">${formatDay(st.event.start)}</p>
       <p class="status-sub"><strong>${formatRange(st.event.start, st.event.end)} Uhr</strong> · ${relativeDay(st.event.start, now)} · ${esc(displayTitle(st.event))}</p>
-      <div class="btn-row"><a class="btn btn-primary" href="/anfahrt.html">Vorbeikommen</a>${eventCta(st.event)}</div>${noSignup}`;
+      <div class="btn-row"><a class="btn btn-primary" href="/anfahrt.html">Wie komme ich hin?</a>${eventCta(st.event)}</div>${noSignup}`;
   } else {
     body = `
       <span class="pill"><span class="dot"></span>Clubhaus zu</span>

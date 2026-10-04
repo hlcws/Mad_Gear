@@ -105,6 +105,7 @@ section + section { border-top: 1px solid var(--border); }
 @media (min-width: 900px) { .hero .wrap { grid-template-columns: 1.1fr .9fr; align-items: center; padding-top: 72px; padding-bottom: 72px; } }
 .hero h1 { font-size: clamp(2.6rem, 8vw, 4.6rem); margin: 0; }
 .hero h1 b, .hero h1 .accent { color: var(--red-text); font-weight: 400; }
+.hero .club-name { display: block; font-size: .5em; letter-spacing: .04em; color: var(--text); margin-bottom: 2px; }
 .hero .kanji { display: block; font-family: var(--body); font-size: .9rem; letter-spacing: .4em; color: var(--teal); margin-bottom: 10px; font-weight: 600; }
 .hero .kanji .reading { margin-left: .6em; letter-spacing: .25em; font-size: .78em; color: var(--muted); }
 .hero .tagline { color: var(--muted); font-size: 1.1rem; margin: 12px 0 24px; max-width: 46ch; }
