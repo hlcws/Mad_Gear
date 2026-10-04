@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MadGear · Chat</title>
+<!-- Standalone: works as an OBS "Local file" browser source, no server needed.
+     Transparent; sits on the chat panel of the frame PNG (header is part of the PNG). -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap">
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; color: #f3f1ec; font-family: 'Inter', 'Segoe UI', sans-serif; }
+  .list { position: absolute; inset: 60px 0 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; padding: 14px 18px; overflow: hidden; }
+  .msg { font-size: 21px; line-height: 1.35; overflow-wrap: anywhere; animation: in .25s ease-out; }
+  .narrow .msg { font-size: 19px; }
+  .msg b { font-weight: 800; }
+  .msg img { height: 28px; vertical-align: middle; margin: -4px 1px 0; }
+  .empty { color: #a3a1b0; font-size: 19px; }
+  @keyframes in { from { opacity: 0; transform: translateY(10px); } }
+</style>
+</head>
+<body>
+<div class="list" id="list"></div>
+<script>
+  const CHANNEL = new URLSearchParams(location.search).get('channel') || 'madgearffm';
+  const MAX = 40;
+  const list = document.getElementById('list');
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const fit = () => document.body.classList.toggle('narrow', innerWidth < 400);
+  addEventListener('resize', fit); fit();
+  list.innerHTML = `<div class="empty">Say hi in chat → twitch.tv/${esc(CHANNEL)}</div>`;
+
+  // Anonymous read-only Twitch chat over IRC WebSocket (no login, no token).
+  function connect() {
+    const ws = new WebSocket('wss://irc-ws.chat.twitch.tv:443');
+    ws.onopen = () => {
+      ws.send('CAP REQ :twitch.tv/tags twitch.tv/commands');
+      ws.send('PASS SCHMOOPIIE');
+      ws.send(`NICK justinfan${Math.floor(Math.random() * 1e5)}`);
+      ws.send(`JOIN #${CHANNEL.toLowerCase()}`);
+    };
+    ws.onmessage = (e) => e.data.split('\r\n').filter(Boolean).forEach((line) => handle(ws, line));
+    ws.onclose = () => setTimeout(connect, 3000);
+  }
+
+  function handle(ws, line) {
+    if (line.startsWith('PING')) return ws.send('PONG :tmi.twitch.tv');
+    const m = line.match(/^(?:@(\S+) )?:(\S+?)(?:!\S+)? (PRIVMSG|CLEARMSG|CLEARCHAT) #\S+(?: :(.*))?$/);
+    if (!m) return;
+    const tags = Object.fromEntries((m[1] || '').split(';').map((t) => t.split('=')));
+    const [, , user, cmd, text = ''] = m;
+    // Moderation: remove deleted messages / timed-out users
+    if (cmd === 'CLEARMSG') return list.querySelector(`[data-id="${tags['target-msg-id']}"]`)?.remove();
+    if (cmd === 'CLEARCHAT') {
+      if (!text) return list.querySelectorAll('.msg').forEach((el) => el.remove());
+      return list.querySelectorAll(`[data-user="${tags['target-user-id']}"]`).forEach((el) => el.remove());
+    }
+    if (text.startsWith('\u0001ACTION')) return;
+    list.querySelector('.empty')?.remove();
+    const div = document.createElement('div');
+    div.className = 'msg';
+    div.dataset.id = tags.id || '';
+    div.dataset.user = tags['user-id'] || '';
+    div.innerHTML = `<b style="color:${esc(tags.color || '#4bb8c9')}">${esc(tags['display-name'] || user)}</b> ${emotes(text, tags.emotes)}`;
+    list.appendChild(div);
+    while (list.children.length > MAX) list.firstChild.remove();
+  }
+
+  function emotes(text, spec) {
+    if (!spec) return esc(text);
+    const chars = Array.from(text); // Twitch emote positions count code points
+    const ranges = spec.split('/').flatMap((part) => {
+      const [id, pos] = part.split(':');
+      return pos.split(',').map((r) => { const [a, b] = r.split('-').map(Number); return { id, a, b }; });
+    }).sort((x, y) => x.a - y.a);
+    let out = '', i = 0;
+    for (const { id, a, b } of ranges) {
+      out += esc(chars.slice(i, a).join('')) + `<img src="https://static-cdn.jtvnw.net/emoticons/v2/${encodeURIComponent(id)}/default/dark/2.0" alt="">`;
+      i = b + 1;
+    }
+    return out + esc(chars.slice(i).join(''));
+  }
+
+  connect();
+</script>
+</body>
+</html>

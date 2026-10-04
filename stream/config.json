@@ -1,0 +1,30 @@
+{
+  "port": 8123,
+  "club": "MadGearFFM",
+  "kanji": "魔奴義亜",
+  "socials": [
+    {
+      "icon": "twitch",
+      "text": "twitch.tv/madgearffm"
+    },
+    {
+      "icon": "discord",
+      "text": "discord.gg/vNG3E345hk"
+    },
+    {
+      "icon": "web",
+      "text": "madgear.org"
+    }
+  ],
+  "defaults": {
+    "p1": "Player 1",
+    "p2": "Player 2",
+    "ft": 10,
+    "title": "Casuals"
+  },
+  "texts": {
+    "startingText": "Stream starting soon",
+    "breakText": "Back in a few minutes",
+    "endingText": "Thanks for watching!"
+  }
+}

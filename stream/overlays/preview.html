@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MadGear · Scene preview</title>
+<style>
+  body { margin: 0; background: #222; font: 14px system-ui, sans-serif; color: #ccc; }
+  nav { padding: 8px 12px; display: flex; gap: 12px; flex-wrap: wrap; }
+  nav a { color: #4bb8c9; }
+  .wrap { width: 100%; aspect-ratio: 16 / 9; position: relative; overflow: hidden; }
+  .stage { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; background: #000; }
+  .stage > * { position: absolute; border: 0; }
+  .sample { background: url(assets/sample-game.jpg) 0 0 / 100% 100%; }
+</style>
+</head>
+<body>
+<nav id="nav"></nav>
+<div class="wrap"><div class="stage" id="stage"></div></div>
+<script>
+  // Builds each scene from scenes.json, exactly like the OBS collection (obs/build.mjs).
+  // Game and cam are stand-ins cut from a sample SF6 frame.
+  const q = new URLSearchParams(location.search);
+  const noServer = q.has('noserver');
+  // synchronous on purpose: layers are part of the page load (headless screenshots wait for it)
+  const xhr = new XMLHttpRequest(); xhr.open('GET', 'scenes.json', false); xhr.send();
+  {
+    const scenes = JSON.parse(xhr.responseText);
+    delete scenes._comment;
+    const names = Object.keys(scenes);
+    const scene = q.get('scene') || 'Match';
+    nav.innerHTML = 'Preview: ' + names.map((n) => `<a href="?scene=${encodeURIComponent(n)}${noServer ? '&noserver' : ''}">${n}</a>`).join(' ') +
+      ` | <a href="?scene=${encodeURIComponent(scene)}${noServer ? '' : '&noserver'}">${noServer ? 'with server' : 'without server (start.bat closed)'}</a>`;
+    const box = (el, [x, y, w, h] = [0, 0, 1920, 1080]) => Object.assign(el.style, { left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px' });
+    for (const layer of scenes[scene]) {
+      let el;
+      if (layer.type === 'game') { el = document.createElement('div'); el.className = 'sample'; }
+      else if (layer.type === 'cam') {
+        // the player cam in the sample frame sits at 769,862 382x218
+        const [, , w, h] = layer.rect, kx = w / 382, ky = h / 218;
+        el = document.createElement('div'); el.className = 'sample';
+        Object.assign(el.style, { backgroundSize: `${1920 * kx}px ${1080 * ky}px`, backgroundPosition: `${-769 * kx}px ${-862 * ky}px` });
+      }
+      else if (layer.type === 'image') { el = document.createElement('img'); el.src = layer.file + '?v=' + Date.now(); }
+      else if (layer.type === 'file') { el = document.createElement('iframe'); el.src = layer.file; }
+      else if (layer.type === 'score') { if (noServer) continue; el = document.createElement('iframe'); el.src = layer.url; }
+      box(el, layer.rect);
+      stage.append(el);
+    }
+  }
+  const fit = () => stage.style.transform = `scale(${stage.parentElement.clientWidth / 1920})`;
+  addEventListener('resize', fit); fit();
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap');
+
+/* Same colors as madgear.org */
+:root {
+  --bg: #0b0b0d;
+  --surface: #15151d;
+  --surface-2: #1d1d27;
+  --border: #2a2a36;
+  --text: #f3f1ec;
+  --muted: #a3a1b0;
+  --red: #d4000c;
+  --red-text: #ff4650;
+  --teal: #4bb8c9;
+  --twitch: #a970ff;
+  --display: 'Anton', 'Impact', sans-serif;
+  --body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: transparent; color: var(--text); font-family: var(--body); }
+.abs { position: absolute; }
+.display { font-family: var(--display); font-weight: 400; text-transform: uppercase; letter-spacing: .02em; line-height: 1; }
+
+/* Panel look: dark surface, subtle diagonal texture */
+.panel {
+  background:
+    repeating-linear-gradient(135deg, rgba(255,255,255,.018) 0 2px, transparent 2px 14px),
+    linear-gradient(180deg, var(--surface-2), var(--surface));
+}
+
+/* Socials row */
+.socials { display: flex; flex-direction: column; gap: 10px; }
+.socials.row { flex-direction: row; gap: 34px; }
+.social { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 22px; white-space: nowrap; }
+.social svg { width: 26px; height: 26px; flex: none; fill: currentColor; }
+.social.twitch svg { color: var(--twitch); }
+.social.discord svg { color: #5865f2; }
+.social.web svg { color: var(--teal); }
+
+/* Scoreboard pieces */
+.name {
+  display: flex; align-items: center; padding: 0 22px; overflow: hidden; white-space: nowrap;
+  font-family: var(--display); text-transform: uppercase; font-size: 34px; letter-spacing: .03em;
+  background: var(--surface-2); border-bottom: 4px solid var(--border);
+}
+.score {
+  display: grid; place-items: center; font-family: var(--display); font-size: 52px;
+  background: var(--red); color: #fff; transition: background .3s, transform .15s;
+}
+.score.bump { transform: scale(1.12); }
+.score.winner { background: var(--teal); color: #0b2a30; }
+.name.winner { border-bottom-color: var(--teal); }
+
+/* Chat panel: only background + header here, messages come from chat.html on top */
+.chat-head { display: flex; align-items: center; gap: 10px; height: 60px; padding: 0 18px; font-family: var(--display); text-transform: uppercase; font-size: 22px; letter-spacing: .06em; border-bottom: 3px solid var(--red); }
+.chat-head svg { width: 22px; height: 22px; fill: var(--twitch); }
+
+/* Parts: frame = static PNG, live = scoreboard layer only */
+body.part-frame .live { display: none !important; }
+body.part-live { background: transparent !important; }
+body.part-live * { visibility: hidden; }
+body.part-live .live, body.part-live .live * { visibility: visible; }

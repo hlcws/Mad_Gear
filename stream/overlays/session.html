@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MadGear · Sessions</title>
+<!-- Standalone: works as an OBS "Local file" browser source, no server needed.
+     Reads today's and the next session from madgear.org (= the Google Calendar).
+     Layout follows the source size: tall (>= 60px) = box with two rows, short = one line. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600&display=swap">
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; color: #f3f1ec; font-family: 'Inter', 'Segoe UI', sans-serif; font-weight: 600; }
+  .label { font-family: 'Anton', Impact, sans-serif; text-transform: uppercase; letter-spacing: .08em; color: #4bb8c9; }
+  .live .label.today { color: #ff4650; }
+  /* box */
+  .box { position: absolute; left: 50%; top: 0; transform: translateX(-50%); display: grid; grid-template-columns: auto auto; gap: 8px 18px; align-items: baseline; padding: 14px 26px; background: #1d1d27; border-left: 5px solid #4bb8c9; white-space: nowrap; font-size: 30px; }
+  .box .label { font-size: 26px; }
+  .box .title { color: #a3a1b0; }
+  /* line */
+  .line { white-space: nowrap; font-size: 17px; color: #a3a1b0; line-height: 1.4; }
+  .line .label { font-size: 16px; margin-right: 6px; }
+  .line b { color: #f3f1ec; font-weight: 600; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div id="out"></div>
+<script>
+  const FEED = 'https://madgear.org/feed.json';
+  const HOURS = 10; // sessions without an end time
+  const out = document.getElementById('out');
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const fmt = (d, o) => new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Berlin', ...o }).format(d);
+  const day = (d) => fmt(d, { weekday: 'short', day: 'numeric', month: 'short' });
+  const time = (d) => fmt(d, { hour: '2-digit', minute: '2-digit' });
+  // Calendar titles like "MadGearFFM - Casuals" → "Casuals"; plain "MadGearFFM" → ""
+  const title = (t) => (t || '').replace(/^madgear(ffm)?\s*[-:–]?\s*/i, '').trim();
+
+  let events = [];
+  async function load() {
+    try {
+      const feed = await (await fetch(FEED, { cache: 'no-store' })).json();
+      events = (feed.events || []).map((e) => {
+        const start = new Date(e.start);
+        return { start, end: e.end ? new Date(e.end) : new Date(start.getTime() + HOURS * 3600e3), title: title(e.title) };
+      }).sort((a, b) => a.start - b.start);
+    } catch {}
+    render();
+  }
+
+  function render() {
+    const now = new Date();
+    const upcoming = events.filter((e) => e.end > now);
+    // "Today" = running now, or starting later today (Berlin time)
+    const today = upcoming.find((e) => e.start <= now || day(e.start) === day(now));
+    const next = upcoming.find((e) => e !== today);
+    const live = today && today.start <= now;
+    const range = (e) => `${time(e.start)} – ${time(e.end)}`;
+    const box = innerHeight >= 60;
+    document.body.classList.toggle('live', !!live);
+    if (!today && !next) { out.innerHTML = ''; return; }
+
+    if (box) {
+      out.className = 'box';
+      out.innerHTML =
+        (today ? `<span class="label today">${live ? 'Open now' : 'Today'}</span><span>${range(today)}${today.title ? ` <span class="title">· ${esc(today.title)}</span>` : ''}</span>` : '') +
+        (next ? `<span class="label">Next session</span><span>${day(next.start)} · ${time(next.start)}${next.title ? ` <span class="title">· ${esc(next.title)}</span>` : ''}</span>` : '');
+    } else {
+      out.className = 'line';
+      out.innerHTML = [
+        today ? `<span class="label today">${live ? 'Open' : 'Today'}</span><b>${range(today)}</b>` : '',
+        next ? `<span class="label">Next</span><b>${day(next.start)}</b>` : '',
+      ].filter(Boolean).join(' &nbsp;·&nbsp; ');
+    }
+  }
+
+  addEventListener('resize', render);
+  load();
+  setInterval(load, 10 * 60e3);   // feed is rebuilt every 30 min
+  setInterval(render, 60e3);      // flip "Today" → "Open now" on time
+</script>
+</body>
+</html>
