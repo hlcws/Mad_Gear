@@ -35,6 +35,8 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-04.
 - [x] Warning when data is older than 2 days
 - [x] Copy: no sign-up needed, just come by; Discord is optional
 - [x] Buttons: "Wie komme ich hin?" (→ Anfahrt) next to "Wer kommt noch?" (→ Discord event)
+- [x] Live player (Twitch, else YouTube) also follows the 5-minute refresh: appears/disappears without reload, a running player is never restarted (`renderLive` in `src/lib/render.js`). Live status itself comes from the build, so worst case ~35 min after going live
+- [x] Stream sections: "Letzte Streams auf Twitch / auf YouTube", buttons "Alle auf Twitch / auf YouTube"
 - [x] Termine capped at the next 5
 
 ### Data feeds (`scripts/fetch-feeds.mjs`)
