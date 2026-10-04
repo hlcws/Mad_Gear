@@ -1,12 +1,13 @@
 ---
 // Re-renders every [data-live] block each minute (so "open now" flips on time)
-// and pulls /feed.json every 5 minutes (so an open tab sees new deploys).
+// and pulls /feed.json every 5 minutes (so an open tab sees new deploys and
+// the live player comes and goes with the stream).
 interface Props { feed: unknown }
 const { feed } = Astro.props;
 ---
 <script type="application/json" id="feed-data" set:html={JSON.stringify(feed).replace(/</g, '\u003c')} />
 <script>
-  import { renderStatus, renderEvents, statusKind } from '../lib/render.js';
+  import { renderStatus, renderEvents, renderLive, statusKind } from '../lib/render.js';
 
   let feed = JSON.parse(document.getElementById('feed-data')!.textContent || '{}');
 
@@ -22,6 +23,12 @@ const { feed } = Astro.props;
           limit: Number(el.dataset.limit) || 6,
           withStreams: el.dataset.streams === 'true',
         });
+      } else if (el.dataset.live === 'stream') {
+        // Only touch the DOM when it changes, so a running player isn't reloaded.
+        // The first pass just records what the build already rendered.
+        const html = renderLive(feed);
+        if (el.dataset.html === undefined) el.dataset.html = html;
+        else if (html !== el.dataset.html) { el.innerHTML = html; el.dataset.html = html; }
       }
     });
   }

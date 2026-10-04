@@ -124,3 +124,26 @@ export function renderEvents(feed, { limit = 6, now = new Date(), withStreams = 
   });
   return `<ul class="events">${items.join('')}</ul>`;
 }
+
+// Live player for the streams section: Twitch first, YouTube if only that is live.
+// Empty string when nobody is live.
+export function renderLive(feed) {
+  const tw = feed?.twitch;
+  const yt = feed?.youtube;
+  const head = (title, href, label, cls) => `
+    <div class="subhead">
+      <h3><span class="pill pill-live"><span class="dot"></span>Live</span> ${esc(title)}</h3>
+      <a class="btn ${cls} btn-sm" href="${esc(href)}">${label}</a>
+    </div>`;
+  if (tw?.live) {
+    const host = new URL(site.url).hostname;
+    const src = `https://player.twitch.tv/?channel=${site.feeds.twitchLogin}&parent=${host}&parent=www.${host}&parent=localhost&muted=true`;
+    return head(tw.stream?.title, site.links.twitch, 'Auf Twitch öffnen', 'btn-twitch')
+      + `<iframe class="player" src="${esc(src)}" allowfullscreen title="Twitch Livestream" loading="lazy"></iframe>`;
+  }
+  if (yt?.live) {
+    return head(yt.live.title, yt.live.url, 'Auf YouTube öffnen', 'btn-primary')
+      + `<iframe class="player" src="https://www.youtube-nocookie.com/embed/${esc(yt.live.id)}?mute=1" allowfullscreen title="YouTube Livestream" loading="lazy"></iframe>`;
+  }
+  return '';
+}

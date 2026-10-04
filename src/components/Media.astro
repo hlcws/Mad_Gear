@@ -2,6 +2,7 @@
 import { site } from '../site.config.mjs';
 import { ago } from '../lib/status.js';
 import SectionHead from './SectionHead.astro';
+import { renderLive } from '../lib/render.js';
 
 interface Props { feed: any; head: { label?: string; title?: string } }
 const { feed, head } = Astro.props;
@@ -9,9 +10,6 @@ const cutoff = Date.now() - site.maxVideoAgeDays * 864e5;
 const recent = (vids: any[] = []) => vids.filter((v) => new Date(v.publishedAt).getTime() > cutoff);
 const tw = feed.twitch && { ...feed.twitch, videos: recent(feed.twitch.videos) };
 const yt = feed.youtube && { ...feed.youtube, videos: recent(feed.youtube.videos) };
-const host = new URL(site.url).hostname;
-const twitchEmbed =
-  `https://player.twitch.tv/?channel=${site.feeds.twitchLogin}&parent=${host}&parent=www.${host}&parent=localhost&muted=true`;
 const twitchDuration = (d: string) => d?.replace(/(\d+)h(\d+)m\d+s/, '$1:$2 h').replace(/^(\d+)m\d+s$/, '$1 min');
 const hasVideos = tw?.videos?.length || yt?.videos?.length;
 const anyLive = tw?.live || yt?.live;
@@ -21,30 +19,12 @@ const anyLive = tw?.live || yt?.live;
     <SectionHead fm={head} />
     <div class="lead md"><slot /></div>
 
-    {tw?.live && (
-      <>
-        <div class="subhead">
-          <h3><span class="pill pill-live"><span class="dot"></span>Live</span> {tw.stream.title}</h3>
-          <a class="btn btn-twitch btn-sm" href={site.links.twitch}>Auf Twitch öffnen</a>
-        </div>
-        <iframe class="player" src={twitchEmbed} allowfullscreen title="Twitch Livestream" loading="lazy"></iframe>
-      </>
-    )}
-
-    {!tw?.live && yt?.live && (
-      <>
-        <div class="subhead">
-          <h3><span class="pill pill-live"><span class="dot"></span>Live</span> {yt.live.title}</h3>
-          <a class="btn btn-primary btn-sm" href={yt.live.url}>Auf YouTube öffnen</a>
-        </div>
-        <iframe class="player" src={`https://www.youtube-nocookie.com/embed/${yt.live.id}?mute=1`} allowfullscreen title="YouTube Livestream" loading="lazy"></iframe>
-      </>
-    )}
+    <div data-live="stream" set:html={renderLive(feed)} />
 
     {tw?.videos?.length > 0 && (
       <>
         <div class="subhead">
-          <h3>Letzte Streams</h3>
+          <h3>Letzte Streams auf Twitch</h3>
           <a class="btn btn-sm" href={`${site.links.twitch}/videos`}>Alle auf Twitch</a>
         </div>
         <div class="media-grid">
@@ -67,7 +47,7 @@ const anyLive = tw?.live || yt?.live;
       <>
         <div class="subhead">
           <h3>Letzte Streams auf YouTube</h3>
-          {site.links.youtube && <a class="btn btn-sm" href={`${site.links.youtube}/streams`}>Alle Streams</a>}
+          {site.links.youtube && <a class="btn btn-sm" href={`${site.links.youtube}/streams`}>Alle auf YouTube</a>}
         </div>
         <div class="media-grid">
           {yt.videos.slice(0, 4).map((v: any) => (
