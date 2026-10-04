@@ -14,12 +14,16 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-04.
 - [x] Astro static site, old `/x.html` URLs kept (`build.format: 'file'`)
 - [x] Biker-gang look: logo red + designer teal, Anton/Inter, real logos (full, mark, text) from `Finals03-colors.ai`
 - [x] Favicons and apple-touch-icon from the logo mark
-- [x] Startseite: hero "Fighting Game *Locals*", section explaining what a local is (including just chilling with people who love fighting games), sessions, streams, location, prices, Anfahrt, Kontakt
+- [x] Startseite: hero "MadGearFFM / Fighting Game *Locals*" (club name from `site.name`), section explaining what a local is (including just chilling with people who love fighting games), sessions, streams, location, prices, Anfahrt, Kontakt
 - [x] Pages: Termine, Anfahrt (with carpool tip FFM City / Wiesbaden / Mainz), Tickets (PayPal, weekend ticket removed), Clubregeln, Die Gang (5 Stamm members), AGB, Impressum
 - [x] All wording in Markdown under `src/content/` and `src/pages/*.md` (see README)
 - [x] Contact email: kontakt@madgear.org
 - [x] Hero shows 魔奴義亜 with the reading `[MA-DO-GI-A]`, T-shirt style (`site.kanjiReading`)
 - [x] Merch shop link (https://madgear.myspreadshop.de/): header menu "Merch", footer, and a button in the prices section (`site.links.shop`)
+- [x] Wording unified: "Club" in text (*Club offen/zu*, "aus dem Club"), "Location" in nav and section label; no "Clubhaus" left
+- [x] Location photos: `club1`–`3.jpg` (picked from the originals in `public/photos/inc/`, which stay uncommitted); hero background stays `location1.jpg` (cleanest shot)
+- [x] "Was gespielt wird": bubbles sized by `tier` in `5-clubhaus.md` (1 = SF6, KOF XI; 2 = Avatar, Guilty Gear, Tokon; 3 = rest). Popularity only implied by order and size, names stay plain text for SEO
+- [x] No horizontal scroll on phones (event list overflowed by ~45 px; grid columns now shrink, long text wraps)
 
 ### Merch
 - [x] Shop: Spreadshop, linked from the site (see above)
@@ -30,6 +34,7 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-04.
 - [x] Page re-fetches `/feed.json` every 5 minutes; "Stand: vor X" freshness line
 - [x] Warning when data is older than 2 days
 - [x] Copy: no sign-up needed, just come by; Discord is optional
+- [x] Buttons: "Wie komme ich hin?" (→ Anfahrt) next to "Wer kommt noch?" (→ Discord event)
 - [x] Termine capped at the next 5
 
 ### Data feeds (`scripts/fetch-feeds.mjs`)
