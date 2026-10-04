@@ -4,4 +4,4 @@ title: Streams *&* Videos
 # Videos und Live-Status kommen automatisch von Twitch und YouTube.
 ---
 
-Turniere, Money Matches und Casuals aus dem Clubhaus, live auf Twitch und YouTube und zum Nachschauen.
+Turniere, Money Matches und Casuals aus dem Club, live auf Twitch und YouTube und zum Nachschauen.

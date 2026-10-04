@@ -63,7 +63,7 @@ export function renderStatus(feed, now = new Date()) {
 
   if (st.kind === 'open') {
     body = `
-      <span class="pill pill-open"><span class="dot"></span>Clubhaus offen</span>
+      <span class="pill pill-open"><span class="dot"></span>Club offen</span>
       <p class="status-when">Jetzt geöffnet</p>
       <p class="status-sub"><strong>${esc(displayTitle(st.event))}</strong> · bis ${formatTime(st.event.end)} Uhr (noch ${duration(st.remaining)})</p>
       <div class="btn-row"><a class="btn btn-primary" href="/anfahrt.html">Wie komme ich hin?</a>${eventCta(st.event)}</div>${noSignup}`;
@@ -76,7 +76,7 @@ export function renderStatus(feed, now = new Date()) {
       <div class="btn-row"><a class="btn btn-primary" href="/anfahrt.html">Wie komme ich hin?</a>${eventCta(st.event)}</div>${noSignup}`;
   } else {
     body = `
-      <span class="pill"><span class="dot"></span>Clubhaus zu</span>
+      <span class="pill"><span class="dot"></span>Club zu</span>
       <p class="status-when">Gerade kein Termin eingetragen</p>
       <p class="status-sub">Uns gibt's noch! Neue Sessions kündigen wir im Discord an. ${esc(site.usualSchedule)}.</p>
       <div class="btn-row"><a class="btn btn-discord" href="${esc(site.links.discord)}">Im Discord nachfragen</a>${directions}</div>`;

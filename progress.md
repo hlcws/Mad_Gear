@@ -14,7 +14,7 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-04.
 - [x] Astro static site, old `/x.html` URLs kept (`build.format: 'file'`)
 - [x] Biker-gang look: logo red + designer teal, Anton/Inter, real logos (full, mark, text) from `Finals03-colors.ai`
 - [x] Favicons and apple-touch-icon from the logo mark
-- [x] Startseite: hero "Fighting Game *Locals*", section explaining what a local is (including just chilling with people who love fighting games), sessions, streams, Clubhaus, prices, Anfahrt, Kontakt
+- [x] Startseite: hero "Fighting Game *Locals*", section explaining what a local is (including just chilling with people who love fighting games), sessions, streams, location, prices, Anfahrt, Kontakt
 - [x] Pages: Termine, Anfahrt (with carpool tip FFM City / Wiesbaden / Mainz), Tickets (PayPal, weekend ticket removed), Clubregeln, Die Gang (5 Stamm members), AGB, Impressum
 - [x] All wording in Markdown under `src/content/` and `src/pages/*.md` (see README)
 - [x] Contact email: kontakt@madgear.org
@@ -26,7 +26,7 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-04.
 - [ ] T-shirt design 魔奴義亜 `[MA-DO-GI-A]` dictionary print, work in progress (see **Handoff: T-shirt** below)
 
 ### "Is it actually open?"
-- [x] Status card: *Clubhaus offen* / *Heute · in X* / *Nächste Session* / *Clubhaus zu*, recomputed in the browser every minute
+- [x] Status card: *Club offen* / *Heute · in X* / *Nächste Session* / *Club zu*, recomputed in the browser every minute
 - [x] Page re-fetches `/feed.json` every 5 minutes; "Stand: vor X" freshness line
 - [x] Warning when data is older than 2 days
 - [x] Copy: no sign-up needed, just come by; Discord is optional

@@ -63,7 +63,7 @@ export const site = {
     // line-break repair: every line ends in . ! ? or : (not followed by a digit),
     // no abbreviations like "usw." mid-sentence.
     description: [
-      'Casual Fighting Games im MadGear Clubhaus!',
+      'Casual Fighting Games bei MadGearFFM!',
       'Street Fighter, Tekken, Guilty Gear oder dein Lieblingsgame – alles ist willkommen, egal ob Neuling oder Turnierprofi.',
       'PS4, Steam-PCs, Screens und Controller sind da, dein eigenes Pad kannst du gerne mitbringen.',
       'Keine Anmeldung nötig, einfach vorbeikommen!',
@@ -75,7 +75,7 @@ export const site = {
       'https://www.youtube.com/@madgearffm7547/streams',
     ].join('\n'),
     location: 'MadGearFFM, Dreieichstrasse 8, Mörfelden-Walldorf (2. OG links)',
-    cover: 'public/photos/location1.jpg', // optional, shown as event banner
+    cover: 'public/photos/club1.jpg', // optional, shown as event banner
   },
 
 };

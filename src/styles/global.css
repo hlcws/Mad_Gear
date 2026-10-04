@@ -183,6 +183,7 @@ a.event:hover { color: var(--text); border-color: #3b3b4b; background: var(--sur
 
 .photos { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
 .photos img { border-radius: var(--radius); aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+.photos img.wide { grid-column: 1 / -1; }
 .address { font-size: 1.1rem; line-height: 1.5; margin: 0 0 16px; }
 .address small { color: var(--muted); }
 

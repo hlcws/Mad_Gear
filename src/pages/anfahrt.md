@@ -27,4 +27,4 @@ Vom Flughafen fährt jede halbe Stunde ein Hotelshuttle zum NH Hotel Mörfelden 
 
 ## Zugang
 
-Der Zugang ist nicht barrierefrei. Das Clubhaus ist im 2. OG ohne Aufzug.
+Der Zugang ist nicht barrierefrei. Der Club ist im 2. OG ohne Aufzug.
