@@ -1,0 +1,49 @@
+---
+// Layout only. Text lives in src/content/logos.md.
+// PNGs and the ZIP are made by scripts/export-logos.sh; LOGOS must match its list.
+import Base from '../layouts/Base.astro';
+import SectionHead from '../components/SectionHead.astro';
+import { site } from '../site.config.mjs';
+import * as logos from '../content/logos.md';
+const LOGOS = [
+  { name: 'full-ffm', title: 'Logo mit FFM' },
+  { name: 'text-ffm', title: 'Schriftzug mit FFM' },
+  { name: 'full', title: 'Logo' },
+  { name: 'text', title: 'Schriftzug' },
+  { name: 'mark', title: 'Maske' },
+];
+const widths = [512, 1024, 2048];
+---
+<Base title="Logos" description={`${site.name} Logos zum Download, als SVG und PNG.`}>
+  <section>
+    <div class="wrap">
+      <SectionHead fm={logos.frontmatter} />
+      <div class="lead md"><logos.Content /></div>
+      <a class="btn btn-primary" href="/logos/madgear-logos.zip" download style="margin-top:8px">Alle als ZIP</a>
+      <div class="logo-grid">
+        {LOGOS.map((l) => (
+          <div class="logo-card">
+            <div class="preview"><img src={`/logo-${l.name}.svg`} alt={l.title} loading="lazy" /></div>
+            <div class="body">
+              <p class="name">{l.title}</p>
+              <div class="files">
+                <a href={`/logo-${l.name}.svg`} download={`madgear-${l.name}.svg`}>SVG</a>
+                {widths.map((w) => <a href={`/logos/madgear-${l.name}-${w}.png`} download>PNG {w}</a>)}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .logo-grid { display: grid; gap: 16px; margin-top: 28px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+    .logo-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    .preview { aspect-ratio: 4 / 3; display: grid; place-items: center; padding: 24px; background: var(--bg); }
+    .preview img { max-width: 100%; max-height: 100%; }
+    .body { padding: 14px 16px; }
+    .name { font-family: var(--display); font-size: 1.3rem; text-transform: uppercase; margin: 0 0 6px; }
+    .files { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .9rem; }
+  </style>
+</Base>
