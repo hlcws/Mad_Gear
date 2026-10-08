@@ -45,7 +45,7 @@ const current = (href: string) => (href.replace('.html', '') === path ? 'page' :
     <div class="wrap">
       <a class="brand" href="/">
         {textLogo
-          ? <img src={textLogo} alt="Mad Gear" height="36" />
+          ? <><img src={textLogo} alt="Mad Gear" height="36" /><span class="brand-ffm">FFM</span></>
           : <span>Mad<b>Gear</b>FFM</span>}
         <small>{site.kanji}</small>
       </a>
