@@ -51,6 +51,8 @@ section + section { border-top: 1px solid var(--border); }
 .brand { display: flex; align-items: baseline; gap: 8px; color: var(--text); text-decoration: none; font-family: var(--display); font-size: 1.45rem; letter-spacing: .03em; white-space: nowrap; }
 .brand b { color: var(--red-text); font-weight: 400; }
 .brand small { font-family: var(--body); font-size: .75rem; color: var(--muted); letter-spacing: .1em; }
+.brand-ffm { color: var(--red-text); }
+@media (max-width: 479px) { .brand small { display: none; } }
 .nav { display: none; gap: 4px; margin-left: auto; }
 .nav a { color: var(--muted); text-decoration: none; padding: 6px 10px; border-radius: 8px; font-weight: 500; font-size: .95rem; }
 .nav a:hover, .nav a[aria-current] { color: var(--text); background: var(--surface-2); }
