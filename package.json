@@ -6,7 +6,8 @@
     "fetch": "node --env-file-if-exists=.env scripts/fetch-feeds.mjs",
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "check": "astro build"
   },
   "dependencies": {
     "astro": "^7.3.5",
