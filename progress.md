@@ -51,6 +51,14 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-04.
 - [x] `SYNC_DRY_RUN=1` preview mode
 - [x] Wired into the deploy workflow (skipped until a token exists)
 
+### Equipment & Club Lighting (`equipment/`)
+- [x] Bluetooth Low Energy (BLE) control for Zengge / Magic Hue BT-SPI addressable LED controllers (`bt_spi.py`, `protocol.py`)
+- [x] Tested against real hardware: `LEDnetWF0200A346BE98` (`08:65:F0:46:BE:98`, model `0xA3`, WS2812B strips)
+- [x] Implemented 8-byte transport wrapping, A3+ IC configuration, 0x3B HSV color framing, power, and live status queries
+- [x] Saved defaults in `equipment/config.json` so commands don't require passing `--address`
+- [x] 17 automated tests in `equipment/tests/` covering framing, checksum, HSV packing, and CLI defaults
+- [ ] Future: Wire `/api/light` hook into `stream/server.mjs` for match / scene lighting events
+
 ## Open
 
 - [ ] T-shirt (see handoff below)
