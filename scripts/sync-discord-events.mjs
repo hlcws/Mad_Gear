@@ -152,13 +152,69 @@ if (dryRun) {
     const p = eventPayload(s);
     console.log(`\n  preview:\n  ${p.name}\n  ${p.description.replaceAll('\n', '\n  ')}`);
   }
-  console.log('  (dry run, no changes made)');
-  process.exit(0);
+} else {
+  for (const e of plan.remove) await discord('DELETE', `/guilds/${guild}/scheduled-events/${e.id}`);
+  for (const { e, diff } of plan.update) await discord('PATCH', `/guilds/${guild}/scheduled-events/${e.id}`, diff);
+  const image = plan.create.length ? await coverImage() : undefined;
+  for (const s of plan.create) {
+    await discord('POST', `/guilds/${guild}/scheduled-events`, { ...eventPayload(s), ...(image ? { image } : {}) });
+  }
 }
 
-for (const e of plan.remove) await discord('DELETE', `/guilds/${guild}/scheduled-events/${e.id}`);
-for (const { e, diff } of plan.update) await discord('PATCH', `/guilds/${guild}/scheduled-events/${e.id}`, diff);
-const image = plan.create.length ? await coverImage() : undefined;
-for (const s of plan.create) {
-  await discord('POST', `/guilds/${guild}/scheduled-events`, { ...eventPayload(s), ...(image ? { image } : {}) });
+// #kalender: one post per upcoming session, linking its Discord event. Stateless like the
+// events: the bot finds its own posts by author and keys them by the event link they contain.
+// A post is edited when the session changes (reactions survive), and deleted at 06:00 Berlin
+// the day after the session, or earlier if its event disappears (session cancelled).
+const channel = cfg.kalenderChannelId;
+if (channel) {
+  const events = (await discord('GET', `/guilds/${guild}/scheduled-events`)).filter((e) => e.status === 1);
+  const eventFor = (s) =>
+    events.find((e) => e.creator_id === me.id && exact(e.scheduled_start_time, s.start)) ??
+    events.find((e) => e.creator_id !== me.id && near(e.scheduled_start_time, s.start));
+  const eventLink = (id) => `https://discord.com/events/${guild}/${id}`;
+  const unix = (d) => Math.floor(t(d) / 1000);
+  const postText = (s, e) => {
+    const p = eventPayload(s);
+    return [`**${p.name}**`, `<t:${unix(s.start)}:F> – <t:${unix(s.end)}:t>`, p.entity_metadata.location, eventLink(e.id)].join('\n');
+  };
+
+  const posts = (await discord('GET', `/channels/${channel}/messages?limit=100`))
+    .filter((m) => m.author.id === me.id)
+    .map((m) => ({
+      m,
+      eventId: m.content.match(/discord\.com\/events\/\d+\/(\d+)/)?.[1],
+      start: new Date(Number(m.content.match(/<t:(\d+):F>/)?.[1] ?? 0) * 1000),
+    }));
+
+  const day = (d) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Berlin' }).format(d); // YYYY-MM-DD
+  const morningAfter = (start) => day(new Date(now.getTime() - 6 * 3600e3)) > day(start);
+  const live = new Set(events.map((e) => e.id));
+
+  const kal = { post: [], edit: [], remove: [] };
+  for (const p of posts) {
+    if (p.start <= now ? morningAfter(p.start) : future.length > 0 && !live.has(p.eventId)) kal.remove.push(p);
+  }
+  for (const s of wanted) {
+    const e = eventFor(s);
+    if (!e) { console.log(`  #kalender: no Discord event yet for ${s.start.toISOString()}, posting next run`); continue; }
+    const p = posts.find((x) => x.eventId === e.id && !kal.remove.includes(x));
+    const text = postText(s, e);
+    if (!p) kal.post.push({ s, text });
+    else if (p.m.content !== text) kal.edit.push({ p, s, text });
+  }
+
+  console.log(`#kalender: ${posts.length} bot posts`);
+  for (const p of kal.remove) console.log(`  - remove  ${p.start.toISOString()}  ${p.m.content.split('\n')[0]}`);
+  for (const { s } of kal.edit) console.log(`  ~ edit    ${s.start.toISOString()}  ${s.title}`);
+  for (const { s, text } of kal.post) console.log(`  + post    ${s.start.toISOString()}  ${s.title}  (${text.split('\n').at(-1)})`);
+  if (!kal.post.length && !kal.edit.length && !kal.remove.length) console.log('  nothing to do');
+
+  if (!dryRun) {
+    for (const p of kal.remove) await discord('DELETE', `/channels/${channel}/messages/${p.m.id}`);
+    for (const { p, text } of kal.edit) await discord('PATCH', `/channels/${channel}/messages/${p.m.id}`, { content: text });
+    for (const { text } of kal.post) {
+      await discord('POST', `/channels/${channel}/messages`, { content: text, allowed_mentions: { parse: [] } });
+    }
+  }
 }
+if (dryRun) console.log('  (dry run, no changes made)');

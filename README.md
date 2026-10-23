@@ -40,6 +40,7 @@ Add or delete sessions in the **Google Calendar** (one-off or recurring). Within
 - Google's calendar feed loses line breaks, so the bot adds one after every punctuation mark except commas, and around links.
 - Discord events you create by hand are never touched by the bot and also count as "announced".
 - Entries titled "Blocked…" are private and never shown.
+- The bot also posts each of the next 5 sessions in `#kalender` (date, time, location, link to the Discord event), edits a post when the session changes, and deletes it at 06:00 the morning after. It only touches its own posts. Channel: `discordSync.kalenderChannelId`.
 
 ## One-time setup
 
@@ -47,6 +48,7 @@ Add or delete sessions in the **Google Calendar** (one-off or recurring). Within
 2. **Discord bot** (for reading and creating events):
    - https://discord.com/developers/applications → New Application → Bot → Reset Token → copy.
    - OAuth2 → URL Generator → scope `bot`, permissions **View Channels**, **Create Events**, **Manage Events** → open the URL and add the bot to the server.
+   - `#kalender` → Edit Channel → Permissions → role of the bot: allow **Send Messages**, **Embed Links**, **Read Message History** (the channel denies sending to `@everyone`).
    - Repo → Settings → Secrets and variables → Actions → `DISCORD_BOT_TOKEN`.
 3. **Twitch** (live status, VODs, schedule): https://dev.twitch.tv/console/apps → Register (OAuth redirect `http://localhost`, category Website) → secrets `TWITCH_CLIENT_ID`, `TWITCH_CLIENT_SECRET`.
 4. **YouTube**: put the channel ID (`UC…`) into `feeds.youtubeChannelId` and the URL into `links.youtube`. No key needed.

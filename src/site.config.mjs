@@ -76,6 +76,8 @@ export const site = {
   discordSync: {
     enabled: true,
     upcoming: 5,
+    // #kalender: one bot post per upcoming session, removed the morning after.
+    kalenderChannelId: '593081981101670413',
     // Website only: calendar titles matching this are listed as "Casual Session"
     // without description. Discord always gets the calendar title.
     genericTitles: '^(madgear(ffm)?(:\\s*(casuals?|zocken))?|session|casuals?)$',

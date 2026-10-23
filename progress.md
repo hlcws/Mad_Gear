@@ -58,6 +58,8 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-23.
 - [x] Only edits/deletes events the bot created; never deletes on an empty calendar
 - [x] `SYNC_DRY_RUN=1` preview mode
 - [x] Wired into the deploy workflow (skipped until a token exists)
+- [x] `#kalender` posts: one bot message per upcoming session (title, Discord timestamps, location, event link), edited in place, deleted at 06:00 Berlin the morning after or when its event disappears. Keyed by the event ID in the link, so no state. Spec: `specs/kalender-posts.md`. Verified 2026-10-23: 5 posts created, rerun idempotent, stale post re-edited. Open/unverified: event card unfurl in the client, cancel path, first real morning-after deletion (2026-10-25 06:00)
+- Gotcha: there are two `#kalender` channels; the live one is `593081981101670413`, the other sits in `archive`
 
 ## Open
 
