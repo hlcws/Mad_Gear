@@ -50,8 +50,12 @@ async function discordEvents() {
     `https://discord.com/api/v10/guilds/${gid}/scheduled-events?with_user_count=true`,
     { headers: { Authorization: `Bot ${env.DISCORD_BOT_TOKEN}` } },
   );
-  const events = list
-    .filter((e) => e.status === 1 || e.status === 2) // scheduled or active
+  const live = list.filter((e) => e.status === 1 || e.status === 2); // scheduled or active
+  const games = await signupGames(live).catch((err) => {
+    console.warn(`  discord games: ${err.message}`);
+    return {};
+  });
+  const events = live
     .map((e) => ({
       id: `discord-${e.id}`,
       source: 'discord',
@@ -64,8 +68,36 @@ async function discordEvents() {
       location: e.entity_metadata?.location || '',
       url: `https://discord.com/events/${gid}/${e.id}`,
       image: e.image ? `https://cdn.discordapp.com/guild-events/${e.id}/${e.image}.png?size=600` : null,
+      ...(games[e.id] ? { games: games[e.id] } : {}),
     }));
   return { status: 'ok', events };
+}
+
+// Games the people signed up for an event play, from their Discord roles
+// (feeds.gameRoles). { eventId: [{ name, count }] }, allowlist order, count ≥ 1.
+async function signupGames(events) {
+  const withSignups = events.filter((e) => e.user_count > 0);
+  if (!withSignups.length) return {};
+  const gid = feeds.discordGuildId;
+  const headers = { Authorization: `Bot ${env.DISCORD_BOT_TOKEN}` };
+  const roles = await getJson(`https://discord.com/api/v10/guilds/${gid}/roles`, { headers });
+  const gameOf = new Map(roles.filter((r) => feeds.gameRoles[r.name]).map((r) => [r.id, feeds.gameRoles[r.name]]));
+  const order = [...new Set(Object.values(feeds.gameRoles))];
+  const result = {};
+  for (const e of withSignups) {
+    const users = await getJson(
+      `https://discord.com/api/v10/guilds/${gid}/scheduled-events/${e.id}/users?with_member=true&limit=100`,
+      { headers },
+    );
+    const counts = new Map();
+    for (const u of users) {
+      const played = new Set((u.member?.roles ?? []).map((id) => gameOf.get(id)).filter(Boolean));
+      for (const g of played) counts.set(g, (counts.get(g) ?? 0) + 1);
+    }
+    const list = order.filter((g) => counts.has(g)).map((name) => ({ name, count: counts.get(name) }));
+    if (list.length) result[e.id] = list;
+  }
+  return result;
 }
 
 async function discordStats() {

@@ -1,6 +1,6 @@
 # Progress
 
-Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-04.
+Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-23.
 
 ## Live
 
@@ -38,6 +38,7 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-04.
 - [x] Live player (Twitch, else YouTube) also follows the 5-minute refresh: appears/disappears without reload, a running player is never restarted (`renderLive` in `src/lib/render.js`). Live status itself comes from the build, so worst case ~35 min after going live
 - [x] Stream sections: "Letzte Streams auf Twitch / auf YouTube", buttons "Alle auf Twitch / auf YouTube"
 - [x] Termine capped at the next 5
+- [x] Session card shows "Die Angemeldeten spielen": games of the Discord sign-ups, from their roles (`feeds.gameRoles` allowlist, unlisted roles ignored). Only represented games; shade = share of sign-ups (3 levels), order shuffled once per page load (no ranking). Spec: `specs/session-game-heatmap.md`. Gotcha: a new game role in Discord shows nowhere until it's added to `gameRoles`
 
 ### Data feeds (`scripts/fetch-feeds.mjs`)
 - [x] Google Calendar ICS (incl. recurring sessions, hides `blocked…` entries)

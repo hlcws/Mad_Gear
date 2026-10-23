@@ -121,6 +121,12 @@ section + section { border-top: 1px solid var(--border); }
 .status-when { font-family: var(--display); font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.05; text-transform: uppercase; margin: 14px 0 4px; }
 .status-sub { color: var(--muted); margin: 0 0 18px; font-size: 1.02rem; }
 .status-sub strong { color: var(--text); }
+.games-label { margin: -6px 0 8px; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+.games-heat { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.games-heat li { padding: 4px 10px; border-radius: 6px; font-size: .85rem; font-weight: 600; color: var(--text); }
+.games-heat .heat-1 { background: rgba(212, 0, 12, .18); }
+.games-heat .heat-2 { background: rgba(212, 0, 12, .45); }
+.games-heat .heat-3 { background: var(--red); }
 .status-meta { margin: 18px 0 0; padding-top: 14px; border-top: 1px solid var(--border); font-size: .85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 16px; }
 .status-meta span { display: inline-flex; align-items: center; gap: 6px; }
 .status-meta .ok { color: var(--teal); }

@@ -46,6 +46,27 @@ export const site = {
     calendarHidePattern: '^blocked',
     twitchLogin: 'madgearffm',
     youtubeChannelId: 'UCNiYLCtsPmiYseTgwZHCyHQ',
+    // Discord role name → game shown on the session card ("Die Angemeldeten
+    // spielen"). Roles not listed here are ignored. Same name twice = one game.
+    gameRoles: {
+      sf6: 'SF6',
+      '2xko': '2XKO',
+      tekken: 'Tekken',
+      kof: 'KOF',
+      gg: 'Guilty Gear',
+      gbvs: 'GBVS',
+      marvel: 'Marvel',
+      '3s': '3rd Strike',
+      sf5: 'SF5',
+      sf4: 'SF4',
+      bb: 'BlazBlue',
+      dbfz: 'DBFZ',
+      mk: 'MK',
+      exvs: 'EXVS',
+      dnf: 'DNF Duel',
+      fate: 'Fate',
+      Mahjong: 'Mahjong',
+    },
   },
 
   // Google Calendar → Discord: the bot creates and updates Discord events for

@@ -20,6 +20,19 @@ function eventCta(e) {
 }
 const noSignup = '<p class="status-note">Keine Anmeldung nötig, einfach spontan vorbeikommen.</p>';
 
+// Games the Discord sign-ups play. Shade = relative weight; no ranking, so the
+// order comes from `order` (name → sort key; the browser shuffles per page load).
+function gamesRow(e, order) {
+  if (!e.games?.length) return '';
+  const max = Math.max(...e.games.map((g) => g.count));
+  const games = order ? [...e.games].sort((a, b) => order(a.name) - order(b.name)) : e.games;
+  const tiles = games.map((g) => {
+    const r = g.count / max;
+    return `<li class="heat-${r >= 0.67 ? 3 : r >= 0.34 ? 2 : 1}">${esc(g.name)}</li>`;
+  });
+  return `<p class="games-label">Die Angemeldeten spielen</p><ul class="games-heat">${tiles.join('')}</ul>`;
+}
+
 function metaLine(feed, now) {
   const parts = [];
   if (isStale(feed, now)) {
@@ -56,7 +69,7 @@ function liveBanner(feed) {
   return '';
 }
 
-export function renderStatus(feed, now = new Date()) {
+export function renderStatus(feed, now = new Date(), { order } = {}) {
   const st = computeStatus(feed, now);
   const directions = '<a class="btn" href="/anfahrt.html">Anfahrt</a>';
   let body;
@@ -65,14 +78,14 @@ export function renderStatus(feed, now = new Date()) {
     body = `
       <span class="pill pill-open"><span class="dot"></span>Club offen</span>
       <p class="status-when">Jetzt geöffnet</p>
-      <p class="status-sub"><strong>${esc(displayTitle(st.event))}</strong> · bis ${formatTime(st.event.end)} Uhr (noch ${duration(st.remaining)})</p>
+      <p class="status-sub"><strong>${esc(displayTitle(st.event))}</strong> · bis ${formatTime(st.event.end)} Uhr (noch ${duration(st.remaining)})</p>${gamesRow(st.event, order)}
       <div class="btn-row"><a class="btn btn-primary" href="/anfahrt.html">Wie komme ich hin?</a>${eventCta(st.event)}</div>${noSignup}`;
   } else if (st.kind === 'soon' || st.kind === 'next') {
     const soon = st.kind === 'soon';
     body = `
       <span class="pill ${soon ? 'pill-soon' : 'pill-next'}"><span class="dot"></span>${soon ? `Heute · in ${duration(st.until)}` : 'Nächste Session'}</span>
       <p class="status-when">${formatDay(st.event.start)}</p>
-      <p class="status-sub"><strong>${formatRange(st.event.start, st.event.end)} Uhr</strong> · ${relativeDay(st.event.start, now)} · ${esc(displayTitle(st.event))}</p>
+      <p class="status-sub"><strong>${formatRange(st.event.start, st.event.end)} Uhr</strong> · ${relativeDay(st.event.start, now)} · ${esc(displayTitle(st.event))}</p>${gamesRow(st.event, order)}
       <div class="btn-row"><a class="btn btn-primary" href="/anfahrt.html">Wie komme ich hin?</a>${eventCta(st.event)}</div>${noSignup}`;
   } else {
     body = `

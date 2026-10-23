@@ -20,6 +20,7 @@ All wording is Markdown. Edit, save, and the local preview updates instantly; on
 | Ticket info text | `src/content/tickets.md` |
 | Anfahrt, Clubregeln, AGB, Impressum | `src/pages/anfahrt.md`, `regeln.md`, `agb.md`, `impressum.md` |
 | Links, address, Discord event template, data sources | `src/site.config.mjs` |
+| Discord game roles shown on the session card (role → name) | `src/site.config.mjs` → `feeds.gameRoles` |
 | Photos / logos | `public/photos/`, `public/logo-*.svg` |
 
 How the Markdown files work:

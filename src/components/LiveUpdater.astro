@@ -11,11 +11,18 @@ const { feed } = Astro.props;
 
   let feed = JSON.parse(document.getElementById('feed-data')!.textContent || '{}');
 
+  // Random game order per page load, stable across repaints and refreshes.
+  const gameKeys = new Map<string, number>();
+  const gameOrder = (name: string) => {
+    if (!gameKeys.has(name)) gameKeys.set(name, Math.random());
+    return gameKeys.get(name)!;
+  };
+
   function paint() {
     const now = new Date();
     document.querySelectorAll<HTMLElement>('[data-live]').forEach((el) => {
       if (el.dataset.live === 'status') {
-        el.innerHTML = renderStatus(feed, now);
+        el.innerHTML = renderStatus(feed, now, { order: gameOrder });
         el.dataset.kind = statusKind(feed, now);
       } else if (el.dataset.live === 'events') {
         el.innerHTML = renderEvents(feed, {
