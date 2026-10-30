@@ -77,7 +77,7 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-30.
 
 ## Ideas / nice to have
 
-- [ ] Replace `public/favicon.ico` with the new logo mark
+- [x] `public/favicon.ico` (16/32/48 px) rebuilt from the logo mark (`public/logos/madgear-mark-512.png`)
 - [x] GitHub Actions bumped to checkout v7, setup-node v7, upload-pages-artifact v5, deploy-pages v5 (Node 24)
 - [x] 60-day cron shutoff: `keepalive` job re-enables the workflow on every scheduled run. If updates ever stop anyway, the stale warning on the site shows it; re-enable in the Actions tab
 - [x] Feed fetch retries on Discord 429 (the sync step right before it used up the rate limit, so Discord events fell back to stale data)
