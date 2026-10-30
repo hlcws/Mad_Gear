@@ -1,6 +1,6 @@
 @echo off
 title MadGear Overlays
 cd /d "%~dp0"
-node obsuild.mjs
+node obs\build.mjs
 node server.mjs
 pause
