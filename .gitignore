@@ -4,7 +4,3 @@ dist/
 .env
 src/data/feed.json
 public/feed.json
-
-# python
-__pycache__/
-*.pyc

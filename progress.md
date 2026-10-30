@@ -61,19 +61,13 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-30.
 - [x] `#kalender` posts: one bot message per upcoming session (title, Discord timestamps, location, event link), edited in place, deleted at 06:00 Berlin the morning after or when its event disappears. Keyed by the event ID in the link, so no state. Spec: `specs/kalender-posts.md`. Verified 2026-10-23: 5 posts created, rerun idempotent, stale post re-edited. Open/unverified: event card unfurl in the client, cancel path, first real morning-after deletion (2026-10-25 06:00)
 - Gotcha: there are two `#kalender` channels; the live one is `593081981101670413`, the other sits in `archive`
 
-### Equipment & Club Lighting (`equipment/`)
-- [x] Bluetooth Low Energy (BLE) control for Zengge / Magic Hue BT-SPI addressable LED controllers (`bt_spi.py`, `protocol.py`)
-- [x] Tested against real hardware: `LEDnetWF0200A346BE98` (`08:65:F0:46:BE:98`, model `0xA3`, WS2812B strips)
-- [x] Implemented 8-byte transport wrapping, A3+ IC configuration, 0x3B HSV color framing, power, and live status queries
-- [x] Saved defaults in `equipment/config.json` so commands don't require passing `--address`
-- [x] 17 automated tests in `equipment/tests/` covering framing, checksum, HSV packing, and CLI defaults
-- [ ] Next: wire an `/api/light` hook into `stream/server.mjs` so scenes and match state drive the lights (e.g. red during the last match)
+### Stream & equipment
+- Moved to the private repo `hlcws/mad_gear_stream` (overlays, scoreboard, player picker, LED controller, their specs and status)
 
 ## Open
 
 - Nothing site-side. Merch status: `hlcws/mad_gear_merch`
-- [x] Scoreboard player picker: Discord sign-ups (`signups` on today's event in `feed.json`, stripped from every other event incl. fallback) + recent players as chips, Next per side (Ctrl+Alt+Shift+7 / 8), player images on Match / Fullscreen / Break, score hidden by default. Spec: `specs/scoreboard-player-picker.md`. Verified 2026-10-30 in the cloud with a mocked Discord API and a local `feed.json` (`MADGEAR_FEED`): pick, swap-by-chip, Next, blur-only commit, Recent cap 30 + ✕, 06:00 day change, 413, overlays in `preview.html` (images on/off, score on/off, `?noserver`), frame layers pixel-identical
-- [ ] Player picker, still to check for real: feed build with the token on a session day (today's event gets `signups`); panel on the tablet (upload from the camera roll); hotkeys 7 / 8 on the stream PC
+- [x] `feed.json`: `signups` (nicknames) on today's Discord event for the stream player picker, stripped from every other event incl. the fallback. Unverified with the real token on a session day
 
 ## Ideas / nice to have
 

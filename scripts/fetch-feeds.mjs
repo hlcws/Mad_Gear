@@ -83,7 +83,7 @@ async function discordEvents() {
 // From the people signed up for an event:
 // games: what they play, from their Discord roles (feeds.gameRoles).
 //   { eventId: [{ name, count }] }, allowlist order, count ≥ 1.
-// signups: their names, only for today's event (stream scoreboard player picker).
+// signups: their names, only for today's event (player picker in hlcws/mad_gear_stream).
 //   { eventId: ["ATG", "Maddo", …] }, server nickname, else display name, else username.
 async function signupDetails(events) {
   const withSignups = events.filter((e) => e.user_count > 0);
