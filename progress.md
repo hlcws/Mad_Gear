@@ -1,6 +1,6 @@
 # Progress
 
-Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-23.
+Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-30.
 
 ## Live
 
@@ -25,9 +25,11 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-23.
 - [x] "Was gespielt wird": bubbles sized by `tier` in `5-clubhaus.md` (1 = SF6, KOF XI; 2 = Avatar, Guilty Gear, Tokon; 3 = rest). Popularity only implied by order and size, names stay plain text for SEO
 - [x] No horizontal scroll on phones (event list overflowed by ~45 px; grid columns now shrink, long text wraps)
 
-### Merch
+### Merch (details: `merch/README.md`)
 - [x] Shop: Spreadshop, linked from the site (see above)
-- [ ] T-shirt design 魔奴義亜 `[MA-DO-GI-A]` dictionary print, work in progress (see **Handoff: T-shirt** below)
+- [x] Dictionary shirt 魔奴義亜 `[MA-DO-GI-A]` (`merch/dictionary/`)
+- [ ] Bōsōzoku shirt, GOON 雑魚 / RINGLEADER 番長 (`merch/bosozoku/`): work in progress
+- Earlier ideas (caricature column, bullet belt, tire track, coat front) are in `merch/archive/`
 
 ### "Is it actually open?"
 - [x] Status card: *Club offen* / *Heute · in X* / *Nächste Session* / *Club zu*, recomputed in the browser every minute
@@ -71,32 +73,7 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-23.
 
 ## Open
 
-- [ ] T-shirt (see handoff below)
-
-## Handoff: T-shirt (as of 2026-10-04)
-
-Work moved to another computer. Everything below is committed on branch `stream-overlays` (not `master`).
-
-**Files in `merch/`**
-- `shirt-madogia.svg`: the source. Header = `public/logo-text.svg`, then 魔奴義亜 + `[MA-DO-GI-A]`, then one row per kanji (reading + meaning), footer "FRANKFURT · RHEIN-MAIN / FIGHTING GAME LOCALS"
-- `export.sh`: `sh merch/export.sh` → `*-print.svg`, `*-print.pdf` (git-ignored, regenerate) and `shirt-madogia-preview.png`. Needs Inkscape (path via `INKSCAPE=`) + Node. Inlines linked **SVG** logos with per-copy id prefixes so the same logo can appear twice
-- `brush-kanji.py`: replaces `<text class="kanji">` with outlines from a font file (needs `pip install fonttools`): `python brush-kanji.py in.svg out.svg fonts/YujiBoku-Regular.ttf`
-- `fonts/`: Yuji Boku / Syuku / Mai (OFL, `fonts/OFL.txt`); `compare-brush.png` compares them with the current Yu Gothic Bold
-- `demon.jpg`, `guy.jpg`: caricature mockups; `demon-cut.png`, `guy-cut.png`: same with the black knocked out, placed in the right column of the 魔 and 奴 rows. 義 row uses `public/logo-mark.svg`. 亜 row has no picture
-- `ref-sodom-mark.png`: reference image; `Finals03-colors.ai`: original logo source
-
-**Latest changes (this round)**
-- Header logo swapped from logo mark to logo text
-- Meanings shortened: DEMON / ROUGH GUY / HONOUR / ASIA
-- Footer reworded (FRANKFURT · RHEIN-MAIN on top)
-- Caricature column added
-
-**Open decisions / next steps**
-1. Kanji font: keep Yu Gothic Bold or switch to a Yuji brush font. `brush-kanji.py` is not wired into `export.sh` yet; if a brush font wins, add it as a step before Inkscape
-2. Caricatures: `export.sh` only inlines `.svg` images, so the PNGs stay **linked** in the print SVG/PDF. Before sending to print: vectorise them (preferred, print is spot colour) or embed them as base64. The PNGs are 1.5 MB each
-3. Caricatures look like recognisable game characters: check that's OK for a shirt that is sold on Spreadshop, or redraw as original characters
-4. 亜 row: picture or leave empty
-5. Check print specs on Spreadshop (max print area, colours, min line width), then upload `shirt-madogia-print.svg`
+- [ ] Bōsōzoku shirt (`merch/bosozoku/`)
 
 ## Ideas / nice to have
 
