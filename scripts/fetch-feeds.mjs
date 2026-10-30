@@ -19,6 +19,12 @@ const windowFrom = new Date(now.getTime() - 24 * 3600e3);
 const windowTo = new Date(now.getTime() + 180 * 24 * 3600e3);
 const HOUR = 3600e3;
 
+// Session day: Berlin date of (time − 6 h), the same rule as the #kalender posts,
+// so a session running past midnight stays one day.
+const berlinDate = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Berlin' }); // YYYY-MM-DD
+const sessionDay = (d) => berlinDate.format(new Date(new Date(d).getTime() - 6 * HOUR));
+const today = sessionDay(now);
+
 // Retries on 429: the Discord sync step runs right before this and can use up
 // the rate limit bucket.
 async function getJson(url, init) {
@@ -51,9 +57,9 @@ async function discordEvents() {
     { headers: { Authorization: `Bot ${env.DISCORD_BOT_TOKEN}` } },
   );
   const live = list.filter((e) => e.status === 1 || e.status === 2); // scheduled or active
-  const games = await signupGames(live).catch((err) => {
-    console.warn(`  discord games: ${err.message}`);
-    return {};
+  const { games, signups } = await signupDetails(live).catch((err) => {
+    console.warn(`  discord sign-ups: ${err.message}`);
+    return { games: {}, signups: {} };
   });
   const events = live
     .map((e) => ({
@@ -69,21 +75,26 @@ async function discordEvents() {
       url: `https://discord.com/events/${gid}/${e.id}`,
       image: e.image ? `https://cdn.discordapp.com/guild-events/${e.id}/${e.image}.png?size=600` : null,
       ...(games[e.id] ? { games: games[e.id] } : {}),
+      ...(signups[e.id] ? { signups: signups[e.id] } : {}),
     }));
   return { status: 'ok', events };
 }
 
-// Games the people signed up for an event play, from their Discord roles
-// (feeds.gameRoles). { eventId: [{ name, count }] }, allowlist order, count ≥ 1.
-async function signupGames(events) {
+// From the people signed up for an event:
+// games: what they play, from their Discord roles (feeds.gameRoles).
+//   { eventId: [{ name, count }] }, allowlist order, count ≥ 1.
+// signups: their names, only for today's event (stream scoreboard player picker).
+//   { eventId: ["ATG", "Maddo", …] }, server nickname, else display name, else username.
+async function signupDetails(events) {
   const withSignups = events.filter((e) => e.user_count > 0);
-  if (!withSignups.length) return {};
+  if (!withSignups.length) return { games: {}, signups: {} };
   const gid = feeds.discordGuildId;
   const headers = { Authorization: `Bot ${env.DISCORD_BOT_TOKEN}` };
   const roles = await getJson(`https://discord.com/api/v10/guilds/${gid}/roles`, { headers });
   const gameOf = new Map(roles.filter((r) => feeds.gameRoles[r.name]).map((r) => [r.id, feeds.gameRoles[r.name]]));
   const order = [...new Set(Object.values(feeds.gameRoles))];
-  const result = {};
+  const games = {};
+  const signups = {};
   for (const e of withSignups) {
     const users = await getJson(
       `https://discord.com/api/v10/guilds/${gid}/scheduled-events/${e.id}/users?with_member=true&limit=100`,
@@ -95,9 +106,18 @@ async function signupGames(events) {
       for (const g of played) counts.set(g, (counts.get(g) ?? 0) + 1);
     }
     const list = order.filter((g) => counts.has(g)).map((name) => ({ name, count: counts.get(name) }));
-    if (list.length) result[e.id] = list;
+    if (list.length) games[e.id] = list;
+    if (sessionDay(e.scheduled_start_time) === today) {
+      const names = new Map();
+      for (const u of users) {
+        const name = (u.member?.nick ?? u.user?.global_name ?? u.user?.username ?? '').trim();
+        if (name && !names.has(name.toLowerCase())) names.set(name.toLowerCase(), name);
+      }
+      const sorted = [...names.values()].sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
+      if (sorted.length) signups[e.id] = sorted;
+    }
   }
-  return result;
+  return { games, signups };
 }
 
 async function discordStats() {
@@ -291,6 +311,10 @@ for (const e of events) {
   if (!dup) deduped.push(e);
 }
 deduped.sort((a, b) => new Date(a.start) - new Date(b.start));
+
+// Sign-up names are public only for today's event. The fallback reuses the previous
+// live feed.json, so strip them from every other event, or yesterday's names would stay up.
+for (const e of deduped) if (e.signups && sessionDay(e.start) !== today) delete e.signups;
 
 const feed = {
   generatedAt: now.toISOString(),

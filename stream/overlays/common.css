@@ -51,6 +51,13 @@ html, body { width: 1920px; height: 1080px; overflow: hidden; background: transp
 .score.winner { background: var(--teal); color: #0b2a30; }
 .name.winner { border-bottom-color: var(--teal); }
 
+/* Score off (default, SF6 shows rounds itself): no score, no FT */
+body:not(.score-on) .score, body:not(.score-on) [data-bind="ft"] { display: none; }
+
+/* Player image: square, may be transparent, never mirrored. No image = empty slot, nothing shifts */
+.pimg { display: block; object-fit: contain; }
+.pimg:not([src]) { visibility: hidden !important; }
+
 /* Chat panel: only background + header here, messages come from chat.html on top */
 .chat-head { display: flex; align-items: center; gap: 10px; height: 60px; padding: 0 18px; font-family: var(--display); text-transform: uppercase; font-size: 22px; letter-spacing: .06em; border-bottom: 3px solid var(--red); }
 .chat-head svg { width: 22px; height: 22px; fill: var(--twitch); }
