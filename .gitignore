@@ -5,12 +5,6 @@ dist/
 src/data/feed.json
 public/feed.json
 
-# merch: generated files (run merch/<design>/export.sh); previews are kept
-merch/*/out/*
-!merch/*/out/*-preview.png
-merch/*/.shirt-inlined.svg
-merch/shared/tools/.trace-*
-
 # python
 __pycache__/
 *.pyc

@@ -25,11 +25,9 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-30.
 - [x] "Was gespielt wird": bubbles sized by `tier` in `5-clubhaus.md` (1 = SF6, KOF XI; 2 = Avatar, Guilty Gear, Tokon; 3 = rest). Popularity only implied by order and size, names stay plain text for SEO
 - [x] No horizontal scroll on phones (event list overflowed by ~45 px; grid columns now shrink, long text wraps)
 
-### Merch (details: `merch/README.md`)
+### Merch
 - [x] Shop: Spreadshop, linked from the site (see above)
-- [x] Dictionary shirt 魔奴義亜 `[MA-DO-GI-A]` (`merch/dictionary/`)
-- [ ] Bōsōzoku shirt, GOON 雑魚 / RINGLEADER 番長 (`merch/bosozoku/`): work in progress
-- Earlier ideas (caricature column, bullet belt, tire track, coat front) are in `merch/archive/`
+- Designs moved to the private repo `hlcws/mad_gear_merch` on 2026-10-30 (status in its `README.md`)
 
 ### "Is it actually open?"
 - [x] Status card: *Club offen* / *Heute · in X* / *Nächste Session* / *Club zu*, recomputed in the browser every minute
@@ -73,7 +71,7 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-30.
 
 ## Open
 
-- [ ] Bōsōzoku shirt (`merch/bosozoku/`)
+- Nothing site-side. Merch status: `hlcws/mad_gear_merch`
 
 ## Ideas / nice to have
 

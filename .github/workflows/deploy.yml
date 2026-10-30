@@ -23,8 +23,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Only what the site build needs (plus root files): skips merch/ (~64 MB),
-      # stream/ and equipment/. Add a folder here if the build starts using it.
+      # Only what the site build needs (plus root files): skips stream/ and
+      # equipment/. Add a folder here if the build starts using it.
       - uses: actions/checkout@v7
         with:
           sparse-checkout: |
