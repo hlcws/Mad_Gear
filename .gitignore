@@ -10,3 +10,7 @@ merch/*/out/*
 !merch/*/out/*-preview.png
 merch/*/.shirt-inlined.svg
 merch/shared/tools/.trace-*
+
+# python
+__pycache__/
+*.pyc
