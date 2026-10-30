@@ -72,6 +72,7 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-30.
 ## Open
 
 - Nothing site-side. Merch status: `hlcws/mad_gear_merch`
+- [ ] Scoreboard player picker: Discord sign-ups + recent players as chips, player images, score hidden by default. Spec: `specs/scoreboard-player-picker.md`
 
 ## Ideas / nice to have
 
