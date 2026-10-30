@@ -15,11 +15,18 @@
   .side .name { font-size: 28px; border-bottom-width: 3px; background: rgba(21, 21, 29, .92); }
   .side.l .name { justify-content: flex-end; }
   .side .score { font-size: 40px; }
+  body:not(.score-on) .side { grid-template-columns: 300px; } /* score off: name tabs flush to the cam */
+  /* Player images stand on the name tabs, next to the cam. The outer ends stay free for SF6's drive gauges. */
+  .pimg { top: 900px; width: 120px; height: 120px; }
+  .pimg.l { left: 680px; }
+  .pimg.r { left: 1120px; }
 </style>
 </head>
 <body>
   <div class="abs tab display live"><span data-bind="title"></span><span data-bind="ft"></span></div>
   <div class="abs cam-frame"></div>
+  <img class="abs pimg l live" data-img="1" alt="">
+  <img class="abs pimg r live" data-img="2" alt="">
   <div class="abs side l live">
     <div class="name" data-side="1" data-bind="p1"></div>
     <div class="score" data-side="1" data-bind="s1"></div>

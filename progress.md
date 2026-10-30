@@ -72,7 +72,8 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-30.
 ## Open
 
 - Nothing site-side. Merch status: `hlcws/mad_gear_merch`
-- [ ] Scoreboard player picker: Discord sign-ups + recent players as chips, player images, score hidden by default. Spec: `specs/scoreboard-player-picker.md`
+- [x] Scoreboard player picker: Discord sign-ups (`signups` on today's event in `feed.json`, stripped from every other event incl. fallback) + recent players as chips, Next per side (Ctrl+Alt+Shift+7 / 8), player images on Match / Fullscreen / Break, score hidden by default. Spec: `specs/scoreboard-player-picker.md`. Verified 2026-10-30 in the cloud with a mocked Discord API and a local `feed.json` (`MADGEAR_FEED`): pick, swap-by-chip, Next, blur-only commit, Recent cap 30 + ✕, 06:00 day change, 413, overlays in `preview.html` (images on/off, score on/off, `?noserver`), frame layers pixel-identical
+- [ ] Player picker, still to check for real: feed build with the token on a session day (today's event gets `signups`); panel on the tablet (upload from the camera roll); hotkeys 7 / 8 on the stream PC
 
 ## Ideas / nice to have
 

@@ -4,10 +4,13 @@
 //   (no part)    both, handy for testing
 // Data attributes:
 //   data-bind="p1|p2|s1|s2|ft|title"  live scoreboard text
+//   <img data-img="1|2">               player image of that side (no image = empty slot)
+//   class="fit"                        text shrinks until it fits its box
 //   data-config="club|kanji|game|..."  text from config.json (baked into the PNG)
 //   data-text="breakText|..."          text from config.json "texts"
 //   data-socials                       social links from config.json
 //   data-icon="twitch|discord|web"     prepends that icon
+// Body classes from the state: score-on (score shown), has-names (both names set)
 
 const ICONS = {
   twitch: '<svg viewBox="0 0 24 24"><path d="M11.57 4.71h1.72v5.15h-1.72zm4.72 0H18v5.15h-1.71zM6 0 1.71 4.29v15.42h5.15V24l4.28-4.29h3.43L22.29 12V0zm14.57 11.14-3.43 3.43h-3.43l-3 3v-3H6.86V1.71h13.71z"/></svg>',
@@ -35,8 +38,19 @@ export async function start() {
   if (part !== 'frame') listenState();
 }
 
+// Shrink the font until the text fits (set title in a narrow cell)
+function fit(el) {
+  el.style.fontSize = '';
+  if (!el.clientWidth) return;
+  const box = el.parentElement;
+  for (let size = parseFloat(getComputedStyle(el).fontSize); size > 12 && (el.scrollWidth > el.clientWidth || el.scrollHeight > box.clientHeight); )
+    el.style.fontSize = --size + 'px';
+}
+const fitAll = () => document.querySelectorAll('.fit').forEach(fit);
+
 function listenState() {
   let last = {};
+  document.fonts.addEventListener('loadingdone', fitAll); // Anton arrives after the first state
   const es = new EventSource('/api/events');
   es.onmessage = (e) => {
     const s = JSON.parse(e.data);
@@ -53,7 +67,14 @@ function listenState() {
       const won = s['s' + n] >= s.ft;
       document.querySelectorAll(`[data-side="${n}"]`).forEach((el) => el.classList.toggle('winner', won));
     }
-    document.body.classList.toggle('has-score', s.s1 + s.s2 > 0);
+    for (const el of document.querySelectorAll('img[data-img]')) {
+      const src = s['img' + el.dataset.img];
+      if (!src) el.removeAttribute('src');
+      else if (el.getAttribute('src') !== src) el.src = src;
+    }
+    document.body.classList.toggle('score-on', !!s.score);
+    document.body.classList.toggle('has-names', !!(s.p1?.trim() && s.p2?.trim()));
+    fitAll();
     last = s;
   };
 }
