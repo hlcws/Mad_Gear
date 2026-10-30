@@ -61,6 +61,14 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-23.
 - [x] `#kalender` posts: one bot message per upcoming session (title, Discord timestamps, location, event link), edited in place, deleted at 06:00 Berlin the morning after or when its event disappears. Keyed by the event ID in the link, so no state. Spec: `specs/kalender-posts.md`. Verified 2026-10-23: 5 posts created, rerun idempotent, stale post re-edited. Open/unverified: event card unfurl in the client, cancel path, first real morning-after deletion (2026-10-25 06:00)
 - Gotcha: there are two `#kalender` channels; the live one is `593081981101670413`, the other sits in `archive`
 
+### Equipment & Club Lighting (`equipment/`)
+- [x] Bluetooth Low Energy (BLE) control for Zengge / Magic Hue BT-SPI addressable LED controllers (`bt_spi.py`, `protocol.py`)
+- [x] Tested against real hardware: `LEDnetWF0200A346BE98` (`08:65:F0:46:BE:98`, model `0xA3`, WS2812B strips)
+- [x] Implemented 8-byte transport wrapping, A3+ IC configuration, 0x3B HSV color framing, power, and live status queries
+- [x] Saved defaults in `equipment/config.json` so commands don't require passing `--address`
+- [x] 17 automated tests in `equipment/tests/` covering framing, checksum, HSV packing, and CLI defaults
+- [ ] Next: wire an `/api/light` hook into `stream/server.mjs` so scenes and match state drive the lights (e.g. red during the last match)
+
 ## Open
 
 - [ ] T-shirt (see handoff below)

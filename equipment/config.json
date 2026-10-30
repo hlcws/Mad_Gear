@@ -1,0 +1,9 @@
+{
+  "default_address": "08:65:F0:46:BE:98",
+  "device_name": "LEDnetWF0200A346BE98",
+  "model_id": "0xA3",
+  "default_ic": "ws2812b",
+  "default_order": "grb",
+  "default_pixels": 100,
+  "default_segments": 1
+}
