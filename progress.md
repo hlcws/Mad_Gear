@@ -1,6 +1,6 @@
 # Progress
 
-Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-30.
+Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-11-15.
 
 ## Live
 
@@ -20,10 +20,22 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-30.
 - [x] Contact email: kontakt@madgear.org
 - [x] Hero shows 魔奴義亜 with the reading `[MA-DO-GI-A]`, T-shirt style (`site.kanjiReading`)
 - [x] Merch shop link (https://madgear.myspreadshop.de/): header menu "Merch", footer, and a button in the prices section (`site.links.shop`)
-- [x] Wording unified: "Club" in text (*Club offen/zu*, "aus dem Club"), "Location" in nav and section label; no "Clubhaus" left
+- [x] Wording unified: "Club" in text (*Club offen/zu*, "aus dem Club"), "Die Location" as section label; no "Clubhaus" left. Nav says "Anfahrt" (was "Location") since it opens the Anfahrt page
 - [x] Location photos: `club1`–`3.jpg` (picked from the originals in `public/photos/inc/`, which stay uncommitted); hero background stays `location1.jpg` (cleanest shot)
 - [x] "Was gespielt wird": bubbles sized by `tier` in `5-clubhaus.md` (1 = SF6, KOF XI; 2 = Avatar, Guilty Gear, Tokon; 3 = rest). Popularity only implied by order and size, names stay plain text for SEO
 - [x] No horizontal scroll on phones (event list overflowed by ~45 px; grid columns now shrink, long text wraps)
+
+### Homepage conversion & SEO pass (2026-11-15)
+- Goal: first visits. The usual path is joining Discord, announcing the visit, getting welcomed and finding a carpool or the same train, so Discord is the primary CTA
+- [x] Hero is the TL;DR for people who know what a local is: town, 10–15 train minutes from Frankfurt Hbf, usual day and time, first visit free
+- [x] Section order: hero, sessions, "Was ist ein Local?" (now says locals exist in Germany too), streams (proof the club is active), location, Anfahrt + Gang, prices
+- [x] Each message once or twice instead of 3–4 times: no sign-up (status card, "Einfach vorbeikommen" card), bring a controller (that card), first visit free (hero, sessions callout)
+- [x] Homepage prices show entry tickets only (`donation: true` in `preise.md` hides a tier there); donate and merch buttons removed from that section
+- [x] Discord event links use the invite form `discord.gg/<code>?event=<id>`. Unverified: that non-members land on the event after joining (Discord was unreachable from the cloud session)
+- [x] Address spelled "Dreieichstr. 8" like the Google Business Profile (homepage, footer, Anfahrt, structured data). Impressum, AGB and the Discord event location keep "Dreieichstrasse"
+- [x] SEO: canonical, `og:url`/`og:type`/`og:locale`, `twitter:card`, photo as `og:image` (the SVG logo showed no preview), JSON-LD for the club and the next sessions, `robots.txt`, `/sitemap.xml`, own meta description per page, `width`/`height` on images
+- [x] Visitor statistics: GoatCounter (cookie-less), counts page views and clicks on Discord links; Datenschutz section added. Off until `goatcounter` in `src/site.config.mjs` is set
+- Not done: self-hosting the Google Fonts, smaller photo files (200–300 KB JPGs)
 
 ### Merch
 - [x] Shop: Spreadshop, linked from the site (see above)
@@ -34,7 +46,7 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-10-30.
 - [x] Page re-fetches `/feed.json` every 5 minutes; "Stand: vor X" freshness line
 - [x] Warning when data is older than 2 days
 - [x] Copy: no sign-up needed, just come by; Discord is optional
-- [x] Buttons: "Wie komme ich hin?" (→ Anfahrt) next to "Wer kommt noch?" (→ Discord event)
+- [x] Buttons: "Im Discord Bescheid sagen" (→ invite link that opens the Discord event) first, then "Wie komme ich hin?" (→ Anfahrt)
 - [x] Live player (Twitch, else YouTube) also follows the 5-minute refresh: appears/disappears without reload, a running player is never restarted (`renderLive` in `src/lib/render.js`). Live status itself comes from the build, so worst case ~35 min after going live
 - [x] Stream sections: "Letzte Streams auf Twitch / auf YouTube", buttons "Alle auf Twitch / auf YouTube"
 - [x] Termine capped at the next 5

@@ -19,4 +19,5 @@ prices:
     price: 5
     duration: Virtueller Döner
     note: Shoutout auf dem Stream
+    donation: true # nicht auf der Startseite
 ---

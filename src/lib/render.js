@@ -11,13 +11,15 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => (
   { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 const generic = new RegExp(site.discordSync?.genericTitles ?? '^$', 'i');
-const displayTitle = (e) => (generic.test(e.title.trim()) ? 'Casual Session' : e.title);
+export const displayTitle = (e) => (generic.test(e.title.trim()) ? 'Casual Session' : e.title);
 
-// Discord is optional: people can just turn up. It's only "who else is coming?".
-function eventCta(e) {
-  const href = e.source === 'discord' ? e.url : site.links.discord;
-  return `<a class="btn btn-discord" href="${esc(href)}">Wer kommt noch?</a>`;
-}
+// Invite link that opens the event, so it also works for people who aren't on
+// the server yet (the plain event URL in the feed is members-only).
+const discordUrl = (e) => (e.source === 'discord'
+  ? `${site.links.discord}?event=${e.id.replace('discord-', '')}` : site.links.discord);
+
+// Discord is optional: people can just turn up. But most first visits start there.
+const eventCta = (e) => `<a class="btn btn-discord" href="${esc(discordUrl(e))}">Im Discord Bescheid sagen</a>`;
 const noSignup = '<p class="status-note">Keine Anmeldung nötig, einfach spontan vorbeikommen.</p>';
 
 // Games the Discord sign-ups play. Shade = relative weight; no ranking, so the
@@ -79,14 +81,14 @@ export function renderStatus(feed, now = new Date(), { order } = {}) {
       <span class="pill pill-open"><span class="dot"></span>Club offen</span>
       <p class="status-when">Jetzt geöffnet</p>
       <p class="status-sub"><strong>${esc(displayTitle(st.event))}</strong> · bis ${formatTime(st.event.end)} Uhr (noch ${duration(st.remaining)})</p>${gamesRow(st.event, order)}
-      <div class="btn-row"><a class="btn btn-primary" href="/anfahrt.html">Wie komme ich hin?</a>${eventCta(st.event)}</div>${noSignup}`;
+      <div class="btn-row">${eventCta(st.event)}<a class="btn" href="/anfahrt.html">Wie komme ich hin?</a></div>${noSignup}`;
   } else if (st.kind === 'soon' || st.kind === 'next') {
     const soon = st.kind === 'soon';
     body = `
       <span class="pill ${soon ? 'pill-soon' : 'pill-next'}"><span class="dot"></span>${soon ? `Heute · in ${duration(st.until)}` : 'Nächste Session'}</span>
       <p class="status-when">${formatDay(st.event.start)}</p>
       <p class="status-sub"><strong>${formatRange(st.event.start, st.event.end)} Uhr</strong> · ${relativeDay(st.event.start, now)} · ${esc(displayTitle(st.event))}</p>${gamesRow(st.event, order)}
-      <div class="btn-row"><a class="btn btn-primary" href="/anfahrt.html">Wie komme ich hin?</a>${eventCta(st.event)}</div>${noSignup}`;
+      <div class="btn-row">${eventCta(st.event)}<a class="btn" href="/anfahrt.html">Wie komme ich hin?</a></div>${noSignup}`;
   } else {
     body = `
       <span class="pill"><span class="dot"></span>Club zu</span>
@@ -126,7 +128,7 @@ export function renderEvents(feed, { limit = 6, now = new Date(), withStreams = 
     const desc = e.description && !generic.test(e.title.trim())
       ? `<p class="event-desc">${esc(e.description.slice(0, 220))}</p>` : '';
     const start = new Date(e.start);
-    return `<li><a class="event${isNow ? ' is-now' : ''}" href="${esc(e.url || site.links.discord)}">
+    return `<li><a class="event${isNow ? ' is-now' : ''}" href="${esc(e.source === 'discord' ? discordUrl(e) : e.url || site.links.discord)}">
       <div class="event-date"><div class="dow">${dow.format(start).replace('.', '')}</div><div class="day">${day.format(start).replace('.', '')}</div><div class="mon">${mon.format(start).replace('.', '')}</div></div>
       <div>
         <p class="event-title">${esc(displayTitle(e))}</p>

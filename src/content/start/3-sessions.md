@@ -2,7 +2,7 @@
 label: Treffen
 title: Kommende *Sessions*
 # Die Termine selbst kommen automatisch aus dem Google Kalender.
-callout: "**Erster Besuch?** Die ganze Session ist für dich kostenlos. Einfach vorbeikommen, Controller mitbringen."
+callout: "**Erster Besuch?** Die ganze Session ist für dich kostenlos."
 ---
 
-Sessions werden im Kalender eingetragen und automatisch im Discord angekündigt. Dort siehst du auch, wer kommt. Anmelden musst du dich nicht.
+Sag im Discord kurz Bescheid, dass du kommst. Dort wirst du begrüßt und siehst, wer noch da ist.

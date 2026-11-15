@@ -14,7 +14,8 @@ All wording is Markdown. Edit, save, and the local preview updates instantly; on
 
 | What | File |
 |---|---|
-| Homepage sections, in order | `src/content/start/1-hero.md` … `7-kontakt.md` |
+| Homepage sections (the order on the page is set in `src/pages/index.astro`) | `src/content/start/1-hero.md` … `7-kontakt.md` |
+| Homepage text shown on Google and in link previews | `src/content/start/1-hero.md` → `description` |
 | Prices (homepage + tickets) | `src/content/preise.md` |
 | Team members | `src/content/gang.md` |
 | Ticket info text | `src/content/tickets.md` |
@@ -22,6 +23,7 @@ All wording is Markdown. Edit, save, and the local preview updates instantly; on
 | Links, address, Discord event template, data sources | `src/site.config.mjs` |
 | Discord game roles shown on the session card (role → name) | `src/site.config.mjs` → `feeds.gameRoles` |
 | Photos / logos | `public/photos/`, `public/logo-*.svg` |
+| Visitor statistics (GoatCounter site code; empty = off) | `src/site.config.mjs` → `goatcounter` |
 
 How the Markdown files work:
 - The part between the `---` lines at the top is settings (title, lists like cards, members, prices). Keep the indentation; if a value contains a `:` wrap it in quotes.

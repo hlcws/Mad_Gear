@@ -1,6 +1,6 @@
 ---
 label: Die Location
-title: Ausstattung
+title: Setups & *Arcade Cabinets*
 equipment:
   - 12 Screens mit HDMI
   - PS2, PS3, PS4, PS5 und PCs
@@ -28,4 +28,4 @@ games:
 
 Unser Highlight: 4 japanische Original-Cabinets mit Tonnen an Spielen. Auf zweien läuft King of Fighters XI, auf den anderen alles von Alien vs. Predator über Samurai Shodown bis Super Street Fighter II Turbo.
 
-Bitte eigenen Controller mitbringen! Eigene Konsole? Einfach an einen freien Screen anschließen. Absprachen laufen im [Discord](https://discord.gg/vNG3E345hk).
+Eigene Konsole? Einfach an einen freien Screen anschließen.

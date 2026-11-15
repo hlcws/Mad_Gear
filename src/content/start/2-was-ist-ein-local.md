@@ -10,7 +10,7 @@ cards:
   - title: Chillen & Spaß haben
     text: Es geht nicht nur ums Gewinnen. Wir hängen ab, quatschen, essen zusammen, schauen Matches und haben einfach Spaß mit Leuten, die Fighting Games genauso lieben wie du.
   - title: Einfach vorbeikommen
-    text: Keine Anmeldung, keine Mitgliedschaft. Controller mitbringen, dazusetzen. Dein **erster Besuch ist kostenlos**.
+    text: Keine Anmeldung, keine Mitgliedschaft. Bring deinen Controller mit und setz dich dazu.
 ---
 
-Ein Local ist das regelmäßige Offline-Treffen der Fighting-Game-Community in deiner Gegend. So spielt die FGC weltweit, und die meisten Profis haben genau so angefangen.
+Ein Local ist das regelmäßige Offline-Treffen der Fighting-Game-Community in deiner Gegend. So spielt die FGC weltweit, und die meisten Profis haben genau so angefangen. Ja, das gibt es auch in Deutschland: MadGearFFM ist das Local für Frankfurt und das Rhein-Main-Gebiet.

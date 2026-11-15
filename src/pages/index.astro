@@ -9,7 +9,8 @@ import LiveUpdater from '../components/LiveUpdater.astro';
 import { site } from '../site.config.mjs';
 import { loadFeed } from '../lib/feed.js';
 import { inline } from '../lib/inline.js';
-import { renderStatus, renderEvents, statusKind } from '../lib/render.js';
+import { renderStatus, renderEvents, statusKind, displayTitle } from '../lib/render.js';
+import { venueEvents } from '../lib/status.js';
 
 import * as hero from '../content/start/1-hero.md';
 import * as locals from '../content/start/2-was-ist-ein-local.md';
@@ -25,8 +26,50 @@ const feed = loadFeed();
 const games = (clubhaus.frontmatter.games ?? [])
   .map((g) => (typeof g === 'string' ? { name: g, tier: 3 } : { tier: 3, ...g }))
   .sort((a, b) => a.tier - b.tier);
+
+// Structured data for search engines: the club, and the next sessions as events.
+const [postalCode, ...locality] = site.address.city.split(' ');
+const place = {
+  '@type': 'Place',
+  name: site.name,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: site.address.street,
+    postalCode,
+    addressLocality: locality.join(' '),
+    addressCountry: 'DE',
+  },
+  // Centre of the map embed on the Anfahrt page.
+  geo: { '@type': 'GeoCoordinates', latitude: 49.98335, longitude: 8.5795 },
+};
+const image = `${site.url}/photos/club1.jpg`;
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    ...place,
+    '@type': 'SportsClub',
+    url: site.url,
+    image,
+    logo: `${site.url}/logo-full-ffm.svg`,
+    description: hero.frontmatter.description,
+    email: site.email,
+    sameAs: [site.links.discord, site.links.twitch, site.links.youtube, site.links.twitter],
+  },
+  ...venueEvents(feed).filter((e) => new Date(e.end) > new Date()).slice(0, 6).map((e) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: `${site.name}: ${displayTitle(e)}`,
+    startDate: e.start,
+    endDate: e.end,
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    eventStatus: 'https://schema.org/EventScheduled',
+    location: place,
+    image,
+    organizer: { '@type': 'Organization', name: site.name, url: site.url },
+  })),
+];
 ---
-<Base>
+<Base description={hero.frontmatter.description} jsonLd={jsonLd}>
   <section class="hero">
     <div class="hero-bg" style="background-image:url('/photos/location1.jpg')"></div>
     <div class="wrap">
@@ -37,21 +80,6 @@ const games = (clubhaus.frontmatter.games ?? [])
         <div class="status-card" data-live="status" data-kind={statusKind(feed)} aria-live="polite" set:html={renderStatus(feed)} />
       </div>
       <HeroLogo />
-    </div>
-  </section>
-
-  <section id="was-ist-ein-local">
-    <div class="wrap">
-      <SectionHead fm={locals.frontmatter} />
-      <div class="lead md"><locals.Content /></div>
-      <div class="locals-grid">
-        {locals.frontmatter.cards?.map((c) => (
-          <div class="local-point">
-            <h3>{c.title}</h3>
-            <p set:html={inline(c.text)} />
-          </div>
-        ))}
-      </div>
     </div>
   </section>
 
@@ -70,6 +98,21 @@ const games = (clubhaus.frontmatter.games ?? [])
     </div>
   </section>
 
+  <section id="was-ist-ein-local">
+    <div class="wrap">
+      <SectionHead fm={locals.frontmatter} />
+      <div class="lead md"><locals.Content /></div>
+      <div class="locals-grid">
+        {locals.frontmatter.cards?.map((c) => (
+          <div class="local-point">
+            <h3>{c.title}</h3>
+            <p set:html={inline(c.text)} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <Media feed={feed} head={streams.frontmatter}><streams.Content /></Media>
 
   <section id="clubhaus">
@@ -82,21 +125,9 @@ const games = (clubhaus.frontmatter.games ?? [])
         <ul class="chips games">{games.map((g) => <li class={`tier-${g.tier}`}>{g.name}</li>)}</ul>
       </div>
       <div class="photos">
-        <img class="wide" src="/photos/club1.jpg" alt="Der Club mit Arcade Cabinets und Spielstationen" loading="lazy" />
-        <img src="/photos/club2.jpg" alt="Halloween-Session an den King of Fighters XI Cabinets" loading="lazy" style="object-position:center 20%" />
-        <img src="/photos/club3.jpg" alt="Casuals an den Screens" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <section id="preise">
-    <div class="wrap">
-      <SectionHead fm={preise.frontmatter} />
-      <Prices />
-      <div class="btn-row">
-        <a class="btn btn-primary" href="/tickets.html">Tickets kaufen</a>
-        <a class="btn" href={site.links.paypal}>Spenden via PayPal</a>
-        <a class="btn" href={site.links.shop}>Merch-Shop</a>
+        <img class="wide" src="/photos/club1.jpg" width="1600" height="1200" alt="Der Club mit Arcade Cabinets und Spielstationen" loading="lazy" />
+        <img src="/photos/club2.jpg" width="1200" height="1600" alt="Halloween-Session an den King of Fighters XI Cabinets" loading="lazy" style="object-position:center 20%" />
+        <img src="/photos/club3.jpg" width="1600" height="1200" alt="Casuals an den Screens" loading="lazy" />
       </div>
     </div>
   </section>
@@ -119,6 +150,16 @@ const games = (clubhaus.frontmatter.games ?? [])
           <a class="btn" href="/gang.html">Die Gang kennenlernen</a>
           <a class="btn" href={`mailto:${site.email}`}>E-Mail</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preise">
+    <div class="wrap">
+      <SectionHead fm={preise.frontmatter} />
+      <Prices donations={false} />
+      <div class="btn-row">
+        <a class="btn btn-primary" href="/tickets.html">Tickets kaufen</a>
       </div>
     </div>
   </section>

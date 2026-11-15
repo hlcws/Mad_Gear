@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/Prose.astro
 title: "Clubregeln"
+description: "Clubregeln und Hausordnung von MadGearFFM."
 ---
 
 # Clubregeln

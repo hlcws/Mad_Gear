@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/Prose.astro
 title: "Impressum"
+description: "Impressum und Datenschutzerklärung von MadGearFFM."
 ---
 
 # Impressum
@@ -179,5 +180,13 @@ Wir verarbeiten Daten im Rahmen von Verwaltungsaufgaben sowie Organisation unser
 Wir offenbaren oder übermitteln hierbei Daten an die Finanzverwaltung, Berater, wie z.B., Steuerberater oder Wirtschaftsprüfer sowie weitere Gebührenstellen und Zahlungsdienstleister.  
   
 Ferner speichern wir auf Grundlage unserer betriebswirtschaftlichen Interessen Angaben zu Lieferanten, Veranstaltern und sonstigen Geschäftspartnern, z.B. zwecks späterer Kontaktaufnahme. Diese mehrheitlich unternehmensbezogenen Daten, speichern wir grundsätzlich dauerhaft.  
+
+### Reichweitenmessung mit GoatCounter
+
+Wir nutzen GoatCounter ([goatcounter.com](https://www.goatcounter.com)), um zu zählen, welche Seiten dieses Onlineangebotes wie oft aufgerufen werden und wie oft Links zu unserem Discord-Server angeklickt werden. So können wir das Onlineangebot verbessern. GoatCounter setzt keine Cookies und speichert keine Kennungen im Browser der Nutzer.  
+  
+Bei jedem Seitenaufruf werden die aufgerufene Seite, die verweisende Seite (Referrer), Browser und Betriebssystem, die Bildschirmgröße sowie das aus der IP-Adresse abgeleitete Land erfasst. Die IP-Adresse selbst wird nicht gespeichert. Um mehrere Aufrufe eines Besuchs zusammenzufassen, wird aus IP-Adresse und Browserkennung kurzzeitig ein nicht umkehrbarer Hashwert gebildet. Ein Rückschluss auf einzelne Personen ist uns nicht möglich.  
+  
+Rechtsgrundlage ist unser berechtigtes Interesse an der Analyse und Verbesserung unseres Onlineangebotes gem. Art. 6 Abs. 1 lit. f. DSGVO. Weitere Informationen: [Datenschutzhinweise von GoatCounter](https://www.goatcounter.com/help/privacy).
 
 [Erstellt mit Datenschutz-Generator.de von RA Dr. Thomas Schwenke](https://datenschutz-generator.de)

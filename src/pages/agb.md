@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/Prose.astro
 title: "Allgemeine Geschäftsbedingungen"
+description: "Allgemeine Geschäftsbedingungen von MadGearFFM."
 ---
 
 # Allgemeine Geschäftsbedingungen

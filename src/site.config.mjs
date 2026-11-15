@@ -9,9 +9,12 @@ export const site = {
   kanjiReading: 'MA-DO-GI-A', // shown as [MA-DO-GI-A], T-shirt style
   tagline: 'Fighting Game Locals in Frankfurt / Rhein-Main',
   email: 'kontakt@madgear.org',
+  // Visitor statistics (cookie-less). Site code from goatcounter.com, e.g. 'madgear'
+  // for madgear.goatcounter.com. Empty = no tracking script on the site.
+  goatcounter: '',
 
   address: {
-    street: 'Dreieichstrasse 8',
+    street: 'Dreieichstr. 8', // same spelling as the Google Business Profile
     city: '64546 Mörfelden-Walldorf',
     floor: '2. OG links',
     mapsUrl: 'https://maps.app.goo.gl/?q=MadGearFFM+Dreieichstrasse+8+M%C3%B6rfelden-Walldorf',

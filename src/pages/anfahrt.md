@@ -1,11 +1,12 @@
 ---
 layout: ../layouts/Prose.astro
 title: Anfahrt
+description: "Anfahrt zu MadGearFFM in Mörfelden-Walldorf: 10–15 Minuten mit der Bahn ab Frankfurt Hbf, Bus bis vor die Tür, Parken und Fahrgemeinschaften."
 ---
 
 # Anfahrt
 
-**Dreieichstrasse 8**\
+**Dreieichstr. 8**\
 64546 Mörfelden-Walldorf\
 2\. OG links
 
@@ -19,7 +20,7 @@ Mit dem Auto könnt ihr vor der Tür auf den Besucherparkplätzen oder an der St
 
 ## Öffentliche Verkehrsmittel
 
-Vor der Tür ist die Bushaltestelle „Hessenring“. Man kann auch vom Bahnhof laufen (ca. 20 Minuten) oder ihr gebt im [Discord](https://discord.gg/vNG3E345hk) Bescheid und wir schauen, ob jemand mit dem Auto vorbeikommt.
+Ab Frankfurt Hbf seid ihr in 10–15 Minuten am Bahnhof Mörfelden oder in Langen (von dort weiter mit dem Bus). Vor der Tür ist die Bushaltestelle „Hessenring“. Man kann auch vom Bahnhof laufen (ca. 20 Minuten) oder ihr gebt im [Discord](https://discord.gg/vNG3E345hk) Bescheid und wir schauen, ob jemand mit dem Auto vorbeikommt.
 
 ## Vom Flughafen
 

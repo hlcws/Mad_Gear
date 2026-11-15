@@ -3,17 +3,19 @@ import { logo } from '../lib/assets.js';
 import { site } from '../site.config.mjs';
 import '../styles/global.css';
 
-interface Props { title?: string; description?: string; }
-const { title, description = `${site.name} – ${site.tagline}. ${site.usualSchedule}.` } = Astro.props;
+interface Props { title?: string; description?: string; jsonLd?: object[] }
+const { title, description = `${site.name} – ${site.tagline}. ${site.usualSchedule}.`, jsonLd } = Astro.props;
 const fullTitle = title ? `${title} · ${site.name}` : `${site.name} – Fighting Game Locals Frankfurt / Rhein-Main`;
-const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+const path = Astro.url.pathname.replace(/(\/index)?\.html$/, '').replace(/\/$/, '') || '/';
 const textLogo = logo('logo-text');
 const markLogo = logo('logo-mark');
-const ogImage = logo('logo-full') ?? markLogo ?? '/photos/location1.jpg';
+const canonical = site.url + (path === '/' ? '/' : `${path}.html`);
+// A photo, not the SVG logo: Discord, WhatsApp and X don't show SVG previews.
+const ogImage = `${site.url}/photos/club1.jpg`;
 
 const nav = [
   ['/termine.html', 'Termine'],
-  ['/anfahrt.html', 'Location'],
+  ['/anfahrt.html', 'Anfahrt'],
   ['/tickets.html', 'Tickets'],
   ['/regeln.html', 'Clubregeln'],
   ['/gang.html', 'Die Gang'],
@@ -30,7 +32,14 @@ const current = (href: string) => (href.replace('.html', '') === path ? 'page' :
   <meta name="description" content={description} />
   <meta property="og:title" content={fullTitle} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content={new URL(ogImage, site.url)} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={site.name} />
+  <meta property="og:locale" content="de_DE" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href={canonical} />
+  {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />}
   <meta name="theme-color" content="#0b0b0d" />
   {markLogo?.endsWith('.svg') && <link rel="icon" type="image/svg+xml" href={markLogo} />}
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -39,13 +48,14 @@ const current = (href: string) => (href.replace('.html', '') === path ? 'page' :
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  {site.goatcounter && <script is:inline async data-goatcounter={`https://${site.goatcounter}.goatcounter.com/count`} src="https://gc.zgo.at/count.js"></script>}
 </head>
 <body>
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="/">
         {textLogo
-          ? <><img src={textLogo} alt="Mad Gear" height="36" /><span class="brand-ffm">FFM</span></>
+          ? <><img src={textLogo} alt="MadGear" width="76" height="36" /><span class="brand-ffm">FFM</span></>
           : <span>Mad<b>Gear</b>FFM</span>}
         <small>{site.kanji}</small>
       </a>
@@ -90,6 +100,12 @@ const current = (href: string) => (href.replace('.html', '') === path ? 'page' :
     btn?.addEventListener('click', () => {
       const open = menu!.classList.toggle('open');
       btn.setAttribute('aria-expanded', String(open));
+    });
+    // Count clicks on Discord links: joining there is the usual step before a first visit.
+    document.addEventListener('click', (e) => {
+      if ((e.target as Element).closest('a[href*="discord."]')) {
+        (window as any).goatcounter?.count?.({ path: 'discord-click', title: location.pathname, event: true });
+      }
     });
   </script>
 </body>
