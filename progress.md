@@ -34,7 +34,7 @@ Status of the madgear.org redesign (Jekyll → Astro). Last updated: 2026-11-15.
 - [x] Discord event links use the invite form `discord.gg/<code>?event=<id>`. Unverified: that non-members land on the event after joining (Discord was unreachable from the cloud session)
 - [x] Address spelled "Dreieichstr. 8" like the Google Business Profile (homepage, footer, Anfahrt, structured data). Impressum, AGB and the Discord event location keep "Dreieichstrasse"
 - [x] SEO: canonical, `og:url`/`og:type`/`og:locale`, `twitter:card`, photo as `og:image` (the SVG logo showed no preview), JSON-LD for the club and the next sessions, `robots.txt`, `/sitemap.xml`, own meta description per page, `width`/`height` on images
-- [x] Visitor statistics: GoatCounter (cookie-less), counts page views and clicks on Discord links; Datenschutz section added. Off until `goatcounter` in `src/site.config.mjs` is set
+- [x] Visitor statistics: GoatCounter (cookie-less), counts page views and clicks on Discord links; Datenschutz section added. Dashboard: madgearffm.goatcounter.com (code in `src/site.config.mjs` → `goatcounter`)
 - Not done: self-hosting the Google Fonts, smaller photo files (200–300 KB JPGs)
 
 ### Merch

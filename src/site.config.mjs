@@ -11,7 +11,7 @@ export const site = {
   email: 'kontakt@madgear.org',
   // Visitor statistics (cookie-less). Site code from goatcounter.com, e.g. 'madgear'
   // for madgear.goatcounter.com. Empty = no tracking script on the site.
-  goatcounter: '',
+  goatcounter: 'madgearffm',
 
   address: {
     street: 'Dreieichstr. 8', // same spelling as the Google Business Profile
